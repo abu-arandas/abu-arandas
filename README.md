@@ -14,6 +14,21 @@ I'm **Ehab Arandas**, a Flutter developer in Amman, Jordan, and the founder of *
 
 ## Products
 
+### Arandas ERP · [source code for sale](https://erp-house.vercel.app/software)
+
+One app that runs a fashion retailer: the online shop, a till for every branch, stock across stores, purchasing, customers and the books, on one Supabase database.
+
+[![Arandas ERP: online shop, point of sale and back office](assets/arandas-erp.jpg)](https://erp-house.vercel.app/software)
+
+- Online shop with live stock per size, checkout, order tracking and loyalty points
+- Point of sale with barcodes, split payments, returns and cash-up
+- Transfers between branches, stock counts, purchase orders, dashboards and profit and loss
+- 39 staff permissions, two-step sign-in, English and Arabic with right-to-left
+
+[Try the back office](https://erp-house.vercel.app/sandbox/sign-in) (no sign-up) · [Visit the live shop](https://erp-house.vercel.app) · [Get the code](https://erp-house.vercel.app/software#pricing): Developer licence $59, Agency licence $199
+
+`Flutter` `Dart` `GetX` `Supabase` `PostgreSQL`
+
 ### Arandas POS · [source code](https://github.com/abu-arandas/POS)
 
 Point of sale for shops, cafés and restaurants. Every sale is saved on the device first, so the till keeps selling when the internet drops.
@@ -87,6 +102,8 @@ Everything ships in Arabic and English, with right-to-left layouts.
 <div dir="rtl">
 
 **Arandas** شركة برمجيات في عمّان. نبني أنظمة نقاط البيع وإدارة الفروع والمتاجر الإلكترونية وتطبيقات الجوال، بالعربي والإنجليزي.
+
+كود **Arandas ERP** لمحلات الأزياء متاح للشراء: متجر إلكتروني وكاشير ومخزون ومشتريات وحسابات في تطبيق واحد. [جرّبه وشاهد الأسعار](https://erp-house.vercel.app/software/ar).
 
 لحجز عرض تجريبي مجاني، راسلنا على [واتساب](https://wa.me/962791568798?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%88%D8%B5%D9%84%D8%AA%20%D8%A5%D9%84%D9%8A%D9%83%D9%85%20%D9%85%D9%86%20GitHub%20%D9%88%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A.).
 
