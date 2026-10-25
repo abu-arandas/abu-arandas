@@ -51,9 +51,11 @@ Retail ERP for chains with several stores and a warehouse.
 
 `TypeScript` `React` `Express` `PostgreSQL` `Flutter`
 
-### Vanguard · private, demo on request
+### Vanguard · [live demo](https://vanguard-demo-sigma.vercel.app)
 
-A premium fashion store with its own back office: colour and size variants with their own price and stock, promotion codes with rules, and Stripe checkout.
+A premium fashion store with its own back office: colour and size variants with their own price and stock, promotion codes with rules, and Stripe checkout. Flutter Web storefront and admin panel.
+
+[Open the store demo](https://vanguard-demo-sigma.vercel.app) (no sign-up; use the "Explore back-office (demo)" chips on the sign-in page to see the admin side)
 
 | Storefront | Back office |
 | --- | --- |
