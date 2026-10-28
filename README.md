@@ -85,15 +85,6 @@ A digital-product store whose catalogue is drafted by one AI model and graded by
 
 Everything ships in Arabic and English, with right-to-left layouts.
 
-## Open-source samples
-
-| Project | What it shows |
-| --- | --- |
-| [tasks_app](https://github.com/abu-arandas/tasks_app) | Offline-first Flutter: SQLite, a sync queue with retries and backoff, a Kanban board, backup and restore |
-| [job_board](https://github.com/abu-arandas/job_board) | A Material 3 job board with search, filters and saved jobs |
-| [weather_app](https://github.com/abu-arandas/weather_app) | Forecasts for your location, hourly and 7-day, with a map |
-| [recipe_app](https://github.com/abu-arandas/recipe_app) | Recipe sharing on Supabase: sign-in, photo upload, saves and follows |
-
 ## Stack
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
