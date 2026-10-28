@@ -34,6 +34,10 @@ One app that runs a fashion retailer: the online shop, a till for every branch, 
 
 Point of sale for shops, cafés and restaurants. Every sale is saved on the device first, so the till keeps selling when the internet drops.
 
+| Register | Arabic menu |
+| --- | --- |
+| [![EA POS register](assets/pos-register.png)](https://pos-sage-one.vercel.app) | [![EA POS in Arabic](assets/pos-arabic.png)](https://pos-sage-one.vercel.app) |
+
 - Barcode scanning, size and colour variants, split payments, parked orders and refunds
 - Kitchen display, tables and open tabs, and a QR menu for customers' phones
 - Receipts on thermal printers, shifts with Z-reports, stock and suppliers
