@@ -1,16 +1,17 @@
 <div align="center">
 
-# Arandas
+# Arandas Tech
 
 **Software that shops and brands run on**
 
 Point of sale · Retail ERP · Online stores · Flutter apps · Arabic and English
 
 [![Book a free demo on WhatsApp](https://img.shields.io/badge/WhatsApp-Book_a_free_demo-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/962791568798?text=Hi%20Arandas%2C%20I%20found%20you%20on%20GitHub%20and%20would%20like%20a%20demo.)
+[![Follow Arandas Tech on Facebook](https://img.shields.io/badge/Facebook-Arandas_Tech-0866FF?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/1294898037048567)
 
 </div>
 
-I'm **Ehab Arandas**, a Flutter developer in Amman, Jordan, and the founder of **Arandas**. I have built apps for clients since 2021. Now we build the systems a retail business runs on: the till, the stock behind it, the online store and the apps around them.
+I'm **Ehab Arandas**, a Flutter developer in Amman, Jordan, and the founder of **Arandas Tech**. I have built apps for clients since 2021. Now we build the systems a retail business runs on: the till, the stock behind it, the online store and the apps around them.
 
 ## Products
 
@@ -25,18 +26,24 @@ One app that runs a fashion retailer: the online shop, a till for every branch, 
 - Transfers between branches, stock counts, purchase orders, dashboards and profit and loss
 - 39 staff permissions, two-step sign-in, English and Arabic with right-to-left
 
-[Try the back office](https://erp-house.vercel.app/sandbox/sign-in) (no sign-up) · [Visit the live shop](https://erp-house.vercel.app) · [Get the code](https://erp-house.vercel.app/software#pricing): Developer licence $59, Agency licence $199
+[Try the back office](https://erp-house.vercel.app/sandbox/sign-in) (no sign-up) · [Visit the live shop](https://erp-house.vercel.app) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://erp-house.vercel.app/software#pricing))
 
 `Flutter` `Dart` `GetX` `Supabase` `PostgreSQL`
 
-### Arandas POS · [source code](https://github.com/abu-arandas/POS)
+### EA POS · [live demo](https://pos-sage-one.vercel.app)
 
 Point of sale for shops, cafés and restaurants. Every sale is saved on the device first, so the till keeps selling when the internet drops.
+
+| Register | Arabic menu |
+| --- | --- |
+| [![EA POS register](assets/pos-register.png)](https://pos-sage-one.vercel.app) | [![EA POS in Arabic](assets/pos-arabic.png)](https://pos-sage-one.vercel.app) |
 
 - Barcode scanning, size and colour variants, split payments, parked orders and refunds
 - Kitchen display, tables and open tabs, and a QR menu for customers' phones
 - Receipts on thermal printers, shifts with Z-reports, stock and suppliers
 - A Windows app or a browser tab, with optional live sync between tills
+
+[Try the demo](https://pos-sage-one.vercel.app) (PIN 1234) · [Source code](https://github.com/abu-arandas/POS) · In Amman we install it for you: 14-day free trial, then 299 JOD one-off, no monthly fee. [Ask on WhatsApp](https://wa.me/962791568798?text=Hi%20Arandas%2C%20I%20would%20like%20a%20free%20EA%20POS%20trial.)
 
 `React` `TypeScript` `Electron` `Supabase`
 
@@ -55,7 +62,7 @@ Retail ERP for chains with several stores and a warehouse.
 
 A premium fashion store with its own back office: colour and size variants with their own price and stock, promotion codes with rules, and Stripe checkout. Flutter Web storefront and admin panel.
 
-[Open the store demo](https://vanguard-demo-sigma.vercel.app) (no sign-up; use the "Explore back-office (demo)" chips on the sign-in page to see the admin side)
+[Open the store demo](https://vanguard-demo-sigma.vercel.app) (no sign-up; use the "Explore back-office (demo)" chips on the sign-in page to see the admin side) · Get the code: [Regular licence $39](https://www.paypal.com/ncp/payment/PLB-NCGYHEPAJRL5) (one store you own) · [Extended licence $149](https://www.paypal.com/ncp/payment/FH5VFUK2KVTSW) (client work or SaaS)
 
 | Storefront | Back office |
 | --- | --- |
@@ -78,15 +85,6 @@ A digital-product store whose catalogue is drafted by one AI model and graded by
 
 Everything ships in Arabic and English, with right-to-left layouts.
 
-## Open-source samples
-
-| Project | What it shows |
-| --- | --- |
-| [tasks_app](https://github.com/abu-arandas/tasks_app) | Offline-first Flutter: SQLite, a sync queue with retries and backoff, a Kanban board, backup and restore |
-| [job_board](https://github.com/abu-arandas/job_board) | A Material 3 job board with search, filters and saved jobs |
-| [weather_app](https://github.com/abu-arandas/weather_app) | Forecasts for your location, hourly and 7-day, with a map |
-| [recipe_app](https://github.com/abu-arandas/recipe_app) | Recipe sharing on Supabase: sign-in, photo upload, saves and follows |
-
 ## Stack
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
@@ -103,9 +101,13 @@ Everything ships in Arabic and English, with right-to-left layouts.
 
 <div dir="rtl">
 
-**Arandas** شركة برمجيات في عمّان. نبني أنظمة نقاط البيع وإدارة الفروع والمتاجر الإلكترونية وتطبيقات الجوال، بالعربي والإنجليزي.
+**Arandas Tech** شركة برمجيات في عمّان. نبني أنظمة نقاط البيع وإدارة الفروع والمتاجر الإلكترونية وتطبيقات الجوال، بالعربي والإنجليزي.
 
 كود **Arandas ERP** لمحلات الأزياء متاح للشراء: متجر إلكتروني وكاشير ومخزون ومشتريات وحسابات في تطبيق واحد. [جرّبه وشاهد الأسعار](https://erp-house.vercel.app/software/ar).
+
+نظام الكاشير **EA POS** للمطاعم والكافيهات والمحلات: [جرّب الديمو](https://pos-sage-one.vercel.app)، ونركّبه عندك في عمّان مع تجربة مجانية 14 يوماً، ثم 299 ديناراً مرة واحدة بدون اشتراك شهري.
+
+تابعنا على [فيسبوك](https://www.facebook.com/1294898037048567).
 
 لحجز عرض تجريبي مجاني، راسلنا على [واتساب](https://wa.me/962791568798?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%88%D8%B5%D9%84%D8%AA%20%D8%A5%D9%84%D9%8A%D9%83%D9%85%20%D9%85%D9%86%20GitHub%20%D9%88%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A.).
 
