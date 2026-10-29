@@ -1,0 +1,34 @@
+name: arandas_site
+description: "The Arandas Tech website: services for agencies, our products and case studies, in Arabic and English."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+
+  # Pinned exactly, as in arandas-starter: one maintainer, and 5.0 has been a release candidate since 2023.
+  get: 4.7.3
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    # Cairo (SIL Open Font License), one font for Arabic and Latin, as in arandas-clinic.
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo.ttf

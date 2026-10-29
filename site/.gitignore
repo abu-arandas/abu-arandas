@@ -1,0 +1,9 @@
+.dart_tool/
+.flutter/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+coverage/
+*.iml
+.idea/
+.vercel
