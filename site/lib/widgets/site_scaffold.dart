@@ -10,8 +10,22 @@ import 'language_button.dart';
 /// The site's main pages, as the header and the menu list them.
 const navItems = [(Routes.agencies, 'For agencies'), (Routes.marcat, 'Marcat'), (Routes.clinic, 'Clinic'), (Routes.work, 'Work'), (Routes.contact, 'Contact')];
 
-/// Every page's frame: the header with the menu, the page's [sections] one under another, and the footer. A change
-/// of language builds the page again, so every `.tr` text is read in the new language.
+/// Builds [page] again from the top when the language changes, so every `.tr` text is read in the new language: the
+/// ones the page reads while building (a WhatsApp message it puts in a link) as well as its sections'. Every route
+/// wraps its page in one (`lib/config/routes.dart`).
+class LanguageBound extends StatelessWidget {
+  const LanguageBound(this.page, {super.key});
+
+  final Widget page;
+
+  @override
+  Widget build(BuildContext context) {
+    final site = Get.find<SiteController>();
+    return Obx(() => KeyedSubtree(key: ValueKey(site.locale.value), child: page));
+  }
+}
+
+/// Every page's frame: the header with the menu, the page's [sections] one under another, and the footer.
 class SiteScaffold extends StatelessWidget {
   const SiteScaffold({required this.current, required this.sections, super.key});
 
@@ -20,19 +34,11 @@ class SiteScaffold extends StatelessWidget {
   final List<Widget> sections;
 
   @override
-  Widget build(BuildContext context) {
-    final site = Get.find<SiteController>();
-    return Obx(
-      () => KeyedSubtree(
-        key: ValueKey(site.locale.value),
-        child: Scaffold(
-          appBar: _Header(current: current),
-          endDrawer: context.isDesktop ? null : _Menu(current: current),
-          body: SelectionArea(child: ListView(children: [...sections, const _Footer()])),
-        ),
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Scaffold(
+    appBar: _Header(current: current),
+    endDrawer: context.isDesktop ? null : _Menu(current: current),
+    body: SelectionArea(child: ListView(children: [...sections, const _Footer()])),
+  );
 }
 
 class _Logo extends StatelessWidget {
