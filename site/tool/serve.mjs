@@ -98,8 +98,9 @@ http
         return;
       }
 
+      // A resumed download names the version it has (If-Range); when the file has changed since, it gets the whole file.
       const range = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range ?? '');
-      if (range && req.method === 'GET') {
+      if (range && req.method === 'GET' && (req.headers['if-range'] ?? etag) === etag) {
         const start = range[1] === '' ? Math.max(0, stat.size - Number(range[2])) : Number(range[1]);
         const end = range[1] === '' || range[2] === '' ? stat.size - 1 : Math.min(Number(range[2]), stat.size - 1);
         if (start > end || start >= stat.size) {

@@ -1,5 +1,6 @@
 import 'package:arandas_site/config/content.dart';
 import 'package:arandas_site/config/routes.dart';
+import 'package:arandas_site/l10n/ar.dart';
 import 'package:arandas_site/views/not_found_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -37,6 +38,16 @@ void main() {
       });
     }
   }
+
+  testWidgets('a WhatsApp link a page builds is in the language on screen, after a switch too', (tester) async {
+    const message = 'Hi Arandas Tech, we are an agency and would like to talk about a Flutter project.';
+    final site = await pumpSite(tester, route: Routes.agencies);
+    site.toggleLanguage();
+    await tester.pumpAndSettle();
+    await tester.tap(find.text(ar['Send us a brief']!));
+    await tester.pumpAndSettle();
+    expect(opened.last.queryParameters['text'], ar[message]);
+  });
 
   testWidgets('an unknown address shows the not-found page', (tester) async {
     await pumpSite(tester, route: '/nowhere');

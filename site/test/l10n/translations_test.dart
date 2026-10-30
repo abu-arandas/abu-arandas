@@ -32,7 +32,8 @@ void main() {
   test('no Arabic is left over from a text that is gone', () {
     final sources = Directory('lib').listSync(recursive: true).whereType<File>().where((f) => f.path.endsWith('.dart') && !f.path.startsWith('lib/l10n'));
     final all = sources.map((f) => f.readAsStringSync().replaceAll(RegExp("'\\s*\\n\\s*'"), '')).join('\n');
-    final unused = ar.keys.where((k) => !all.contains(k.replaceAll("'", r"\'")) && !all.contains(k)).toList();
+    // A text is used when it stands as a whole string ('Stack'), not inside a longer word (`StackChips`).
+    final unused = ar.keys.where((k) => !all.contains("'${k.replaceAll("'", r"\'")}'") && !all.contains('"$k"')).toList();
     expect(unused, isEmpty, reason: 'remove these from lib/l10n/ar.dart');
   });
 

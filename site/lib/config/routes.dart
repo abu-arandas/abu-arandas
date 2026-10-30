@@ -9,6 +9,7 @@ import '../views/home_page.dart';
 import '../views/marcat_page.dart';
 import '../views/not_found_page.dart';
 import '../views/work_page.dart';
+import '../widgets/site_scaffold.dart';
 
 /// Every page the site can open, by address.
 class Routes {
@@ -41,9 +42,9 @@ class _KnownOnly extends GetMiddleware {
   RouteSettings? redirect(String? route) => route == null || Routes.isKnown(route) ? null : const RouteSettings(name: Routes.notFound);
 }
 
-GetPage<void> _page(String name, GetPageBuilder page) => GetPage<void>(name: name, page: page, middlewares: [_KnownOnly()]);
+GetPage<void> _page(String name, GetPageBuilder page) => GetPage<void>(name: name, page: () => LanguageBound(page()), middlewares: [_KnownOnly()]);
 
-final notFoundPage = GetPage<void>(name: Routes.notFound, page: () => const NotFoundPage());
+final notFoundPage = GetPage<void>(name: Routes.notFound, page: () => const LanguageBound(NotFoundPage()));
 
 final appPages = [
   _page(Routes.home, () => const HomePage()),
