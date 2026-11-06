@@ -15,20 +15,20 @@ I'm **Ehab Arandas**, a Flutter developer in Amman, Jordan, and the founder of *
 
 ## Products
 
-### Arandas ERP · [source code for sale](https://erp-house.vercel.app/software)
+### Marcat · [see it and buy the code](https://erp-house.vercel.app/software)
 
-One app that runs a fashion retailer: the online shop, a till for every branch, stock across stores, purchasing, customers and the books, on one Supabase database.
+One app that runs a clothing store: the online shop, a till for every branch, stock across stores, buying, customers and the books, on one Supabase database. English and Arabic, light and dark, on the web, Android, iPad and Windows.
 
-[![Arandas ERP: online shop, point of sale and back office](assets/arandas-erp.jpg)](https://erp-house.vercel.app/software)
+[![Marcat: online shop, point of sale and back office](assets/marcat/cover.jpg)](https://erp-house.vercel.app/software)
 
-- Online shop with live stock per size, checkout, order tracking and loyalty points
-- Point of sale with barcodes, split payments, returns and cash-up
-- Transfers between branches, stock counts, purchase orders, dashboards and profit and loss
-- 39 staff permissions, two-step sign-in, English and Arabic with right-to-left
+- Online shop with live stock per size, checkout, card payments through PayTabs, order tracking and loyalty points
+- Point of sale with barcodes, split payments, returns, cash-up and bilingual receipts with Jordan's JoFotara e-invoicing
+- Transfers between branches, stock counts, purchase orders, payroll, dashboards and profit and loss
+- 39 staff permissions, two-step sign-in, and an AI assistant that writes product descriptions in both languages
 
-[Try the back office](https://erp-house.vercel.app/sandbox/sign-in) (no sign-up) · [Visit the live shop](https://erp-house.vercel.app) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://erp-house.vercel.app/software#pricing))
+[Visit the live shop](https://erp-house.vercel.app) · [Watch the 5-minute tour](https://cdn.jsdelivr.net/gh/abu-arandas/abu-arandas@1137caa/assets/marcat/marcat-tutorial-720p.mp4) · [Book a back-office walkthrough](https://wa.me/962791568798?text=Hi%2C%20I%20would%20like%20a%20walkthrough%20of%20the%20Marcat%20back%20office.) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://erp-house.vercel.app/software#pricing))
 
-`Flutter` `Dart` `GetX` `Supabase` `PostgreSQL`
+`Flutter` `Dart` `Supabase` `PostgreSQL`
 
 ### EA POS · [live demo](https://pos-sage-one.vercel.app)
 
@@ -41,40 +41,16 @@ Point of sale for shops, cafés and restaurants. Every sale is saved on the devi
 - Barcode scanning, size and colour variants, split payments, parked orders and refunds
 - Kitchen display, tables and open tabs, and a QR menu for customers' phones
 - Receipts on thermal printers, shifts with Z-reports, stock and suppliers
-- A Windows app or a browser tab, with optional live sync between tills
 
-[Try the demo](https://pos-sage-one.vercel.app) (PIN 1234) · [Source code](https://github.com/abu-arandas/POS) · In Amman we install it for you: 14-day free trial, then 299 JOD one-off, no monthly fee. [Ask on WhatsApp](https://wa.me/962791568798?text=Hi%20Arandas%2C%20I%20would%20like%20a%20free%20EA%20POS%20trial.)
+[Try the demo](https://pos-sage-one.vercel.app) (PIN 1234) · In Amman we install it for you: 14-day free trial, then 299 JOD one-off, no monthly fee. [Ask on WhatsApp](https://wa.me/962791568798?text=Hi%20Arandas%2C%20I%20would%20like%20a%20free%20EA%20POS%20trial.)
 
 `React` `TypeScript` `Electron` `Supabase`
 
-### Arandas Retail · private, demo on request
-
-Retail ERP for chains with several stores and a warehouse.
-
-- Point of sale, a stock ledger, transfers between branches, purchase orders and blind stock counts
-- Customer loyalty, made-to-measure orders and fittings, and reports per store and per currency
-- Several companies and currencies on one installation, with each company's data kept apart by the database
-- A Flutter app for item lookup and stock counts that works offline
-
-`TypeScript` `React` `Express` `PostgreSQL` `Flutter`
-
 ### Vanguard · [live demo](https://vanguard-demo-sigma.vercel.app)
 
-A premium fashion store with its own back office: colour and size variants with their own price and stock, promotion codes with rules, and Stripe checkout. Flutter Web storefront and admin panel.
-
-[Open the store demo](https://vanguard-demo-sigma.vercel.app) (no sign-up; use the "Explore back-office (demo)" chips on the sign-in page to see the admin side) · Get the code: [Regular licence $39](https://www.paypal.com/ncp/payment/PLB-NCGYHEPAJRL5) (one store you own) · [Extended licence $149](https://www.paypal.com/ncp/payment/FH5VFUK2KVTSW) (client work or SaaS)
-
-| Storefront | Back office |
-| --- | --- |
-| ![Vanguard storefront](assets/vanguard-store.jpg) | ![Vanguard back-office dashboard](assets/vanguard-admin.jpg) |
+A lighter fashion storefront with its own admin panel, for a single brand that only sells online: colour and size variants, promotion codes and Stripe checkout. [Regular licence $39](https://www.paypal.com/ncp/payment/PLB-NCGYHEPAJRL5) · [Extended licence $149](https://www.paypal.com/ncp/payment/FH5VFUK2KVTSW)
 
 `Flutter Web` `Supabase`
-
-### Foundry · private
-
-A digital-product store whose catalogue is drafted by one AI model and graded by a different one before anything is listed, under a hard daily spending cap.
-
-`React` `Hono` `Supabase` `Anthropic, OpenAI and Gemini models`
 
 ## What we build for clients
 
@@ -103,7 +79,7 @@ Everything ships in Arabic and English, with right-to-left layouts.
 
 **Arandas Tech** شركة برمجيات في عمّان. نبني أنظمة نقاط البيع وإدارة الفروع والمتاجر الإلكترونية وتطبيقات الجوال، بالعربي والإنجليزي.
 
-كود **Arandas ERP** لمحلات الأزياء متاح للشراء: متجر إلكتروني وكاشير ومخزون ومشتريات وحسابات في تطبيق واحد. [جرّبه وشاهد الأسعار](https://erp-house.vercel.app/software/ar).
+كود **Marcat (ماركات)** لمحلات الملابس متاح للشراء: متجر إلكتروني وكاشير ومخزون ومشتريات وحسابات في تطبيق واحد. [جرّبه وشاهد الأسعار](https://erp-house.vercel.app/software/ar).
 
 نظام الكاشير **EA POS** للمطاعم والكافيهات والمحلات: [جرّب الديمو](https://pos-sage-one.vercel.app)، ونركّبه عندك في عمّان مع تجربة مجانية 14 يوماً، ثم 299 ديناراً مرة واحدة بدون اشتراك شهري.
 
