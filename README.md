@@ -26,7 +26,7 @@ One app that runs a clothing store: the online shop, a till for every branch, st
 - Transfers between branches, stock counts, purchase orders, payroll, dashboards and profit and loss
 - 39 staff permissions, two-step sign-in, and an AI assistant that writes product descriptions in both languages
 
-[Visit the live shop](https://erp-house.vercel.app) · [Watch the 5-minute tour](https://cdn.jsdelivr.net/gh/abu-arandas/abu-arandas@1137caa/assets/marcat/marcat-tutorial-720p.mp4) · [Book a back-office walkthrough](https://wa.me/962791568798?text=Hi%2C%20I%20would%20like%20a%20walkthrough%20of%20the%20Arandas%20Tech%20back%20office.) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://erp-house.vercel.app/software#pricing))
+[Visit the live shop](https://erp-house.vercel.app) · [Watch the 5-minute tour](https://cdn.jsdelivr.net/gh/abu-arandas/abu-arandas@c722defce674a5f475c49f7139459393a860e0d5/assets/retail/arandas-tech-tutorial-720p.mp4) · [Book a back-office walkthrough](https://wa.me/962791568798?text=Hi%2C%20I%20would%20like%20a%20walkthrough%20of%20the%20Arandas%20Tech%20back%20office.) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://erp-house.vercel.app/software#pricing))
 
 `Flutter` `Dart` `Supabase` `PostgreSQL`
 
