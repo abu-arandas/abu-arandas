@@ -8,7 +8,7 @@ import '../controllers/site_controller.dart';
 import 'language_button.dart';
 
 /// The site's main pages, as the header and the menu list them.
-const navItems = [(Routes.agencies, 'For agencies'), (Routes.marcat, 'Marcat'), (Routes.clinic, 'Clinic'), (Routes.work, 'Work'), (Routes.contact, 'Contact')];
+const navItems = [(Routes.agencies, 'For agencies'), (Routes.retail, 'Retail'), (Routes.clinic, 'Clinic'), (Routes.work, 'Work'), (Routes.contact, 'Contact')];
 
 /// Builds [page] again from the top when the language changes, so every `.tr` text is read in the new language: the
 /// ones the page reads while building (a WhatsApp message it puts in a link) as well as its sections'. Every route

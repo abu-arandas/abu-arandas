@@ -7,22 +7,22 @@ import '../config/routes.dart';
 import '../widgets/blocks.dart';
 import '../widgets/site_scaffold.dart';
 
-/// Marcat: the online shop, back office and point of sale, sold as source code. Its public demo is the ERP House shop.
-class MarcatPage extends StatelessWidget {
-  const MarcatPage({super.key});
+/// Arandas Tech Retail: the online shop, back office and point of sale, sold as source code. Its public demo is the ERP House shop.
+class RetailPage extends StatelessWidget {
+  const RetailPage({super.key});
 
   @override
   Widget build(BuildContext context) => SiteScaffold(
-    current: Routes.marcat,
+    current: Routes.retail,
     sections: [
       PageHero(
-        eyebrow: 'Marcat · for fashion retail',
+        eyebrow: 'Arandas Tech Retail · for fashion retail',
         title: 'Your online shop, tills and stock in one Flutter app',
-        body: 'Marcat runs a fashion retailer end to end: the website, a point of sale in every branch, stock across stores, purchasing and the books, on one Supabase database. Buy the source code and ship it under your brand.',
-        actions: Content.marcatLinks.take(2).toList(),
+        body: 'Arandas Tech Retail runs a fashion retailer end to end: the website, a point of sale in every branch, stock across stores, purchasing and the books, on one Supabase database. Buy the source code and ship it under your brand.',
+        actions: Content.retailLinks.take(2).toList(),
         image: 'assets/images/arandas-erp.jpg',
       ),
-      const PageSection(eyebrow: 'Features', title: 'One system instead of five', child: FeatureGrid(Content.marcatFeatures)),
+      const PageSection(eyebrow: 'Features', title: 'One system instead of five', child: FeatureGrid(Content.retailFeatures)),
       PageSection(
         tinted: true,
         child: GridRow(
@@ -37,7 +37,7 @@ class MarcatPage extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text('What you get with the code'.tr, style: Theme.of(context).textTheme.headlineMedium),
                   const SizedBox(height: 24),
-                  const CheckList(Content.marcatInTheBox),
+                  const CheckList(Content.retailInTheBox),
                 ],
               ),
             ),
@@ -52,9 +52,9 @@ class MarcatPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const OfferGrid(Content.marcatOffers, highlight: 1),
+            const OfferGrid(Content.retailOffers, highlight: 1),
             const SizedBox(height: 16),
-            LinkButtons([Content.marcatLinks.last]),
+            LinkButtons([Content.retailLinks.last]),
           ],
         ),
       ),
@@ -63,7 +63,7 @@ class MarcatPage extends StatelessWidget {
   );
 }
 
-/// Marcat's numbers, as large figures.
+/// Arandas Tech Retail's numbers, as large figures.
 class _Figures extends StatelessWidget {
   const _Figures();
 

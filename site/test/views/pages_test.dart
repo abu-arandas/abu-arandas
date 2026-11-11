@@ -11,11 +11,11 @@ import '../helpers.dart';
 const _pages = {
   Routes.home: 'Flutter apps for agencies, and the products to start them from',
   Routes.agencies: 'A white-label Flutter team, under your name',
-  Routes.marcat: 'Your online shop, tills and stock in one Flutter app',
+  Routes.retail: 'Your online shop, tills and stock in one Flutter app',
   Routes.clinic: 'Fewer no-shows, files in one place, and e-invoices sent for you',
   Routes.work: 'What we have built',
   Routes.contact: 'Tell us about your project',
-  '/work/marcat': 'One app for a fashion retailer’s shop, tills and books',
+  '/work/retail': 'One app for a fashion retailer’s shop, tills and books',
   '/work/clinic': 'Bookings, files and WhatsApp reminders for clinics in Jordan',
   '/work/vanguard': 'A premium fashion store with its own back office',
   '/work/starter': 'The starter every Arandas Tech app begins from',
@@ -97,7 +97,7 @@ void main() {
   });
 
   testWidgets('a licence button opens PayPal', (tester) async {
-    await pumpSite(tester, route: Routes.marcat);
+    await pumpSite(tester, route: Routes.retail);
     await tester.scrollUntilVisible(find.text('Agency licence'), 300, scrollable: find.byType(Scrollable).first);
     final buy = find.text('Buy with PayPal').first;
     await tester.ensureVisible(buy);

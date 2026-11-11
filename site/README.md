@@ -1,6 +1,6 @@
 # Arandas Tech website
 
-The studio's own site, in Arabic and English: a white-label Flutter team for agencies, the Marcat and Arandas Clinic
+The studio's own site, in Arabic and English: a white-label Flutter team for agencies, the Arandas Tech Retail and Arandas Clinic
 product pages, case studies from the project repositories, and a contact page. A Flutter web app built from
 [arandas-starter](https://github.com/abu-arandas/arandas-starter)'s structure and rules. It needs no backend and no keys.
 
@@ -8,9 +8,9 @@ product pages, case studies from the project repositories, and a contact page. A
 | --- | --- |
 | ![Home](docs/screenshots/en-home.jpg) | ![For agencies, in Arabic](docs/screenshots/ar-agencies.jpg) |
 
-| Marcat | Clinic | Phone |
+| Arandas Tech Retail | Clinic | Phone |
 | --- | --- | --- |
-| ![Marcat](docs/screenshots/en-marcat.jpg) | ![Clinic](docs/screenshots/en-clinic.jpg) | ![Phone](docs/screenshots/mobile-en-home.jpg) |
+| ![Arandas Tech Retail](docs/screenshots/en-retail.jpg) | ![Clinic](docs/screenshots/en-clinic.jpg) | ![Phone](docs/screenshots/mobile-en-home.jpg) |
 
 ## Pages
 
@@ -18,9 +18,9 @@ product pages, case studies from the project repositories, and a contact page. A
 | --- | --- |
 | `/` | Home: services, products, quality bar, recent case studies |
 | `/agencies` | The white-label Flutter team: benefits, ways to work, process, FAQ |
-| `/products/marcat` | Marcat (the ERP repository): features, what is in the box, licences with PayPal links |
+| `/products/retail` | Arandas Tech Retail (the ERP repository): features, what is in the box, licences with PayPal links |
 | `/products/clinic` | Arandas Clinic: features and the PDPL privacy measures |
-| `/work`, `/work/<slug>` | Case studies: `marcat`, `clinic`, `vanguard`, `starter`; EA POS as another product |
+| `/work`, `/work/<slug>` | Case studies: `retail`, `clinic`, `vanguard`, `starter`; EA POS as another product |
 | `/contact` | A form that opens WhatsApp with the visitor's message written, and the other links |
 
 The site opens in Arabic when the visitor's browser asks for Arabic, otherwise in English; the button in the header

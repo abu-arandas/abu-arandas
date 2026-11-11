@@ -6,8 +6,8 @@ import '../views/case_study_page.dart';
 import '../views/clinic_page.dart';
 import '../views/contact_page.dart';
 import '../views/home_page.dart';
-import '../views/marcat_page.dart';
 import '../views/not_found_page.dart';
+import '../views/retail_page.dart';
 import '../views/work_page.dart';
 import '../widgets/site_scaffold.dart';
 
@@ -15,7 +15,7 @@ import '../widgets/site_scaffold.dart';
 class Routes {
   static const home = '/';
   static const agencies = '/agencies';
-  static const marcat = '/products/marcat';
+  static const retail = '/products/retail';
   static const clinic = '/products/clinic';
   static const work = '/work';
   static const contact = '/contact';
@@ -25,7 +25,7 @@ class Routes {
   /// One case study, by its slug.
   static String caseStudy(String slug) => '$work/$slug';
 
-  static const _fixed = {home, agencies, marcat, clinic, work, contact, notFound};
+  static const _fixed = {home, agencies, retail, clinic, work, contact, notFound};
 
   /// Whether [name] is one of the site's addresses, ignoring a query and a trailing slash.
   static bool isKnown(String name) {
@@ -49,7 +49,7 @@ final notFoundPage = GetPage<void>(name: Routes.notFound, page: () => const Lang
 final appPages = [
   _page(Routes.home, () => const HomePage()),
   _page(Routes.agencies, () => const AgenciesPage()),
-  _page(Routes.marcat, () => const MarcatPage()),
+  _page(Routes.retail, () => const RetailPage()),
   _page(Routes.clinic, () => const ClinicPage()),
   _page(Routes.work, () => const WorkPage()),
   _page('${Routes.work}/:slug', () => CaseStudyPage(slug: Get.parameters['slug'] ?? '')),

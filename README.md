@@ -15,18 +15,18 @@ I'm **Ehab Arandas**, a Flutter developer in Amman, Jordan, and the founder of *
 
 ## Products
 
-### Marcat · [see it and buy the code](https://erp-house.vercel.app/software)
+### Arandas Tech Retail · [see it and buy the code](https://erp-house.vercel.app/software)
 
 One app that runs a clothing store: the online shop, a till for every branch, stock across stores, buying, customers and the books, on one Supabase database. English and Arabic, light and dark, on the web, Android, iPad and Windows.
 
-[![Marcat: online shop, point of sale and back office](assets/marcat/cover.jpg)](https://erp-house.vercel.app/software)
+[![Arandas Tech Retail: online shop, point of sale and back office](assets/retail/cover.jpg)](https://erp-house.vercel.app/software)
 
 - Online shop with live stock per size, checkout, card payments through PayTabs, order tracking and loyalty points
 - Point of sale with barcodes, split payments, returns, cash-up and bilingual receipts with Jordan's JoFotara e-invoicing
 - Transfers between branches, stock counts, purchase orders, payroll, dashboards and profit and loss
 - 39 staff permissions, two-step sign-in, and an AI assistant that writes product descriptions in both languages
 
-[Visit the live shop](https://erp-house.vercel.app) · [Watch the 5-minute tour](https://cdn.jsdelivr.net/gh/abu-arandas/abu-arandas@1137caa/assets/marcat/marcat-tutorial-720p.mp4) · [Book a back-office walkthrough](https://wa.me/962791568798?text=Hi%2C%20I%20would%20like%20a%20walkthrough%20of%20the%20Marcat%20back%20office.) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://erp-house.vercel.app/software#pricing))
+[Visit the live shop](https://erp-house.vercel.app) · [Watch the 5-minute tour](https://cdn.jsdelivr.net/gh/abu-arandas/abu-arandas@c722defce674a5f475c49f7139459393a860e0d5/assets/retail/arandas-tech-tutorial-720p.mp4) · [Book a back-office walkthrough](https://wa.me/962791568798?text=Hi%2C%20I%20would%20like%20a%20walkthrough%20of%20the%20Arandas%20Tech%20back%20office.) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://erp-house.vercel.app/software#pricing))
 
 `Flutter` `Dart` `Supabase` `PostgreSQL`
 
@@ -79,7 +79,7 @@ Everything ships in Arabic and English, with right-to-left layouts.
 
 **Arandas Tech** شركة برمجيات في عمّان. نبني أنظمة نقاط البيع وإدارة الفروع والمتاجر الإلكترونية وتطبيقات الجوال، بالعربي والإنجليزي.
 
-كود **Marcat (ماركات)** لمحلات الملابس متاح للشراء: متجر إلكتروني وكاشير ومخزون ومشتريات وحسابات في تطبيق واحد. [جرّبه وشاهد الأسعار](https://erp-house.vercel.app/software/ar).
+كود **نظام أرندس تك للتجزئة** لمحلات الملابس متاح للشراء: متجر إلكتروني وكاشير ومخزون ومشتريات وحسابات في تطبيق واحد. [جرّبه وشاهد الأسعار](https://erp-house.vercel.app/software/ar).
 
 نظام الكاشير **EA POS** للمطاعم والكافيهات والمحلات: [جرّب الديمو](https://pos-sage-one.vercel.app)، ونركّبه عندك في عمّان مع تجربة مجانية 14 يوماً، ثم 299 ديناراً مرة واحدة بدون اشتراك شهري.
 

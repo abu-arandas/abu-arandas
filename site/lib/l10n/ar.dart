@@ -9,7 +9,6 @@ const ar = <String, String>{
 
   // Header, menu and footer
   'For agencies': 'للوكالات',
-  'Marcat': 'ماركات',
   'Clinic': 'العيادة',
   'Work': 'أعمالنا',
   'Contact': 'تواصل معنا',
@@ -65,7 +64,7 @@ const ar = <String, String>{
   'White-label Flutter team': 'فريق Flutter باسمك',
   'We build your clients’ apps under your agency’s name, on your timeline, and stay invisible unless you want us in the room.':
       'نبني تطبيقات عملائك باسم وكالتك وفي مواعيدك، ونبقى خلف الكواليس إلا إذا أردت حضورنا.',
-  'Marcat for retail': 'ماركات لمحلات التجزئة',
+  'Arandas Tech Retail': 'أرندس تك للتجزئة',
   'An online shop, a back office and a point of sale in one Flutter app, sold as source code you can brand and resell.':
       'متجر إلكتروني ولوحة إدارة ونقطة بيع في تطبيق Flutter واحد، يُباع ككود مصدري تضع عليه علامتك.',
   'Arandas Clinic': 'موعد',
@@ -159,8 +158,8 @@ const ar = <String, String>{
   'Questions': 'أسئلة',
   'What agencies ask us': 'ما تسألنا عنه الوكالات',
   'Who owns the code?': 'من يملك الكود؟',
-  'You do, for the work you pay for. Our own products (the starter, Marcat and the clinic system) are licensed to you instead.':
-      'أنت، في العمل الذي تدفع ثمنه. أما منتجاتنا (القالب وماركات ونظام العيادات) فتحصل على ترخيص لاستخدامها.',
+  'You do, for the work you pay for. Our own products (the starter, the retail app and the clinic system) are licensed to you instead.':
+      'أنت، في العمل الذي تدفع ثمنه. أما منتجاتنا (القالب وأرندس تك للتجزئة ونظام العيادات) فتحصل على ترخيص لاستخدامها.',
   'Will you talk to our client?': 'هل تتواصلون مع عميلنا؟',
   'Only if you want us to. By default we talk to you, and your client never sees our name.':
       'فقط إن أردت ذلك. نتواصل معك أنت عادةً، ولا يرى عميلك اسمنا أبداً.',
@@ -182,10 +181,10 @@ const ar = <String, String>{
   'Weekly builds you can show your client': 'إصدارات أسبوعية تعرضها على عميلك',
   'Source code and store builds under your name': 'الكود وإصدارات المتاجر باسمك',
 
-  // Marcat
-  'Marcat · for fashion retail': 'ماركات · لمحلات الأزياء',
+  // Arandas Tech Retail
+  'Arandas Tech Retail · for fashion retail': 'أرندس تك للتجزئة · لمحلات الأزياء',
   'Your online shop, tills and stock in one Flutter app': 'متجرك الإلكتروني والكاشير والمخزون في تطبيق Flutter واحد',
-  'Marcat runs a fashion retailer end to end: the website, a point of sale in every branch, stock across stores, purchasing and the books, on one Supabase database. Buy the source code and ship it under your brand.': 'ماركات يدير محل الأزياء من أوله إلى آخره: الموقع ونقطة بيع في كل فرع والمخزون بين الفروع والمشتريات والحسابات، على قاعدة بيانات Supabase واحدة. اشترِ الكود المصدري وأطلقه باسمك.',
+  'Arandas Tech Retail runs a fashion retailer end to end: the website, a point of sale in every branch, stock across stores, purchasing and the books, on one Supabase database. Buy the source code and ship it under your brand.': 'أرندس تك للتجزئة يدير محل الأزياء من أوله إلى آخره: الموقع ونقطة بيع في كل فرع والمخزون بين الفروع والمشتريات والحسابات، على قاعدة بيانات Supabase واحدة. اشترِ الكود المصدري وأطلقه باسمك.',
   'Visit the demo shop': 'زُر المتجر التجريبي',
   'Try the back office': 'جرّب لوحة الإدارة',
   'Compare licences': 'قارن التراخيص',
@@ -310,8 +309,8 @@ const ar = <String, String>{
   'JoFotara e-invoices for every sale': 'فاتورة جو فوترة لكل عملية بيع',
   'One database for the shop, the stores and the books': 'قاعدة بيانات واحدة للمتجر والفروع والحسابات',
   '68% test coverage, with an integration test that walks a sale end to end': 'تغطية 68% بالاختبارات، مع اختبار تكامل يمرّ بعملية بيع كاملة',
-  'Now sold as source code, as Marcat': 'يُباع الآن ككود مصدري باسم ماركات',
-  'See Marcat': 'تعرّف على ماركات',
+  'Now sold as source code, as Arandas Tech Retail': 'يُباع الآن ككود مصدري باسم أرندس تك للتجزئة',
+  'See Arandas Tech Retail': 'تعرّف على أرندس تك للتجزئة',
   'Bookings, files and WhatsApp reminders for clinics in Jordan': 'حجوزات وملفات وتذكيرات واتساب للعيادات في الأردن',
   'Healthcare': 'الرعاية الصحية',
   'A Flutter app for small clinics, on Android, iPhone and the web, built Arabic first around Jordan’s privacy and e-invoicing laws.':
@@ -376,7 +375,7 @@ const ar = <String, String>{
   'Company: @company': 'الشركة: @company',
   'About: @type': 'الموضوع: @type',
   'White-label work for an agency': 'عمل باسم وكالة',
-  'Marcat licence': 'ترخيص ماركات',
+  'Retail licence': 'ترخيص نظام التجزئة',
   'A new app': 'تطبيق جديد',
   'Something else': 'موضوع آخر',
 
