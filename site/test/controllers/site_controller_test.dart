@@ -20,7 +20,7 @@ void main() {
   });
 
   test('only the site’s own addresses are known', () {
-    for (final name in ['/', '/agencies', '/agencies/', '/work', '/work/marcat', '/contact?from=ad']) {
+    for (final name in ['/', '/agencies', '/agencies/', '/work', '/work/retail', '/contact?from=ad']) {
       expect(Routes.isKnown(name), isTrue, reason: name);
     }
     for (final name in ['/nowhere', '/agencies/x', '/work/a/b', '/products']) {

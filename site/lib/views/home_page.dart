@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
         child: GridRow(
           gutter: 20,
           children: [
-            GridCol(lg: 6, child: CaseStudyCard(Content.caseStudy('marcat')!)),
+            GridCol(lg: 6, child: CaseStudyCard(Content.caseStudy('retail')!)),
             GridCol(lg: 6, child: CaseStudyCard(Content.caseStudy('clinic')!)),
           ],
         ),

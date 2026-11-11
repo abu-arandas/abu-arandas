@@ -22,7 +22,7 @@ class Content {
     ),
     Feature(
       Glyph.store,
-      'Marcat for retail',
+      'Arandas Tech Retail',
       'An online shop, a back office and a point of sale in one Flutter app, sold as source code you can brand and resell.',
     ),
     Feature(Glyph.calendar, 'Arandas Clinic', 'Appointments, patient files, WhatsApp reminders and JoFotara e-invoices for small clinics in Jordan.'),
@@ -100,16 +100,19 @@ class Content {
   ];
 
   static const agencyFaqs = [
-    Faq('Who owns the code?', 'You do, for the work you pay for. Our own products (the starter, Marcat and the clinic system) are licensed to you instead.'),
+    Faq(
+      'Who owns the code?',
+      'You do, for the work you pay for. Our own products (the starter, the retail app and the clinic system) are licensed to you instead.',
+    ),
     Faq('Will you talk to our client?', 'Only if you want us to. By default we talk to you, and your client never sees our name.'),
     Faq('What time zone do you work in?', 'Amman, UTC+3, which overlaps the whole working day in the Gulf and most of it in Europe.'),
     Faq('How do you charge?', 'A fixed price per project, or a monthly fee for reserved days. Ask on WhatsApp for current rates.'),
     Faq('Do you only do Flutter?', 'Flutter and Supabase are what we do best. We also build web apps in React and TypeScript.'),
   ];
 
-  // ---------------------------------------------------------------- Marcat
+  // ---------------------------------------------------------------- Arandas Tech Retail
 
-  static const marcatFeatures = [
+  static const retailFeatures = [
     Feature(Glyph.store, 'Online shop', 'Live stock per size, search and filters, checkout, order tracking, returns and loyalty points.'),
     Feature(Glyph.pos, 'Point of sale', 'A till for every branch: barcodes, split payments, returns and cash-up.'),
     Feature(Glyph.stock, 'Stock across stores', 'One stock ledger for the warehouse and every store, with transfers, counts and purchase orders.'),
@@ -118,7 +121,7 @@ class Content {
     Feature(Glyph.receipt, 'JoFotara e-invoices', 'Each sale goes to Jordan’s national e-invoicing system, with its QR code on the receipt.'),
   ];
 
-  static const marcatInTheBox = [
+  static const retailInTheBox = [
     'The full Flutter source code: shop, back office and point of sale',
     'Supabase migrations with row-level security and SQL tests',
     'A sample company to start from: five stores, 24 products and 90 days of sales',
@@ -127,7 +130,7 @@ class Content {
     'English and Arabic, light and dark, on phones, tablets and laptops',
   ];
 
-  static const marcatOffers = [
+  static const retailOffers = [
     Offer(
       name: 'Developer licence',
       price: r'$59',
@@ -150,7 +153,7 @@ class Content {
     ),
   ];
 
-  static const marcatLinks = [
+  static const retailLinks = [
     SiteLink('Visit the demo shop', 'https://erp-house.vercel.app'),
     SiteLink('Try the back office', 'https://erp-house.vercel.app/sandbox/sign-in'),
     SiteLink('Compare licences', 'https://erp-house.vercel.app/software#pricing'),
@@ -183,7 +186,7 @@ class Content {
 
   static const caseStudies = [
     CaseStudy(
-      slug: 'marcat',
+      slug: 'retail',
       title: 'One app for a fashion retailer’s shop, tills and books',
       sector: 'Retail',
       summary: 'The online shop, a till in every branch, stock, purchasing and accounts for retailers selling in Jordan and the UAE, in one Flutter project.',
@@ -198,11 +201,11 @@ class Content {
       results: [
         'One database for the shop, the stores and the books',
         '68% test coverage, with an integration test that walks a sale end to end',
-        'Now sold as source code, as Marcat',
+        'Now sold as source code, as Arandas Tech Retail',
       ],
       stack: ['Flutter', 'Dart', 'GetX', 'Supabase', 'PostgreSQL'],
       image: 'assets/images/arandas-erp.jpg',
-      links: [SiteLink('Visit the demo shop', 'https://erp-house.vercel.app'), SiteLink('See Marcat', Routes.marcat)],
+      links: [SiteLink('Visit the demo shop', 'https://erp-house.vercel.app'), SiteLink('See Arandas Tech Retail', Routes.retail)],
     ),
     CaseStudy(
       slug: 'clinic',
@@ -291,7 +294,7 @@ class Content {
 
   // ---------------------------------------------------------------- Contact
 
-  static const projectTypes = ['White-label work for an agency', 'Marcat licence', 'Arandas Clinic', 'A new app', 'Something else'];
+  static const projectTypes = ['White-label work for an agency', 'Retail licence', 'Arandas Clinic', 'A new app', 'Something else'];
 
   static final contactLinks = [
     SiteLink('WhatsApp', Brand.whatsAppLink()),
@@ -303,19 +306,19 @@ class Content {
   /// Every text above that is shown translated, for the Arabic check.
   static Iterable<String> get translatedText sync* {
     for (final (_, label) in homeStats) yield label;
-    for (final f in [...services, ...qualityBar, ...agencyBenefits, ...agencySteps, ...marcatFeatures, ...clinicFeatures]) {
+    for (final f in [...services, ...qualityBar, ...agencyBenefits, ...agencySteps, ...retailFeatures, ...clinicFeatures]) {
       yield f.title;
       yield f.body;
     }
-    for (final o in [...agencyOffers, ...marcatOffers]) {
+    for (final o in [...agencyOffers, ...retailOffers]) {
       yield* [o.name, o.price, o.summary, ...o.points];
       if (o.link != null) yield o.link!.label;
     }
     for (final q in agencyFaqs) yield* [q.question, q.answer];
     yield* agencyIncludes;
-    yield* marcatInTheBox;
+    yield* retailInTheBox;
     yield* clinicPrivacy;
-    for (final l in [...marcatLinks, ...contactLinks]) yield l.label;
+    for (final l in [...retailLinks, ...contactLinks]) yield l.label;
     for (final c in [...caseStudies, ...otherProducts]) {
       yield* [c.title, c.sector, c.summary, ...c.built, ...c.results, for (final l in c.links) l.label];
       if (c.challenge.isNotEmpty) yield c.challenge;
