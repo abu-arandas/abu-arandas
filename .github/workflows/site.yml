@@ -1,0 +1,29 @@
+name: Site
+
+on:
+  push:
+    branches: [main]
+    paths: ['site/**', '.github/workflows/site.yml']
+  pull_request:
+    paths: ['site/**', '.github/workflows/site.yml']
+
+defaults:
+  run:
+    working-directory: site
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.50.0
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: dart format --output=none --set-exit-if-changed lib tool
+      - run: flutter analyze
+      - run: tool/check_layers.sh
+      - run: node tool/check_arabic.mjs
+      - run: flutter build web --release --wasm
