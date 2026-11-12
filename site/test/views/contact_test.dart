@@ -19,17 +19,17 @@ void main() {
     await tester.enterText(find.widgetWithText(TextFormField, 'Company or agency (optional)'), 'Blue Agency');
     await tester.tap(find.text('White-label work for an agency'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Zirr Clinic').last);
+    await tester.tap(find.text('Retail licence').last);
     await tester.pumpAndSettle();
-    await tester.enterText(find.widgetWithText(TextFormField, 'Your message'), 'We need a clinic app.');
+    await tester.enterText(find.widgetWithText(TextFormField, 'Your message'), 'We want to sell our own shop app.');
     await tester.tap(find.text('Send on WhatsApp'));
     await tester.pumpAndSettle();
     final text = opened.single.queryParameters['text']!;
     expect(opened.single.host, 'wa.me');
     expect(text, contains('I am Lina.'));
     expect(text, contains('Company: Blue Agency'));
-    expect(text, contains('About: Zirr Clinic'));
-    expect(text, endsWith('We need a clinic app.'));
+    expect(text, contains('About: Retail licence'));
+    expect(text, endsWith('We want to sell our own shop app.'));
   });
 
   testWidgets('in Arabic the message is written in Arabic', (tester) async {

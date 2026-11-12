@@ -464,7 +464,7 @@ class CaseStudyCard extends StatelessWidget {
     );
   }
 
-  static const _sectorIcons = {'clinic': Icons.local_hospital_outlined, 'starter': Icons.rocket_launch_outlined};
+  static const _sectorIcons = {'starter': Icons.rocket_launch_outlined};
 }
 
 /// Names of tools as small chips. Names are not translated.

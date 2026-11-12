@@ -10,7 +10,6 @@ const ar = <String, String>{
 
   // Header, menu and footer
   'For agencies': 'للوكالات',
-  'Clinic': 'العيادة',
   'Work': 'أعمالنا',
   'Contact': 'تواصل معنا',
   'Home': 'الرئيسية',
@@ -40,8 +39,8 @@ const ar = <String, String>{
   // Home
   'Flutter and Supabase studio in Amman': 'استوديو Flutter وSupabase في عمّان',
   'Flutter apps for agencies, and the products to start them from': 'تطبيقات Flutter للوكالات، ومنتجات جاهزة تبدأ منها',
-  'We build Arabic and English apps under your agency’s name, and we make our own products for retail and clinics that you can license and ship.':
-      'نبني تطبيقات بالعربي والإنجليزي باسم وكالتك، ونصنع منتجاتنا الخاصة لمحلات التجزئة والعيادات لتشتري ترخيصها وتطلقها.',
+  'We build Arabic and English apps under your agency’s name, and we make our own products for shops that you can license and ship.':
+      'نبني تطبيقات بالعربي والإنجليزي باسم وكالتك، ونصنع منتجاتنا الخاصة لمحلات التجزئة لتشتري ترخيصها وتطلقها.',
   'Hire us for your agency': 'اعمل معنا لوكالتك',
   'See our work': 'شاهد أعمالنا',
   'building Flutter apps for clients': 'نبني تطبيقات Flutter للعملاء منذ',
@@ -49,7 +48,7 @@ const ar = <String, String>{
   'test coverage, the least CI accepts': 'تغطية بالاختبارات، أقل ما يقبله CI',
   'of tables behind row-level security': 'من الجداول محمية بأمان على مستوى الصفوف',
   'What we do': 'ماذا نفعل',
-  'Four ways to work with us': 'أربع طرق للعمل معنا',
+  'Three ways to work with us': 'ثلاث طرق للعمل معنا',
   'Our products': 'منتجاتنا',
   'Built, tested and ready to brand': 'مبنية ومختبرة وجاهزة لعلامتك',
   'Each product is a working app with its source code, tests and docs, so your next project starts at version one.':
@@ -68,9 +67,6 @@ const ar = <String, String>{
   'Zirr Retail': 'زِرّ للتجزئة',
   'An online shop, a back office and a point of sale in one Flutter app, sold as source code you can brand and resell.':
       'متجر إلكتروني ولوحة إدارة ونقطة بيع في تطبيق Flutter واحد، يُباع ككود مصدري تضع عليه علامتك.',
-  'Zirr Clinic': 'زِرّ للعيادات',
-  'Appointments, patient files, WhatsApp reminders and JoFotara e-invoices for small clinics in Jordan.':
-      'مواعيد وملفات مرضى وتذكيرات واتساب وفواتير جو فوترة للعيادات الصغيرة في الأردن.',
   'Custom apps': 'تطبيقات حسب الطلب',
   'Android, iPhone and web apps on Flutter and Supabase, from the first screen to the store listing.':
       'تطبيقات أندرويد وآيفون وويب على Flutter وSupabase، من أول شاشة حتى النشر في المتجر.',
@@ -159,8 +155,8 @@ const ar = <String, String>{
   'Questions': 'أسئلة',
   'What agencies ask us': 'ما تسألنا عنه الوكالات',
   'Who owns the code?': 'من يملك الكود؟',
-  'You do, for the work you pay for. Our own products (the starter, the retail app and the clinic system) are licensed to you instead.':
-      'أنت، في العمل الذي تدفع ثمنه. أما منتجاتنا (القالب وزِرّ للتجزئة ونظام العيادات) فتحصل على ترخيص لاستخدامها.',
+  'You do, for the work you pay for. Our own products (the starter, the retail app and the till) are licensed to you instead.':
+      'أنت، في العمل الذي تدفع ثمنه. أما منتجاتنا (القالب وزِرّ للتجزئة والكاشير) فتحصل على ترخيص لاستخدامها.',
   'Will you talk to our client?': 'هل تتواصلون مع عميلنا؟',
   'Only if you want us to. By default we talk to you, and your client never sees our name.':
       'فقط إن أردت ذلك. نتواصل معك أنت عادةً، ولا يرى عميلك اسمنا أبداً.',
@@ -244,48 +240,6 @@ const ar = <String, String>{
   'We show you the shop, the back office and the till on a call, in Arabic or English.':
       'نعرض لك المتجر ولوحة الإدارة والكاشير في مكالمة، بالعربي أو الإنجليزي.',
 
-  // Clinic
-  'Zirr Clinic · for clinics in Jordan': 'زِرّ للعيادات · في الأردن',
-  'Fewer no-shows, files in one place, and e-invoices sent for you': 'غياب أقل، وملفات في مكان واحد، وفواتير إلكترونية تُرسل عنك',
-  'Appointments, patient files and WhatsApp reminders for small clinics, on Android, iPhone and the web. Arabic first, English too, and built around Jordan’s privacy and e-invoicing laws.': 'مواعيد وملفات مرضى وتذكيرات واتساب للعيادات الصغيرة، على أندرويد وآيفون والويب. العربية أولاً والإنجليزية أيضاً، ومبني حول قوانين الخصوصية والفوترة الإلكترونية في الأردن.',
-  'Book a demo on WhatsApp': 'احجز عرضاً على واتساب',
-  'Hi Zirr team, I would like a demo of Zirr Clinic.': 'مرحباً فريق زِرّ، أودّ عرضاً تجريبياً لنظام زِرّ للعيادات.',
-  'Today': 'اليوم',
-  'Confirmed': 'مؤكَّد',
-  'Reminder sent': 'أُرسل التذكير',
-  'Booked online': 'حُجز أونلاين',
-  'Attended': 'حضر',
-  'Everything the front desk and the doctor need': 'كل ما يحتاجه الاستقبال والطبيب',
-  'Schedule': 'جدول المواعيد',
-  'A day view per doctor, booking in a few taps from free slots, and every status from booked to no-show.':
-      'عرض يومي لكل طبيب، وحجز بلمسات قليلة من الأوقات المتاحة، وكل الحالات من الحجز حتى الغياب.',
-  'Online booking': 'الحجز أونلاين',
-  'Each clinic gets its own booking page for Instagram and WhatsApp. Patients need no account.':
-      'لكل عيادة صفحة حجز خاصة لإنستغرام وواتساب، ولا يحتاج المريض إلى حساب.',
-  'WhatsApp reminders': 'تذكيرات واتساب',
-  '24 hours and 2 hours before each visit, with Confirm and Cancel buttons that update the schedule.':
-      'قبل كل موعد بـ 24 ساعة وساعتين، مع زرّي تأكيد وإلغاء يحدّثان الجدول.',
-  'Patient files': 'ملفات المرضى',
-  'Contact details, allergies, visits, clinical notes, x-rays and PDFs, payments and balance.':
-      'بيانات التواصل والحساسية والزيارات والملاحظات السريرية والأشعة وملفات PDF والدفعات والرصيد.',
-  'Roles': 'الأدوار',
-  'Owner, doctor and receptionist, each with what they need and no more. Receptionists never see clinical notes.':
-      'المالك والطبيب وموظف الاستقبال، لكلٍّ ما يحتاجه فقط. لا يرى موظف الاستقبال الملاحظات السريرية أبداً.',
-  'Every payment becomes an e-invoice and every voided payment a credit invoice, with the QR code on the receipt.':
-      'كل دفعة تصبح فاتورة إلكترونية، وكل دفعة ملغاة إشعارَ دائن، مع رمز QR على الإيصال.',
-  'Privacy': 'الخصوصية',
-  'Built for Jordan’s data protection law': 'مبني لقانون حماية البيانات الأردني',
-  'Health data is sensitive data under the PDPL (Law 24 of 2023). The app protects it in the database, not only on the screen.':
-      'البيانات الصحية بيانات حساسة وفق قانون حماية البيانات الشخصية (رقم 24 لسنة 2023). والتطبيق يحميها في قاعدة البيانات نفسها، لا على الشاشة فقط.',
-  'Patient consent and its date recorded on every new file': 'موافقة المريض وتاريخها مسجّلان في كل ملف جديد',
-  'Each clinic’s data walled off by row-level security in the database': 'بيانات كل عيادة معزولة بأمان على مستوى الصفوف في قاعدة البيانات',
-  'A log of who opened or changed each patient file': 'سجلّ لمن فتح أو عدّل كل ملف مريض',
-  'No medical details in WhatsApp messages': 'لا تفاصيل طبية في رسائل واتساب',
-  'Files in a private bucket, opened with links that expire in 10 minutes': 'الملفات في مخزن خاص، تُفتح بروابط تنتهي خلال 10 دقائق',
-  'Run a clinic, or build for clinics?': 'تدير عيادة، أو تبني أنظمة للعيادات؟',
-  'Clinics get a demo and a setup in Amman. Agencies can license the clinic system for their own clients.':
-      'العيادات تحصل على عرض وتركيب في عمّان، والوكالات تستطيع ترخيص النظام لعملائها.',
-
   // Work and case studies
   'What we have built': 'ما بنيناه',
   'Products we built and run, with the problem each one solves and what it achieved.': 'منتجات بنيناها ونشغّلها، مع المشكلة التي يحلّها كلٌّ منها وما حقّقه.',
@@ -312,21 +266,6 @@ const ar = <String, String>{
   '68% test coverage, with an integration test that walks a sale end to end': 'تغطية 68% بالاختبارات، مع اختبار تكامل يمرّ بعملية بيع كاملة',
   'Now sold as source code, as Zirr Retail': 'يُباع الآن ككود مصدري باسم زِرّ للتجزئة',
   'See Zirr Retail': 'تعرّف على زِرّ للتجزئة',
-  'Bookings, files and WhatsApp reminders for clinics in Jordan': 'حجوزات وملفات وتذكيرات واتساب للعيادات في الأردن',
-  'Healthcare': 'الرعاية الصحية',
-  'A Flutter app for small clinics, on Android, iPhone and the web, built Arabic first around Jordan’s privacy and e-invoicing laws.':
-      'تطبيق Flutter للعيادات الصغيرة على أندرويد وآيفون والويب، بالعربية أولاً ومبني حول قوانين الخصوصية والفوترة الإلكترونية في الأردن.',
-  'Small clinics lose visits to no-shows, keep patient files on paper, and now have to send every payment to JoFotara and protect health data under the PDPL.': 'تخسر العيادات الصغيرة مواعيد بسبب الغياب، وتحفظ ملفات المرضى على الورق، وعليها الآن إرسال كل دفعة إلى جو فوترة وحماية البيانات الصحية وفق قانون حماية البيانات.',
-  'A schedule per doctor and a public booking page for each clinic': 'جدول لكل طبيب وصفحة حجز عامة لكل عيادة',
-  'Reminders on WhatsApp with Confirm and Cancel buttons': 'تذكيرات على واتساب بزرّي تأكيد وإلغاء',
-  'Patient files with notes, x-rays and payments, behind three roles': 'ملفات مرضى بالملاحظات والأشعة والدفعات، خلف ثلاثة أدوار',
-  'JoFotara e-invoices built as UBL 2.1 and sent by a Supabase Edge Function': 'فواتير جو فوترة بصيغة UBL 2.1 تُرسلها دالة Supabase Edge',
-  'Consent records and an audit log of who opened each file': 'سجلّات الموافقة وسجلّ تدقيق لمن فتح كل ملف',
-  '75% test coverage, with SQL tests for booking, overlap, consent and access rules':
-      'تغطية 75% بالاختبارات، مع اختبارات SQL لقواعد الحجز والتداخل والموافقة والوصول',
-  'Clinical notes hidden from receptionists by the database itself': 'الملاحظات السريرية محجوبة عن الاستقبال من قاعدة البيانات نفسها',
-  'One codebase for three platforms': 'كود واحد لثلاث منصّات',
-  'See Zirr Clinic': 'تعرّف على زِرّ للعيادات',
   'A premium fashion store with its own back office': 'متجر أزياء راقٍ بلوحة إدارة خاصة',
   'E-commerce': 'التجارة الإلكترونية',
   'An editorial Flutter Web storefront with colour and size variants, promotion rules and Stripe checkout, and an admin panel for the team.':

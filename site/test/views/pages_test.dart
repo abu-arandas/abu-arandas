@@ -12,11 +12,9 @@ const _pages = {
   Routes.home: 'Flutter apps for agencies, and the products to start them from',
   Routes.agencies: 'A white-label Flutter team, under your name',
   Routes.retail: 'Your online shop, tills and stock in one Flutter app',
-  Routes.clinic: 'Fewer no-shows, files in one place, and e-invoices sent for you',
   Routes.work: 'What we have built',
   Routes.contact: 'Tell us about your project',
   '/work/retail': 'One app for a fashion retailer’s shop, tills and books',
-  '/work/clinic': 'Bookings, files and WhatsApp reminders for clinics in Jordan',
   '/work/vanguard': 'A premium fashion store with its own back office',
   '/work/starter': 'The starter every Zirr app begins from',
 };
@@ -53,6 +51,13 @@ void main() {
     await pumpSite(tester, route: '/nowhere');
     expect(find.byType(NotFoundPage), findsOneWidget);
   });
+
+  for (final route in ['/products/clinic', '/work/clinic']) {
+    testWidgets('$route, a page that is gone, shows the not-found page', (tester) async {
+      await pumpSite(tester, route: route);
+      expect(find.byType(NotFoundPage), findsOneWidget);
+    });
+  }
 
   testWidgets('an unknown case study shows the not-found page', (tester) async {
     await pumpSite(tester, route: '/work/nowhere');
