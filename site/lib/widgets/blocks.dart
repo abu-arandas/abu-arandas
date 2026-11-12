@@ -1,12 +1,14 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../config/brand.dart';
 import '../config/breakpoints.dart';
 import '../config/routes.dart';
+import '../config/theme.dart';
 import '../controllers/site_controller.dart';
 import '../models/content.dart';
 import 'glyph_icon.dart';
+import 'stitch_line.dart';
 
 /// The building blocks every page is made of. Text handed to them is English and is translated here.
 
@@ -55,7 +57,7 @@ class PageSection extends StatelessWidget {
   }
 }
 
-/// A short coloured label in capitals, above a heading.
+/// A short coloured label above a heading: spaced capitals in English, plain in Arabic, whose letters must join.
 class Eyebrow extends StatelessWidget {
   const Eyebrow(this.text, {super.key});
 
@@ -64,9 +66,10 @@ class Eyebrow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final arabic = Directionality.of(context) == TextDirection.rtl;
     return Text(
-      text.tr.toUpperCase(),
-      style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary, letterSpacing: 1.2, fontWeight: FontWeight.w700),
+      arabic ? text.tr : text.tr.toUpperCase(),
+      style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary, letterSpacing: arabic ? 0 : 1.1, fontWeight: FontWeight.w600),
     );
   }
 }
@@ -110,11 +113,10 @@ class PageHero extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     if (eyebrow != null) ...[Eyebrow(eyebrow!), const SizedBox(height: 12)],
-                    Text(
-                      title.tr,
-                      style: context.responsive(theme.textTheme.headlineMedium, lg: theme.textTheme.displaySmall)?.copyWith(fontWeight: FontWeight.w800),
-                    ),
-                    const SizedBox(height: 20),
+                    Text(title.tr, style: context.responsive(theme.textTheme.headlineMedium, lg: theme.textTheme.displaySmall)),
+                    const SizedBox(height: 14),
+                    const StitchLine(),
+                    const SizedBox(height: 18),
                     Text(body.tr, style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant, height: 1.6)),
                     if (actions.isNotEmpty) ...[const SizedBox(height: 32), LinkButtons(actions)],
                   ],
@@ -152,7 +154,7 @@ class LinkButtons extends StatelessWidget {
   }
 }
 
-/// A picture from assets/images in a rounded frame with a soft shadow.
+/// A picture from assets/images in a frame with continuous corners and a soft, layered shadow tinted with ink.
 class Screenshot extends StatelessWidget {
   const Screenshot(this.asset, {this.label, super.key});
 
@@ -164,13 +166,16 @@ class Screenshot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    const ink = Color(0xFF18202E);
     return DecoratedBox(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: scheme.outlineVariant),
-        boxShadow: [BoxShadow(color: scheme.shadow.withValues(alpha: 0.12), blurRadius: 32, offset: const Offset(0, 12))],
+      decoration: ShapeDecoration(
+        shape: AppTheme.shape(16, side: BorderSide(color: scheme.outlineVariant)),
+        shadows: [
+          BoxShadow(color: ink.withValues(alpha: 0.06), blurRadius: 4, offset: const Offset(0, 1)),
+          BoxShadow(color: ink.withValues(alpha: 0.1), blurRadius: 32, offset: const Offset(0, 14)),
+        ],
       ),
-      child: ClipRRect(
+      child: ClipRSuperellipse(
         borderRadius: BorderRadius.circular(16),
         child: Image.asset(asset, fit: BoxFit.cover, semanticLabel: label?.tr),
       ),
@@ -227,7 +232,7 @@ class FeatureCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 16),
-            Text(feature.title.tr, style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
+            Text(feature.title.tr, style: theme.textTheme.titleMedium),
             const SizedBox(height: 8),
             Text(feature.body.tr, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
           ],
@@ -306,8 +311,8 @@ class _OfferCard extends StatelessWidget {
         offer.link ?? SiteLink('Ask on WhatsApp', Brand.whatsAppLink('Hi Zirr team, I would like to know more about: @name'.trParams({'name': offer.name.tr})));
     final site = Get.find<SiteController>();
     return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+      shape: AppTheme.shape(
+        16,
         side: BorderSide(color: highlighted ? scheme.primary : scheme.outlineVariant, width: highlighted ? 2 : 1),
       ),
       child: Padding(
@@ -319,7 +324,11 @@ class _OfferCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               offer.price.tr,
-              style: theme.textTheme.headlineSmall?.copyWith(color: scheme.primary, fontWeight: FontWeight.w800),
+              style: theme.textTheme.headlineSmall?.copyWith(
+                color: scheme.primary,
+                fontWeight: FontWeight.w700,
+                fontFeatures: const [FontFeature.tabularFigures()],
+              ),
             ),
             const SizedBox(height: 8),
             Text(offer.summary.tr, style: theme.textTheme.bodyMedium?.copyWith(color: scheme.onSurfaceVariant)),
@@ -359,7 +368,7 @@ class CallToAction extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 48),
       child: GridContainer(
         child: DecoratedBox(
-          decoration: BoxDecoration(color: scheme.primary, borderRadius: BorderRadius.circular(24)),
+          decoration: ShapeDecoration(color: scheme.primary, shape: AppTheme.shape(24)),
           child: Padding(
             padding: EdgeInsets.all(context.responsive<double>(28, lg: 56)),
             child: GridRow(
@@ -443,7 +452,7 @@ class CaseStudyCard extends StatelessWidget {
                 children: [
                   Eyebrow(study.sector),
                   const SizedBox(height: 8),
-                  Text(study.title.tr, style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
+                  Text(study.title.tr, style: theme.textTheme.titleMedium),
                   const SizedBox(height: 8),
                   Text(study.summary.tr, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
                   const SizedBox(height: 16),

@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
+import '../config/theme.dart';
 import '../models/content.dart';
 
 /// The Material icon for each [Glyph].
@@ -24,7 +25,7 @@ const glyphIcons = {
   Glyph.handshake: Icons.handshake_outlined,
 };
 
-/// A [Glyph] in a tinted rounded square.
+/// A [Glyph] in a tinted square with continuous corners.
 class GlyphIcon extends StatelessWidget {
   const GlyphIcon(this.glyph, {super.key});
 
@@ -34,7 +35,7 @@ class GlyphIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     return DecoratedBox(
-      decoration: BoxDecoration(color: scheme.primaryContainer, borderRadius: BorderRadius.circular(12)),
+      decoration: ShapeDecoration(color: scheme.primaryContainer, shape: AppTheme.shape(12)),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Icon(glyphIcons[glyph], color: scheme.onPrimaryContainer),

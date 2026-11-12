@@ -3,7 +3,7 @@
 # holds this version), then builds into build/web, which vercel.json serves. The site needs no keys.
 set -euo pipefail
 
-FLUTTER_VERSION=3.47.7
+FLUTTER_VERSION=3.50.0
 FLUTTER_HOME="$PWD/.flutter"
 
 if [ "$(cat "$FLUTTER_HOME/version" 2>/dev/null)" != "$FLUTTER_VERSION" ]; then

@@ -38,7 +38,7 @@ switches. Any other address shows the not-found page.
 
 ## Run and check
 
-Flutter 3.47.7, the version CI and `tool/vercel_build.sh` use.
+Flutter 3.50.0, the version CI and `tool/vercel_build.sh` use.
 
 ```bash
 flutter pub get
