@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
         title: 'Flutter apps for agencies, and the products to start them from',
         body: 'We build Arabic and English apps under your agency’s name, and we make our own products for retail and clinics that you can license and ship.',
         actions: [SiteLink('Hire us for your agency', Routes.agencies), SiteLink('See our work', Routes.work)],
-        image: 'assets/images/arandas-erp.jpg',
+        image: 'assets/images/zirr-retail.jpg',
       ),
       const _Stats(),
       const PageSection(eyebrow: 'What we do', title: 'Four ways to work with us', child: FeatureGrid(Content.services, columns: 4)),

@@ -59,7 +59,7 @@ class _ContactFormState extends State<ContactForm> {
   /// The WhatsApp message the form describes, in the site's current language.
   String get message {
     final lines = [
-      'Hi Arandas Tech, I am @name.'.trParams({'name': _name.text.trim()}),
+      'Hi Zirr team, I am @name.'.trParams({'name': _name.text.trim()}),
       if (_company.text.trim().isNotEmpty) 'Company: @company'.trParams({'company': _company.text.trim()}),
       'About: @type'.trParams({'type': _type.tr}),
       '',

@@ -18,7 +18,7 @@ const _pages = {
   '/work/retail': 'One app for a fashion retailer’s shop, tills and books',
   '/work/clinic': 'Bookings, files and WhatsApp reminders for clinics in Jordan',
   '/work/vanguard': 'A premium fashion store with its own back office',
-  '/work/starter': 'The starter every Arandas Tech app begins from',
+  '/work/starter': 'The starter every Zirr app begins from',
 };
 
 void main() {
@@ -40,7 +40,7 @@ void main() {
   }
 
   testWidgets('a WhatsApp link a page builds is in the language on screen, after a switch too', (tester) async {
-    const message = 'Hi Arandas Tech, we are an agency and would like to talk about a Flutter project.';
+    const message = 'Hi Zirr team, we are an agency and would like to talk about a Flutter project.';
     final site = await pumpSite(tester, route: Routes.agencies);
     site.toggleLanguage();
     await tester.pumpAndSettle();

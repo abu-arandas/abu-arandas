@@ -1,52 +1,55 @@
 <div align="center">
 
-# Arandas Tech
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/brand/zirr-on-dark.png">
+  <img src="assets/brand/zirr.png" alt="Zirr" width="274">
+</picture>
 
 **Software that shops and brands run on**
 
 Point of sale · Retail ERP · Online stores · Flutter apps · Arabic and English
 
-[![Book a free demo on WhatsApp](https://img.shields.io/badge/WhatsApp-Book_a_free_demo-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/962791568798?text=Hi%20Arandas%2C%20I%20found%20you%20on%20GitHub%20and%20would%20like%20a%20demo.)
-[![Follow Arandas Tech on Facebook](https://img.shields.io/badge/Facebook-Arandas_Tech-0866FF?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/1294898037048567)
+[![Book a free demo on WhatsApp](https://img.shields.io/badge/WhatsApp-Book_a_free_demo-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/962791568798?text=Hi%20Zirr%20team%2C%20I%20found%20you%20on%20GitHub%20and%20would%20like%20a%20demo.)
+[![Follow Zirr on Facebook](https://img.shields.io/badge/Facebook-Zirr-0866FF?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/1294898037048567)
 
 </div>
 
-I'm **Ehab Arandas**, a Flutter developer in Amman, Jordan, and the founder of **Arandas Tech**. I have built apps for clients since 2021. Now we build the systems a retail business runs on: the till, the stock behind it, the online store and the apps around them.
+I'm **Ehab Arandas**, a Flutter developer in Amman, Jordan, and the founder of **Zirr** (زِرّ, "button": the one on a shirt and the one on a screen). I have built apps for clients since 2021. Now we build the systems a retail business runs on: the till, the stock behind it, the online store and the apps around them.
 
 ## Products
 
-### Arandas Tech Retail · [see it and buy the code](https://erp-house.vercel.app/software)
+### Zirr Retail · [see it and buy the code](https://erp-house.vercel.app/software)
 
 One app that runs a clothing store: the online shop, a till for every branch, stock across stores, buying, customers and the books, on one Supabase database. English and Arabic, light and dark, on the web, Android, iPad and Windows.
 
-[![Arandas Tech Retail: online shop, point of sale and back office](assets/retail/cover.jpg)](https://erp-house.vercel.app/software)
+[![Zirr Retail: online shop, point of sale and back office](assets/retail/cover.jpg)](https://erp-house.vercel.app/software)
 
 - Online shop with live stock per size, checkout, card payments through PayTabs, order tracking and loyalty points
 - Point of sale with barcodes, split payments, returns, cash-up and bilingual receipts with Jordan's JoFotara e-invoicing
 - Transfers between branches, stock counts, purchase orders, payroll, dashboards and profit and loss
 - 39 staff permissions, two-step sign-in, and an AI assistant that writes product descriptions in both languages
 
-[Visit the live shop](https://erp-house.vercel.app) · [Watch the 5-minute tour](https://cdn.jsdelivr.net/gh/abu-arandas/abu-arandas@c722defce674a5f475c49f7139459393a860e0d5/assets/retail/arandas-tech-tutorial-720p.mp4) · [Book a back-office walkthrough](https://wa.me/962791568798?text=Hi%2C%20I%20would%20like%20a%20walkthrough%20of%20the%20Arandas%20Tech%20back%20office.) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://erp-house.vercel.app/software#pricing))
+[Visit the live shop](https://erp-house.vercel.app) · [Book a back-office walkthrough](https://wa.me/962791568798?text=Hi%2C%20I%20would%20like%20a%20walkthrough%20of%20the%20Zirr%20Retail%20back%20office.) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://erp-house.vercel.app/software#pricing))
 
 `Flutter` `Dart` `Supabase` `PostgreSQL`
 
-### EA POS · [live demo](https://pos-sage-one.vercel.app)
+### Zirr POS · [live demo](https://pos-sage-one.vercel.app)
 
 Point of sale for shops, cafés and restaurants. Every sale is saved on the device first, so the till keeps selling when the internet drops.
 
 | Register | Arabic menu |
 | --- | --- |
-| [![EA POS register](assets/pos-register.png)](https://pos-sage-one.vercel.app) | [![EA POS in Arabic](assets/pos-arabic.png)](https://pos-sage-one.vercel.app) |
+| [![Zirr POS register](assets/pos-register.png)](https://pos-sage-one.vercel.app) | [![Zirr POS in Arabic](assets/pos-arabic.png)](https://pos-sage-one.vercel.app) |
 
 - Barcode scanning, size and colour variants, split payments, parked orders and refunds
 - Kitchen display, tables and open tabs, and a QR menu for customers' phones
 - Receipts on thermal printers, shifts with Z-reports, stock and suppliers
 
-[Try the demo](https://pos-sage-one.vercel.app) (PIN 1234) · In Amman we install it for you: 14-day free trial, then 299 JOD one-off, no monthly fee. [Ask on WhatsApp](https://wa.me/962791568798?text=Hi%20Arandas%2C%20I%20would%20like%20a%20free%20EA%20POS%20trial.)
+[Try the demo](https://pos-sage-one.vercel.app) (PIN 1234) · In Amman we install it for you: 14-day free trial, then 299 JOD one-off, no monthly fee. [Ask on WhatsApp](https://wa.me/962791568798?text=Hi%20Zirr%20team%2C%20I%20would%20like%20a%20free%20Zirr%20POS%20trial.)
 
 `React` `TypeScript` `Electron` `Supabase`
 
-### Vanguard · [live demo](https://vanguard-demo-sigma.vercel.app)
+### Zirr Boutique · [live demo](https://vanguard-demo-sigma.vercel.app)
 
 A lighter fashion storefront with its own admin panel, for a single brand that only sells online: colour and size variants, promotion codes and Stripe checkout. [Regular licence $39](https://www.paypal.com/ncp/payment/PLB-NCGYHEPAJRL5) · [Extended licence $149](https://www.paypal.com/ncp/payment/FH5VFUK2KVTSW)
 
@@ -77,11 +80,11 @@ Everything ships in Arabic and English, with right-to-left layouts.
 
 <div dir="rtl">
 
-**Arandas Tech** شركة برمجيات في عمّان. نبني أنظمة نقاط البيع وإدارة الفروع والمتاجر الإلكترونية وتطبيقات الجوال، بالعربي والإنجليزي.
+**زِرّ (Zirr)** شركة برمجيات في عمّان. نبني أنظمة نقاط البيع وإدارة الفروع والمتاجر الإلكترونية وتطبيقات الجوال، بالعربي والإنجليزي.
 
-كود **نظام أرندس تك للتجزئة** لمحلات الملابس متاح للشراء: متجر إلكتروني وكاشير ومخزون ومشتريات وحسابات في تطبيق واحد. [جرّبه وشاهد الأسعار](https://erp-house.vercel.app/software/ar).
+كود **زِرّ للتجزئة** لمحلات الملابس متاح للشراء: متجر إلكتروني وكاشير ومخزون ومشتريات وحسابات في تطبيق واحد. [جرّبه وشاهد الأسعار](https://erp-house.vercel.app/software/ar).
 
-نظام الكاشير **EA POS** للمطاعم والكافيهات والمحلات: [جرّب الديمو](https://pos-sage-one.vercel.app)، ونركّبه عندك في عمّان مع تجربة مجانية 14 يوماً، ثم 299 ديناراً مرة واحدة بدون اشتراك شهري.
+نظام الكاشير **زِرّ كاشير** للمطاعم والكافيهات والمحلات: [جرّب الديمو](https://pos-sage-one.vercel.app)، ونركّبه عندك في عمّان مع تجربة مجانية 14 يوماً، ثم 299 ديناراً مرة واحدة بدون اشتراك شهري.
 
 تابعنا على [فيسبوك](https://www.facebook.com/1294898037048567).
 

@@ -9,7 +9,7 @@ import '../models/content.dart';
 import '../widgets/blocks.dart';
 import '../widgets/site_scaffold.dart';
 
-/// Arandas Clinic: appointments, patient files, reminders and e-invoices for small clinics in Jordan.
+/// Zirr Clinic: appointments, patient files, reminders and e-invoices for small clinics in Jordan.
 class ClinicPage extends StatelessWidget {
   const ClinicPage({super.key});
 
@@ -18,10 +18,10 @@ class ClinicPage extends StatelessWidget {
     current: Routes.clinic,
     sections: [
       PageHero(
-        eyebrow: 'Arandas Clinic · for clinics in Jordan',
+        eyebrow: 'Zirr Clinic · for clinics in Jordan',
         title: 'Fewer no-shows, files in one place, and e-invoices sent for you',
         body: 'Appointments, patient files and WhatsApp reminders for small clinics, on Android, iPhone and the web. Arabic first, English too, and built around Jordan’s privacy and e-invoicing laws.',
-        actions: [SiteLink('Book a demo on WhatsApp', Brand.whatsAppLink('Hi Arandas Tech, I would like a demo of Arandas Clinic.'.tr))],
+        actions: [SiteLink('Book a demo on WhatsApp', Brand.whatsAppLink('Hi Zirr team, I would like a demo of Zirr Clinic.'.tr))],
         aside: const _Today(),
       ),
       const PageSection(eyebrow: 'Features', title: 'Everything the front desk and the doctor need', child: FeatureGrid(Content.clinicFeatures)),

@@ -20,12 +20,8 @@ class Content {
       'White-label Flutter team',
       'We build your clients’ apps under your agency’s name, on your timeline, and stay invisible unless you want us in the room.',
     ),
-    Feature(
-      Glyph.store,
-      'Arandas Tech Retail',
-      'An online shop, a back office and a point of sale in one Flutter app, sold as source code you can brand and resell.',
-    ),
-    Feature(Glyph.calendar, 'Arandas Clinic', 'Appointments, patient files, WhatsApp reminders and JoFotara e-invoices for small clinics in Jordan.'),
+    Feature(Glyph.store, 'Zirr Retail', 'An online shop, a back office and a point of sale in one Flutter app, sold as source code you can brand and resell.'),
+    Feature(Glyph.calendar, 'Zirr Clinic', 'Appointments, patient files, WhatsApp reminders and JoFotara e-invoices for small clinics in Jordan.'),
     Feature(Glyph.phone, 'Custom apps', 'Android, iPhone and web apps on Flutter and Supabase, from the first screen to the store listing.'),
   ];
 
@@ -110,7 +106,7 @@ class Content {
     Faq('Do you only do Flutter?', 'Flutter and Supabase are what we do best. We also build web apps in React and TypeScript.'),
   ];
 
-  // ---------------------------------------------------------------- Arandas Tech Retail
+  // ---------------------------------------------------------------- Zirr Retail
 
   static const retailFeatures = [
     Feature(Glyph.store, 'Online shop', 'Live stock per size, search and filters, checkout, order tracking, returns and loyalty points.'),
@@ -201,11 +197,11 @@ class Content {
       results: [
         'One database for the shop, the stores and the books',
         '68% test coverage, with an integration test that walks a sale end to end',
-        'Now sold as source code, as Arandas Tech Retail',
+        'Now sold as source code, as Zirr Retail',
       ],
       stack: ['Flutter', 'Dart', 'GetX', 'Supabase', 'PostgreSQL'],
-      image: 'assets/images/arandas-erp.jpg',
-      links: [SiteLink('Visit the demo shop', 'https://erp-house.vercel.app'), SiteLink('See Arandas Tech Retail', Routes.retail)],
+      image: 'assets/images/zirr-retail.jpg',
+      links: [SiteLink('Visit the demo shop', 'https://erp-house.vercel.app'), SiteLink('See Zirr Retail', Routes.retail)],
     ),
     CaseStudy(
       slug: 'clinic',
@@ -226,7 +222,7 @@ class Content {
         'One codebase for three platforms',
       ],
       stack: ['Flutter', 'Supabase', 'Edge Functions', 'WhatsApp Cloud API', 'JoFotara'],
-      links: [SiteLink('See Arandas Clinic', Routes.clinic)],
+      links: [SiteLink('See Zirr Clinic', Routes.clinic)],
     ),
     CaseStudy(
       slug: 'vanguard',
@@ -243,12 +239,12 @@ class Content {
       ],
       results: ['A public demo anyone can open', 'Services kept free of the UI framework, so the logic is tested on its own', '64% test coverage'],
       stack: ['Flutter Web', 'Supabase', 'Stripe'],
-      image: 'assets/images/vanguard-store.jpg',
+      image: 'assets/images/zirr-boutique.jpg',
       links: [SiteLink('Open the store demo', 'https://vanguard-demo-sigma.vercel.app')],
     ),
     CaseStudy(
       slug: 'starter',
-      title: 'The starter every Arandas Tech app begins from',
+      title: 'The starter every Zirr app begins from',
       sector: 'Internal tooling',
       summary: 'A Flutter and Supabase template with one folder structure, house lint rules, CI, row-level security tests and a one-file rebrand.',
       challenge: 'Every new project spent its first weeks rebuilding sign-in, languages, layout and CI, and each one did it a little differently.',
@@ -273,7 +269,7 @@ class Content {
   static const otherProducts = [
     CaseStudy(
       slug: 'pos',
-      title: 'EA POS',
+      title: 'Zirr POS',
       sector: 'Point of sale',
       summary: 'A point of sale for shops, cafés and restaurants that saves every sale on the device first, so the till keeps selling when the internet drops.',
       challenge: '',
@@ -294,7 +290,7 @@ class Content {
 
   // ---------------------------------------------------------------- Contact
 
-  static const projectTypes = ['White-label work for an agency', 'Retail licence', 'Arandas Clinic', 'A new app', 'Something else'];
+  static const projectTypes = ['White-label work for an agency', 'Retail licence', 'Zirr Clinic', 'A new app', 'Something else'];
 
   static final contactLinks = [
     SiteLink('WhatsApp', Brand.whatsAppLink()),
