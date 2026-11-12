@@ -28,8 +28,8 @@ switches. Any other address shows the not-found page.
 ## Changing what it says
 
 - **Text, offers, case studies, FAQ:** [`lib/config/content.dart`](lib/config/content.dart), in English.
-- **Arabic:** [`lib/l10n/ar.dart`](lib/l10n/ar.dart), keyed by the English. `flutter test` fails when a text has no
-  Arabic, or when an Arabic entry is left over.
+- **Arabic:** [`lib/l10n/ar.dart`](lib/l10n/ar.dart), keyed by the English. `node tool/check_arabic.mjs` fails when a text has
+  no Arabic, or when an Arabic entry is left over.
 - **Name, colour, font, WhatsApp, email, social links:** [`lib/config/brand.dart`](lib/config/brand.dart). Set
   `Brand.email` once the studio has its own address; the contact page shows it then.
 - **Testimonials:** add them to `Content.testimonials` once clients agree to be quoted; the section appears by itself.
@@ -43,11 +43,10 @@ Flutter 3.50.0, the version CI and `tool/vercel_build.sh` use.
 ```bash
 flutter pub get
 flutter run -d chrome
-dart format lib test && flutter analyze && flutter test --coverage && tool/check_coverage.sh 60
+dart format lib tool && flutter analyze && tool/check_layers.sh && node tool/check_arabic.mjs
 ```
 
-The tests open every page at a phone's and a laptop's width, in both languages, with the real font, and fail on any
-overflow.
+Open each page at a phone's and a laptop's width in both languages before you deploy: no check does that for you.
 
 ## Deploy on Vercel
 

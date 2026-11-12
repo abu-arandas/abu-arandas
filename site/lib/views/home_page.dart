@@ -28,8 +28,8 @@ class HomePage extends StatelessWidget {
       PageSection(
         tinted: true,
         eyebrow: 'Our products',
-        title: 'Built, tested and ready to brand',
-        subtitle: 'Each product is a working app with its source code, tests and docs, so your next project starts at version one.',
+        title: 'Built, checked and ready to brand',
+        subtitle: 'Each product is a working app with its source code, database checks and docs, so your next project starts at version one.',
         child: GridRow(
           gutter: 20,
           children: [

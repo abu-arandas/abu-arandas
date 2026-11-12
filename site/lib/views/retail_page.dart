@@ -71,9 +71,9 @@ class _Figures extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final figures = [
-      ('68%', 'test coverage, with an end-to-end sale in an integration test'.tr),
+      ('100%', 'of tables behind row-level security, with SQL tests'.tr),
       ('39', 'staff permissions, so each role sees only its own pages'.tr),
-      ('2', 'currencies and countries in the sample shop, Jordan and the UAE'.tr),
+      ('2', 'currencies and countries, Jordan and the UAE'.tr),
       ('3', 'apps in one: the shop, the back office and the till'.tr),
     ];
     return GridRow(

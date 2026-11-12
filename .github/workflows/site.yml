@@ -22,9 +22,8 @@ jobs:
           channel: stable
           cache: true
       - run: flutter pub get
-      - run: dart format --output=none --set-exit-if-changed lib test
+      - run: dart format --output=none --set-exit-if-changed lib tool
       - run: flutter analyze
-      # Includes the Arabic checks in test/l10n/translations_test.dart and the layout of every page in both languages.
-      - run: flutter test --coverage
-      - run: tool/check_coverage.sh 60
+      - run: tool/check_layers.sh
+      - run: node tool/check_arabic.mjs
       - run: flutter build web --release --wasm

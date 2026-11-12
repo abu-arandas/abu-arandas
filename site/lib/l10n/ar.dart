@@ -1,7 +1,7 @@
 import '../config/brand.dart';
 
 /// Arabic for every English text the site shows. English text is its own key (`'Work'.tr`), so a missing entry
-/// shows English rather than nothing; test/l10n/translations_test.dart fails the build when one is missing.
+/// shows English rather than nothing; `node tool/check_arabic.mjs` fails the build when one is missing.
 const ar = <String, String>{
   Brand.name: Brand.nameAr,
   Brand.wordmark: Brand.nameAr,
@@ -45,14 +45,14 @@ const ar = <String, String>{
   'See our work': 'شاهد أعمالنا',
   'building Flutter apps for clients': 'نبني تطبيقات Flutter للعملاء منذ',
   'languages in every build, Arabic and English': 'لغتان في كل إصدار، العربية والإنجليزية',
-  'test coverage, the least CI accepts': 'تغطية بالاختبارات، أقل ما يقبله CI',
+  'analyzer issues, the only number CI accepts': 'مشكلة في التحليل، الرقم الوحيد الذي يقبله CI',
   'of tables behind row-level security': 'من الجداول محمية بأمان على مستوى الصفوف',
   'What we do': 'ماذا نفعل',
   'Three ways to work with us': 'ثلاث طرق للعمل معنا',
   'Our products': 'منتجاتنا',
-  'Built, tested and ready to brand': 'مبنية ومختبرة وجاهزة لعلامتك',
-  'Each product is a working app with its source code, tests and docs, so your next project starts at version one.':
-      'كل منتج تطبيق يعمل، مع كوده المصدري واختباراته ووثائقه، فيبدأ مشروعك القادم من الإصدار الأول.',
+  'Built, checked and ready to brand': 'مبنية ومفحوصة وجاهزة لعلامتك',
+  'Each product is a working app with its source code, database checks and docs, so your next project starts at version one.':
+      'كل منتج تطبيق يعمل، مع كوده المصدري وفحوص قاعدة بياناته ووثائقه، فيبدأ مشروعك القادم من الإصدار الأول.',
   'Our quality bar': 'معايير الجودة لدينا',
   'What every project ships with': 'ما يأتي مع كل مشروع',
   'The same rules hold for our own products and for the apps we build for you.': 'القواعد نفسها تسري على منتجاتنا وعلى التطبيقات التي نبنيها لك.',
@@ -74,15 +74,15 @@ const ar = <String, String>{
   // Quality bar
   'Zero analyzer issues': 'صفر ملاحظات من المحلّل',
   'Strict lint rules on every project, checked by CI on every pull request.': 'قواعد صارمة لجودة الكود في كل مشروع، يفحصها CI مع كل طلب دمج.',
-  'Tested code': 'كود مختبَر',
-  'Unit, widget and integration tests, with at least 60% line coverage before anything merges.':
-      'اختبارات وحدات وواجهات وتكامل، بتغطية لا تقل عن 60% قبل دمج أي تغيير.',
+  'Checked on every change': 'مفحوص عند كل تغيير',
+  'CI checks the format, the analyzer, the folder rules, the Arabic and the database rules before anything merges.':
+      'يفحص CI التنسيق والمحلّل وقواعد المجلدات والعربية وقواعد قاعدة البيانات قبل دمج أي تغيير.',
   'Secure by default': 'آمن من البداية',
   'Row-level security on every Supabase table, with SQL tests that fail when a policy leaks.':
       'أمان على مستوى الصفوف في كل جدول Supabase، مع اختبارات SQL تفشل إذا سرّبت سياسة أي بيانات.',
   'Arabic and English': 'العربية والإنجليزية',
-  'Right-to-left layouts and a test that fails the build when a screen misses its Arabic.':
-      'تصميم من اليمين إلى اليسار، واختبار يوقف البناء إذا نقصت شاشةً ترجمتُها العربية.',
+  'Right-to-left layouts and a check that fails the build when a screen misses its Arabic.':
+      'تصميم من اليمين إلى اليسار، وفحص يوقف البناء إذا نقصت شاشةً ترجمتُها العربية.',
   'One-file rebrand': 'تغيير العلامة من ملف واحد',
   'Name, colours and font live in one file, so a product ships under your brand in an afternoon.':
       'الاسم والألوان والخط في ملف واحد، فيصدر المنتج باسمك خلال ساعات.',
@@ -112,11 +112,11 @@ const ar = <String, String>{
   'Right-to-left layouts, Arabic fonts and Gulf and Levant copy that reads like it was written in Arabic.':
       'تصميم من اليمين إلى اليسار وخطوط عربية ونصوص خليجية وشامية تُقرأ كأنها كُتبت بالعربية أصلاً.',
   'Jordan compliance built in': 'متوافق مع الأنظمة الأردنية',
-  'JoFotara e-invoicing and the personal data protection law (PDPL), already built and tested in our products.':
-      'الفوترة الإلكترونية جو فوترة وقانون حماية البيانات الشخصية، مبنيّان ومختبَران في منتجاتنا.',
+  'JoFotara e-invoicing and the personal data protection law (PDPL), already built into our products.':
+      'الفوترة الإلكترونية جو فوترة وقانون حماية البيانات الشخصية، مبنيّان في منتجاتنا.',
   'A head start': 'بداية متقدّمة',
-  'Every project starts from our tested starter: sign-in, roles, languages, CI and docs on day one.':
-      'يبدأ كل مشروع من قالبنا المختبَر: تسجيل الدخول والصلاحيات واللغات وCI والوثائق من اليوم الأول.',
+  'Every project starts from our starter: sign-in, roles, languages, CI and docs on day one.':
+      'يبدأ كل مشروع من قالبنا: تسجيل الدخول والصلاحيات واللغات وCI والوثائق من اليوم الأول.',
   'Ways to work': 'طرق العمل',
   'Pick how we work with you': 'اختر طريقة عملنا معك',
   'Prices depend on the scope. Send a brief and you get a written quote within two working days.':
@@ -182,7 +182,7 @@ const ar = <String, String>{
   'Zirr Retail · for fashion retail': 'زِرّ للتجزئة · لمحلات الأزياء',
   'Your online shop, tills and stock in one Flutter app': 'متجرك الإلكتروني والكاشير والمخزون في تطبيق Flutter واحد',
   'Zirr Retail runs a fashion retailer end to end: the website, a point of sale in every branch, stock across stores, purchasing and the books, on one Supabase database. Buy the source code and ship it under your brand.': 'زِرّ للتجزئة يدير محل الأزياء من أوله إلى آخره: الموقع ونقطة بيع في كل فرع والمخزون بين الفروع والمشتريات والحسابات، على قاعدة بيانات Supabase واحدة. اشترِ الكود المصدري وأطلقه باسمك.',
-  'Visit the demo shop': 'زُر المتجر التجريبي',
+  'Visit the live shop': 'زُر المتجر المباشر',
   'Try the back office': 'جرّب لوحة الإدارة',
   'Compare licences': 'قارن التراخيص',
   'Features': 'المزايا',
@@ -206,13 +206,12 @@ const ar = <String, String>{
   'What you get with the code': 'ما تحصل عليه مع الكود',
   'The full Flutter source code: shop, back office and point of sale': 'كود Flutter المصدري كاملاً: المتجر ولوحة الإدارة ونقطة البيع',
   'Supabase migrations with row-level security and SQL tests': 'ملفات قاعدة بيانات Supabase مع أمان على مستوى الصفوف واختبارات SQL',
-  'A sample company to start from: five stores, 24 products and 90 days of sales': 'شركة تجريبية تبدأ منها: خمسة فروع و24 منتجاً و90 يوماً من المبيعات',
-  'Tests with 68% line coverage, and CI that keeps it above 60%': 'اختبارات بتغطية 68%، وCI يُبقيها فوق 60%',
+  'Strict lint rules with zero analyzer issues, and CI that keeps it that way': 'قواعد تدقيق صارمة بلا أي مشكلة في التحليل، وCI يحافظ على ذلك',
   'A one-file rebrand and setup steps for Vercel and Supabase': 'تغيير العلامة من ملف واحد وخطوات إعداد Vercel وSupabase',
   'English and Arabic, light and dark, on phones, tablets and laptops': 'إنجليزي وعربي، فاتح وداكن، على الجوال والتابلت واللابتوب',
-  'test coverage, with an end-to-end sale in an integration test': 'تغطية بالاختبارات، مع اختبار تكامل لعملية بيع كاملة',
+  'of tables behind row-level security, with SQL tests': 'من الجداول محمية بأمان على مستوى الصفوف، مع اختبارات SQL',
   'staff permissions, so each role sees only its own pages': 'صلاحية للموظفين، فيرى كل دور صفحاته فقط',
-  'currencies and countries in the sample shop, Jordan and the UAE': 'عملتان ودولتان في المتجر التجريبي، الأردن والإمارات',
+  'currencies and countries, Jordan and the UAE': 'عملتان ودولتان، الأردن والإمارات',
   'apps in one: the shop, the back office and the till': 'تطبيقات في واحد: المتجر ولوحة الإدارة والكاشير',
   'Pricing': 'الأسعار',
   'Pay once for the code, or let us run it for you': 'ادفع مرة واحدة للكود، أو دعنا نشغّله لك',
@@ -263,7 +262,7 @@ const ar = <String, String>{
   'Dashboards, margins and profit and loss per store': 'لوحات متابعة وهوامش وأرباح وخسائر لكل فرع',
   'JoFotara e-invoices for every sale': 'فاتورة جو فوترة لكل عملية بيع',
   'One database for the shop, the stores and the books': 'قاعدة بيانات واحدة للمتجر والفروع والحسابات',
-  '68% test coverage, with an integration test that walks a sale end to end': 'تغطية 68% بالاختبارات، مع اختبار تكامل يمرّ بعملية بيع كاملة',
+  'Every table behind row-level security, proven by SQL tests': 'كل جدول محمي بأمان على مستوى الصفوف، تثبته اختبارات SQL',
   'Now sold as source code, as Zirr Retail': 'يُباع الآن ككود مصدري باسم زِرّ للتجزئة',
   'See Zirr Retail': 'تعرّف على زِرّ للتجزئة',
   'A premium fashion store with its own back office': 'متجر أزياء راقٍ بلوحة إدارة خاصة',
@@ -276,11 +275,11 @@ const ar = <String, String>{
   'A promotions engine with codes, limits and rules': 'محرّك عروض برموز وحدود وقواعد',
   'Stripe checkout': 'الدفع عبر Stripe',
   'A role-based back office for products, orders and promotions': 'لوحة إدارة حسب الأدوار للمنتجات والطلبات والعروض',
-  'A demo mode that runs every screen without a backend': 'وضع تجريبي يشغّل كل الشاشات دون خادم',
-  'A public demo anyone can open': 'عرض تجريبي عام يفتحه أي أحد',
-  'Services kept free of the UI framework, so the logic is tested on its own': 'خدمات منفصلة عن إطار الواجهة، فتُختبر المنطقيات وحدها',
-  '64% test coverage': 'تغطية 64% بالاختبارات',
-  'Open the store demo': 'افتح المتجر التجريبي',
+  'Every screen on the live Supabase catalogue, with no sample data in the app': 'كل الشاشات على كتالوج Supabase المباشر، بلا بيانات نموذجية في التطبيق',
+  'A live store anyone can open': 'متجر مباشر يفتحه أي أحد',
+  'Services kept free of the UI framework, so the logic stands on its own': 'خدمات منفصلة عن إطار الواجهة، فيبقى المنطق مستقلاً بذاته',
+  'Database rules proven by 163 SQL checks': 'قواعد قاعدة البيانات تثبتها 163 فحصاً بلغة SQL',
+  'Open the store': 'افتح المتجر',
   'The starter every Zirr app begins from': 'القالب الذي يبدأ منه كل تطبيق من زِرّ',
   'Internal tooling': 'أدوات داخلية',
   'A Flutter and Supabase template with one folder structure, house lint rules, CI, row-level security tests and a one-file rebrand.':
@@ -289,17 +288,17 @@ const ar = <String, String>{
       'كان كل مشروع جديد يقضي أسابيعه الأولى في إعادة بناء تسجيل الدخول واللغات والتصميم وCI، وكلٌّ بطريقة مختلفة قليلاً.',
   'One folder structure and the rules a change keeps to': 'بنية مجلّدات واحدة وقواعد يلتزم بها كل تعديل',
   'A 12-column responsive grid with no layout dependency': 'شبكة متجاوبة من 12 عموداً دون مكتبة تصميم خارجية',
-  'Arabic and English with a test that fails on a missing translation': 'العربية والإنجليزية مع اختبار يفشل عند نقص ترجمة',
-  'Row-level security with SQL tests, and a demo mode on sample data': 'أمان على مستوى الصفوف مع اختبارات SQL، ووضع تجريبي ببيانات نموذجية',
-  'CI for format, analysis, tests, coverage and a web build': 'CI للتنسيق والتحليل والاختبارات والتغطية وبناء الويب',
-  'New projects start with working, tested sign-in, languages and CI': 'تبدأ المشاريع الجديدة بتسجيل دخول ولغات وCI تعمل ومختبرة',
+  'Arabic and English with a check that fails on a missing translation': 'العربية والإنجليزية مع فحص يفشل عند نقص ترجمة',
+  'Row-level security with SQL tests, and real data only': 'أمان على مستوى الصفوف مع اختبارات SQL، وبيانات حقيقية فقط',
+  'CI for format, analysis, the house rules, SQL tests and a web build': 'CI للتنسيق والتحليل وقواعد البيت واختبارات SQL وبناء الويب',
+  'New projects start with working sign-in, languages and CI': 'تبدأ المشاريع الجديدة بتسجيل دخول ولغات وCI تعمل',
   'This website is built from it': 'هذا الموقع مبني منه',
   'Agencies get the same structure in every app we hand over': 'تحصل الوكالات على البنية نفسها في كل تطبيق نسلّمه',
   'Work with us': 'اعمل معنا',
   'Zirr POS': 'زِرّ كاشير',
   'A point of sale for shops, cafés and restaurants that saves every sale on the device first, so the till keeps selling when the internet drops.':
       'نقطة بيع للمحلات والمقاهي والمطاعم تحفظ كل عملية بيع على الجهاز أولاً، فيستمر الكاشير بالبيع حين ينقطع الإنترنت.',
-  'Try the demo': 'جرّب العرض التجريبي',
+  'Try it in your browser': 'جرّبه في متصفحك',
 
   // Contact
   'Tell us about your project': 'أخبرنا عن مشروعك',

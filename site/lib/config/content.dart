@@ -3,14 +3,14 @@ import 'brand.dart';
 import 'routes.dart';
 
 /// Everything the site says that is more than a label: services, products, case studies and questions. English
-/// here, Arabic in lib/l10n/ar.dart; test/l10n/translations_test.dart fails when a text has no Arabic.
+/// here, Arabic in lib/l10n/ar.dart; `node tool/check_arabic.mjs` fails when a text has no Arabic.
 class Content {
   // ---------------------------------------------------------------- Home
 
   static const homeStats = [
     ('2021', 'building Flutter apps for clients'),
     ('2', 'languages in every build, Arabic and English'),
-    ('60%', 'test coverage, the least CI accepts'),
+    ('0', 'analyzer issues, the only number CI accepts'),
     ('100%', 'of tables behind row-level security'),
   ];
 
@@ -26,9 +26,13 @@ class Content {
 
   static const qualityBar = [
     Feature(Glyph.code, 'Zero analyzer issues', 'Strict lint rules on every project, checked by CI on every pull request.'),
-    Feature(Glyph.test, 'Tested code', 'Unit, widget and integration tests, with at least 60% line coverage before anything merges.'),
+    Feature(
+      Glyph.test,
+      'Checked on every change',
+      'CI checks the format, the analyzer, the folder rules, the Arabic and the database rules before anything merges.',
+    ),
     Feature(Glyph.shield, 'Secure by default', 'Row-level security on every Supabase table, with SQL tests that fail when a policy leaks.'),
-    Feature(Glyph.language, 'Arabic and English', 'Right-to-left layouts and a test that fails the build when a screen misses its Arabic.'),
+    Feature(Glyph.language, 'Arabic and English', 'Right-to-left layouts and a check that fails the build when a screen misses its Arabic.'),
     Feature(Glyph.brand, 'One-file rebrand', 'Name, colours and font live in one file, so a product ships under your brand in an afternoon.'),
     Feature(Glyph.docs, 'Documented', 'A README, an architecture guide and setup steps a new developer can follow alone.'),
   ];
@@ -40,12 +44,8 @@ class Content {
     Feature(Glyph.handshake, 'An NDA before the brief', 'We sign your NDA, or ours, before you share anything about your client.'),
     Feature(Glyph.code, 'Code you own', 'You and your client own the code you pay for, with its history, from the first commit.'),
     Feature(Glyph.language, 'Arabic done properly', 'Right-to-left layouts, Arabic fonts and Gulf and Levant copy that reads like it was written in Arabic.'),
-    Feature(
-      Glyph.lock,
-      'Jordan compliance built in',
-      'JoFotara e-invoicing and the personal data protection law (PDPL), already built and tested in our products.',
-    ),
-    Feature(Glyph.rocket, 'A head start', 'Every project starts from our tested starter: sign-in, roles, languages, CI and docs on day one.'),
+    Feature(Glyph.lock, 'Jordan compliance built in', 'JoFotara e-invoicing and the personal data protection law (PDPL), already built into our products.'),
+    Feature(Glyph.rocket, 'A head start', 'Every project starts from our starter: sign-in, roles, languages, CI and docs on day one.'),
   ];
 
   static const agencyIncludes = [
@@ -116,8 +116,7 @@ class Content {
   static const retailInTheBox = [
     'The full Flutter source code: shop, back office and point of sale',
     'Supabase migrations with row-level security and SQL tests',
-    'A sample company to start from: five stores, 24 products and 90 days of sales',
-    'Tests with 68% line coverage, and CI that keeps it above 60%',
+    'Strict lint rules with zero analyzer issues, and CI that keeps it that way',
     'A one-file rebrand and setup steps for Vercel and Supabase',
     'English and Arabic, light and dark, on phones, tablets and laptops',
   ];
@@ -146,7 +145,7 @@ class Content {
   ];
 
   static const retailLinks = [
-    SiteLink('Visit the demo shop', 'https://erp-house.vercel.app'),
+    SiteLink('Visit the live shop', 'https://erp-house.vercel.app'),
     SiteLink('Try the back office', 'https://erp-house.vercel.app/sandbox/sign-in'),
     SiteLink('Compare licences', 'https://erp-house.vercel.app/software#pricing'),
   ];
@@ -169,12 +168,12 @@ class Content {
       ],
       results: [
         'One database for the shop, the stores and the books',
-        '68% test coverage, with an integration test that walks a sale end to end',
+        'Every table behind row-level security, proven by SQL tests',
         'Now sold as source code, as Zirr Retail',
       ],
       stack: ['Flutter', 'Dart', 'GetX', 'Supabase', 'PostgreSQL'],
       image: 'assets/images/zirr-retail.jpg',
-      links: [SiteLink('Visit the demo shop', 'https://erp-house.vercel.app'), SiteLink('See Zirr Retail', Routes.retail)],
+      links: [SiteLink('Visit the live shop', 'https://erp-house.vercel.app'), SiteLink('See Zirr Retail', Routes.retail)],
     ),
     CaseStudy(
       slug: 'vanguard',
@@ -187,12 +186,16 @@ class Content {
         'A promotions engine with codes, limits and rules',
         'Stripe checkout',
         'A role-based back office for products, orders and promotions',
-        'A demo mode that runs every screen without a backend',
+        'Every screen on the live Supabase catalogue, with no sample data in the app',
       ],
-      results: ['A public demo anyone can open', 'Services kept free of the UI framework, so the logic is tested on its own', '64% test coverage'],
+      results: [
+        'A live store anyone can open',
+        'Services kept free of the UI framework, so the logic stands on its own',
+        'Database rules proven by 163 SQL checks',
+      ],
       stack: ['Flutter Web', 'Supabase', 'Stripe'],
       image: 'assets/images/zirr-boutique.jpg',
-      links: [SiteLink('Open the store demo', 'https://vanguard-demo-sigma.vercel.app')],
+      links: [SiteLink('Open the store', 'https://vanguard-demo-sigma.vercel.app')],
     ),
     CaseStudy(
       slug: 'starter',
@@ -203,12 +206,12 @@ class Content {
       built: [
         'One folder structure and the rules a change keeps to',
         'A 12-column responsive grid with no layout dependency',
-        'Arabic and English with a test that fails on a missing translation',
-        'Row-level security with SQL tests, and a demo mode on sample data',
-        'CI for format, analysis, tests, coverage and a web build',
+        'Arabic and English with a check that fails on a missing translation',
+        'Row-level security with SQL tests, and real data only',
+        'CI for format, analysis, the house rules, SQL tests and a web build',
       ],
       results: [
-        'New projects start with working, tested sign-in, languages and CI',
+        'New projects start with working sign-in, languages and CI',
         'This website is built from it',
         'Agencies get the same structure in every app we hand over',
       ],
@@ -229,7 +232,7 @@ class Content {
       results: [],
       stack: ['React', 'TypeScript', 'Electron', 'Supabase'],
       image: 'assets/images/pos-register.png',
-      links: [SiteLink('Try the demo', 'https://pos-sage-one.vercel.app')],
+      links: [SiteLink('Try it in your browser', 'https://pos-sage-one.vercel.app')],
     ),
   ];
 
