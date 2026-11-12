@@ -21,7 +21,6 @@ class Content {
       'We build your clients’ apps under your agency’s name, on your timeline, and stay invisible unless you want us in the room.',
     ),
     Feature(Glyph.store, 'Zirr Retail', 'An online shop, a back office and a point of sale in one Flutter app, sold as source code you can brand and resell.'),
-    Feature(Glyph.calendar, 'Zirr Clinic', 'Appointments, patient files, WhatsApp reminders and JoFotara e-invoices for small clinics in Jordan.'),
     Feature(Glyph.phone, 'Custom apps', 'Android, iPhone and web apps on Flutter and Supabase, from the first screen to the store listing.'),
   ];
 
@@ -96,10 +95,7 @@ class Content {
   ];
 
   static const agencyFaqs = [
-    Faq(
-      'Who owns the code?',
-      'You do, for the work you pay for. Our own products (the starter, the retail app and the clinic system) are licensed to you instead.',
-    ),
+    Faq('Who owns the code?', 'You do, for the work you pay for. Our own products (the starter, the retail app and the till) are licensed to you instead.'),
     Faq('Will you talk to our client?', 'Only if you want us to. By default we talk to you, and your client never sees our name.'),
     Faq('What time zone do you work in?', 'Amman, UTC+3, which overlaps the whole working day in the Gulf and most of it in Europe.'),
     Faq('How do you charge?', 'A fixed price per project, or a monthly fee for reserved days. Ask on WhatsApp for current rates.'),
@@ -155,29 +151,6 @@ class Content {
     SiteLink('Compare licences', 'https://erp-house.vercel.app/software#pricing'),
   ];
 
-  // ---------------------------------------------------------------- Clinic
-
-  static const clinicFeatures = [
-    Feature(Glyph.calendar, 'Schedule', 'A day view per doctor, booking in a few taps from free slots, and every status from booked to no-show.'),
-    Feature(Glyph.phone, 'Online booking', 'Each clinic gets its own booking page for Instagram and WhatsApp. Patients need no account.'),
-    Feature(Glyph.chat, 'WhatsApp reminders', '24 hours and 2 hours before each visit, with Confirm and Cancel buttons that update the schedule.'),
-    Feature(Glyph.docs, 'Patient files', 'Contact details, allergies, visits, clinical notes, x-rays and PDFs, payments and balance.'),
-    Feature(Glyph.team, 'Roles', 'Owner, doctor and receptionist, each with what they need and no more. Receptionists never see clinical notes.'),
-    Feature(
-      Glyph.receipt,
-      'JoFotara e-invoices',
-      'Every payment becomes an e-invoice and every voided payment a credit invoice, with the QR code on the receipt.',
-    ),
-  ];
-
-  static const clinicPrivacy = [
-    'Patient consent and its date recorded on every new file',
-    'Each clinic’s data walled off by row-level security in the database',
-    'A log of who opened or changed each patient file',
-    'No medical details in WhatsApp messages',
-    'Files in a private bucket, opened with links that expire in 10 minutes',
-  ];
-
   // ---------------------------------------------------------------- Case studies
 
   static const caseStudies = [
@@ -202,27 +175,6 @@ class Content {
       stack: ['Flutter', 'Dart', 'GetX', 'Supabase', 'PostgreSQL'],
       image: 'assets/images/zirr-retail.jpg',
       links: [SiteLink('Visit the demo shop', 'https://erp-house.vercel.app'), SiteLink('See Zirr Retail', Routes.retail)],
-    ),
-    CaseStudy(
-      slug: 'clinic',
-      title: 'Bookings, files and WhatsApp reminders for clinics in Jordan',
-      sector: 'Healthcare',
-      summary: 'A Flutter app for small clinics, on Android, iPhone and the web, built Arabic first around Jordan’s privacy and e-invoicing laws.',
-      challenge: 'Small clinics lose visits to no-shows, keep patient files on paper, and now have to send every payment to JoFotara and protect health data under the PDPL.',
-      built: [
-        'A schedule per doctor and a public booking page for each clinic',
-        'Reminders on WhatsApp with Confirm and Cancel buttons',
-        'Patient files with notes, x-rays and payments, behind three roles',
-        'JoFotara e-invoices built as UBL 2.1 and sent by a Supabase Edge Function',
-        'Consent records and an audit log of who opened each file',
-      ],
-      results: [
-        '75% test coverage, with SQL tests for booking, overlap, consent and access rules',
-        'Clinical notes hidden from receptionists by the database itself',
-        'One codebase for three platforms',
-      ],
-      stack: ['Flutter', 'Supabase', 'Edge Functions', 'WhatsApp Cloud API', 'JoFotara'],
-      links: [SiteLink('See Zirr Clinic', Routes.clinic)],
     ),
     CaseStudy(
       slug: 'vanguard',
@@ -290,7 +242,7 @@ class Content {
 
   // ---------------------------------------------------------------- Contact
 
-  static const projectTypes = ['White-label work for an agency', 'Retail licence', 'Zirr Clinic', 'A new app', 'Something else'];
+  static const projectTypes = ['White-label work for an agency', 'Retail licence', 'A new app', 'Something else'];
 
   static final contactLinks = [
     SiteLink('WhatsApp', Brand.whatsAppLink()),
@@ -302,7 +254,7 @@ class Content {
   /// Every text above that is shown translated, for the Arabic check.
   static Iterable<String> get translatedText sync* {
     for (final (_, label) in homeStats) yield label;
-    for (final f in [...services, ...qualityBar, ...agencyBenefits, ...agencySteps, ...retailFeatures, ...clinicFeatures]) {
+    for (final f in [...services, ...qualityBar, ...agencyBenefits, ...agencySteps, ...retailFeatures]) {
       yield f.title;
       yield f.body;
     }
@@ -313,7 +265,6 @@ class Content {
     for (final q in agencyFaqs) yield* [q.question, q.answer];
     yield* agencyIncludes;
     yield* retailInTheBox;
-    yield* clinicPrivacy;
     for (final l in [...retailLinks, ...contactLinks]) yield l.label;
     for (final c in [...caseStudies, ...otherProducts]) {
       yield* [c.title, c.sector, c.summary, ...c.built, ...c.results, for (final l in c.links) l.label];

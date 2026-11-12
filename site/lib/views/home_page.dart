@@ -19,12 +19,12 @@ class HomePage extends StatelessWidget {
       const PageHero(
         eyebrow: 'Flutter and Supabase studio in Amman',
         title: 'Flutter apps for agencies, and the products to start them from',
-        body: 'We build Arabic and English apps under your agency’s name, and we make our own products for retail and clinics that you can license and ship.',
+        body: 'We build Arabic and English apps under your agency’s name, and we make our own products for shops that you can license and ship.',
         actions: [SiteLink('Hire us for your agency', Routes.agencies), SiteLink('See our work', Routes.work)],
         image: 'assets/images/zirr-retail.jpg',
       ),
       const _Stats(),
-      const PageSection(eyebrow: 'What we do', title: 'Four ways to work with us', child: FeatureGrid(Content.services, columns: 4)),
+      const PageSection(eyebrow: 'What we do', title: 'Three ways to work with us', child: FeatureGrid(Content.services)),
       PageSection(
         tinted: true,
         eyebrow: 'Our products',
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
           gutter: 20,
           children: [
             GridCol(lg: 6, child: CaseStudyCard(Content.caseStudy('retail')!)),
-            GridCol(lg: 6, child: CaseStudyCard(Content.caseStudy('clinic')!)),
+            GridCol(lg: 6, child: CaseStudyCard(Content.caseStudy('starter')!)),
           ],
         ),
       ),

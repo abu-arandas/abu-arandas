@@ -1,16 +1,16 @@
 # Zirr website
 
-The studio's own site, in Arabic and English: a white-label Flutter team for agencies, the Zirr Retail and Zirr Clinic
-product pages, case studies from the project repositories, and a contact page. A Flutter web app built from
+The studio's own site, in Arabic and English: a white-label Flutter team for agencies, the Zirr Retail
+product page, case studies from the project repositories, and a contact page. A Flutter web app built from
 [arandas-starter](https://github.com/abu-arandas/arandas-starter)'s structure and rules. It needs no backend and no keys.
 
 | Home | For agencies (Arabic) |
 | --- | --- |
 | ![Home](docs/screenshots/en-home.jpg) | ![For agencies, in Arabic](docs/screenshots/ar-agencies.jpg) |
 
-| Zirr Retail | Clinic | Phone |
-| --- | --- | --- |
-| ![Zirr Retail](docs/screenshots/en-retail.jpg) | ![Clinic](docs/screenshots/en-clinic.jpg) | ![Phone](docs/screenshots/mobile-en-home.jpg) |
+| Zirr Retail | Phone |
+| --- | --- |
+| ![Zirr Retail](docs/screenshots/en-retail.jpg) | ![Phone](docs/screenshots/mobile-en-home.jpg) |
 
 ## Pages
 
@@ -19,8 +19,7 @@ product pages, case studies from the project repositories, and a contact page. A
 | `/` | Home: services, products, quality bar, recent case studies |
 | `/agencies` | The white-label Flutter team: benefits, ways to work, process, FAQ |
 | `/products/retail` | Zirr Retail (the ERP repository): features, what is in the box, licences with PayPal links |
-| `/products/clinic` | Zirr Clinic: features and the PDPL privacy measures |
-| `/work`, `/work/<slug>` | Case studies: `retail`, `clinic`, `vanguard` (Zirr Boutique), `starter`; Zirr POS as another product |
+| `/work`, `/work/<slug>` | Case studies: `retail`, `vanguard` (Zirr Boutique), `starter`; Zirr POS as another product |
 | `/contact` | A form that opens WhatsApp with the visitor's message written, and the other links |
 
 The site opens in Arabic when the visitor's browser asks for Arabic, otherwise in English; the button in the header
@@ -34,7 +33,7 @@ switches. Any other address shows the not-found page.
 - **Name, colour, font, WhatsApp, email, social links:** [`lib/config/brand.dart`](lib/config/brand.dart). Set
   `Brand.email` once the studio has its own address; the contact page shows it then.
 - **Testimonials:** add them to `Content.testimonials` once clients agree to be quoted; the section appears by itself.
-- **Pictures:** `assets/images`. The clinic has no screenshot yet; a sketch of its Today screen stands in.
+- **Pictures:** `assets/images`.
 - **Page title and link previews:** `web/index.html`.
 
 ## Run and check
