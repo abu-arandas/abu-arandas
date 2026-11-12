@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../config/brand.dart';
 import '../config/breakpoints.dart';
 import '../config/routes.dart';
+import '../config/theme.dart';
 import '../controllers/site_controller.dart';
 import 'language_button.dart';
 
@@ -136,7 +137,7 @@ class _Header extends StatelessWidget implements PreferredSizeWidget {
                         TextButton(
                           onPressed: () => site.open(route),
                           style: TextButton.styleFrom(foregroundColor: _isCurrent(route) ? scheme.primary : scheme.onSurface),
-                          child: Text(label.tr, style: TextStyle(fontWeight: _isCurrent(route) ? FontWeight.w700 : FontWeight.w500)),
+                          child: Text(label.tr, style: TextStyle(fontWeight: _isCurrent(route) ? FontWeight.w600 : FontWeight.w400)),
                         ),
                       const SizedBox(width: 8),
                       const LanguageButton(),
@@ -185,7 +186,7 @@ class _Menu extends StatelessWidget {
               ListTile(
                 title: Text(label.tr),
                 selected: current == route,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                shape: AppTheme.shape(10),
                 onTap: () {
                   Navigator.of(context).pop();
                   site.open(route);

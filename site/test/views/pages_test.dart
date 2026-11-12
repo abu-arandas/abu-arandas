@@ -2,9 +2,9 @@ import 'package:arandas_site/config/content.dart';
 import 'package:arandas_site/config/routes.dart';
 import 'package:arandas_site/l10n/ar.dart';
 import 'package:arandas_site/views/not_found_page.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../helpers.dart';
 

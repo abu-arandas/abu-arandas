@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../config/breakpoints.dart';
 import '../config/content.dart';
@@ -84,7 +84,11 @@ class _Stats extends StatelessWidget {
                   children: [
                     Text(
                       figure,
-                      style: theme.textTheme.headlineMedium?.copyWith(color: theme.colorScheme.primary, fontWeight: FontWeight.w800),
+                      style: theme.textTheme.headlineMedium?.copyWith(
+                        color: theme.colorScheme.primary,
+                        fontWeight: FontWeight.w700,
+                        fontFeatures: const [FontFeature.tabularFigures()],
+                      ),
                     ),
                     const SizedBox(height: 4),
                     Text(label.tr, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
