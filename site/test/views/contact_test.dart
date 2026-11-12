@@ -19,7 +19,7 @@ void main() {
     await tester.enterText(find.widgetWithText(TextFormField, 'Company or agency (optional)'), 'Blue Agency');
     await tester.tap(find.text('White-label work for an agency'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Arandas Clinic').last);
+    await tester.tap(find.text('Zirr Clinic').last);
     await tester.pumpAndSettle();
     await tester.enterText(find.widgetWithText(TextFormField, 'Your message'), 'We need a clinic app.');
     await tester.tap(find.text('Send on WhatsApp'));
@@ -28,7 +28,7 @@ void main() {
     expect(opened.single.host, 'wa.me');
     expect(text, contains('I am Lina.'));
     expect(text, contains('Company: Blue Agency'));
-    expect(text, contains('About: Arandas Clinic'));
+    expect(text, contains('About: Zirr Clinic'));
     expect(text, endsWith('We need a clinic app.'));
   });
 

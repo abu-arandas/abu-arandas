@@ -1,5 +1,5 @@
 name: arandas_site
-description: "The Arandas Tech website: services for agencies, our products and case studies, in Arabic and English."
+description: "The Zirr website: services for agencies, our products and case studies, in Arabic and English."
 publish_to: 'none'
 version: 0.1.0+1
 
@@ -28,7 +28,7 @@ flutter:
   assets:
     - assets/images/
   fonts:
-    # Cairo (SIL Open Font License), one font for Arabic and Latin, as in arandas-clinic.
-    - family: Cairo
+    # Rubik (SIL Open Font License), one font for Arabic and Latin, the brand's own.
+    - family: Rubik
       fonts:
-        - asset: assets/fonts/Cairo.ttf
+        - asset: assets/fonts/Rubik.ttf

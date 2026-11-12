@@ -2,14 +2,21 @@ import 'package:flutter/material.dart';
 
 import 'brand.dart';
 
-/// Light and dark themes, both made from [Brand.seedColor].
+/// Light and dark themes, both made from [Brand.seedColor], with the brand's own denim, thread orange and page colours.
 class AppTheme {
   static ThemeData light() => _build(Brightness.light);
   static ThemeData dark() => _build(Brightness.dark);
 
   static ThemeData _build(Brightness brightness) {
-    final scheme = ColorScheme.fromSeed(seedColor: Brand.seedColor, brightness: brightness, dynamicSchemeVariant: DynamicSchemeVariant.fidelity);
-    final base = ThemeData(colorScheme: scheme, fontFamily: Brand.fontFamily);
+    final dark = brightness == Brightness.dark;
+    final scheme = ColorScheme.fromSeed(seedColor: Brand.seedColor, brightness: brightness, dynamicSchemeVariant: DynamicSchemeVariant.fidelity).copyWith(
+      primary: dark ? Brand.seedColorDark : Brand.seedColor,
+      onPrimary: dark ? Brand.pageDark : Colors.white,
+      secondary: dark ? Brand.threadDark : Brand.thread,
+      onSecondary: const Color(0xFF18202E),
+      surface: dark ? Brand.pageDark : Brand.page,
+    );
+    final base = ThemeData(colorScheme: scheme, fontFamily: Brand.fontFamily, scaffoldBackgroundColor: scheme.surface);
     return base.copyWith(
       textTheme: base.textTheme.copyWith(
         displaySmall: base.textTheme.displaySmall?.copyWith(fontWeight: FontWeight.w800, height: 1.2),

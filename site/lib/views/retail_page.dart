@@ -7,7 +7,7 @@ import '../config/routes.dart';
 import '../widgets/blocks.dart';
 import '../widgets/site_scaffold.dart';
 
-/// Arandas Tech Retail: the online shop, back office and point of sale, sold as source code. Its public demo is the ERP House shop.
+/// Zirr Retail: the online shop, back office and point of sale, sold as source code. Its public demo is the ERP House shop.
 class RetailPage extends StatelessWidget {
   const RetailPage({super.key});
 
@@ -16,11 +16,11 @@ class RetailPage extends StatelessWidget {
     current: Routes.retail,
     sections: [
       PageHero(
-        eyebrow: 'Arandas Tech Retail · for fashion retail',
+        eyebrow: 'Zirr Retail · for fashion retail',
         title: 'Your online shop, tills and stock in one Flutter app',
-        body: 'Arandas Tech Retail runs a fashion retailer end to end: the website, a point of sale in every branch, stock across stores, purchasing and the books, on one Supabase database. Buy the source code and ship it under your brand.',
+        body: 'Zirr Retail runs a fashion retailer end to end: the website, a point of sale in every branch, stock across stores, purchasing and the books, on one Supabase database. Buy the source code and ship it under your brand.',
         actions: Content.retailLinks.take(2).toList(),
-        image: 'assets/images/arandas-erp.jpg',
+        image: 'assets/images/zirr-retail.jpg',
       ),
       const PageSection(eyebrow: 'Features', title: 'One system instead of five', child: FeatureGrid(Content.retailFeatures)),
       PageSection(
@@ -63,7 +63,7 @@ class RetailPage extends StatelessWidget {
   );
 }
 
-/// Arandas Tech Retail's numbers, as large figures.
+/// Zirr Retail's numbers, as large figures.
 class _Figures extends StatelessWidget {
   const _Figures();
 

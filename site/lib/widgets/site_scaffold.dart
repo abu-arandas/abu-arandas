@@ -55,25 +55,51 @@ class _Logo extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            DecoratedBox(
-              decoration: BoxDecoration(color: scheme.primary, borderRadius: BorderRadius.circular(8)),
-              child: SizedBox.square(
-                dimension: 32,
-                child: Center(
-                  child: Text(
-                    'A',
-                    style: TextStyle(color: scheme.onPrimary, fontWeight: FontWeight.w800, fontSize: 18),
-                  ),
-                ),
+            ExcludeSemantics(
+              child: CustomPaint(
+                size: const Size.square(34),
+                painter: _ButtonMark(button: scheme.primary, holes: scheme.surface, lit: scheme.secondary),
               ),
             ),
             const SizedBox(width: 10),
-            Text(Brand.name.tr, style: Theme.of(context).textTheme.titleLarge),
+            Text(Brand.wordmark.tr, style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700, letterSpacing: -0.5)),
           ],
         ),
       ),
     );
   }
+}
+
+/// The Zirr mark: a shirt button whose four holes are app tiles, the top-right one lit. Drawn on a 120-unit grid.
+class _ButtonMark extends CustomPainter {
+  const _ButtonMark({required this.button, required this.holes, required this.lit});
+
+  final Color button;
+  final Color holes;
+  final Color lit;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas
+      ..save()
+      ..scale(size.shortestSide / 120)
+      ..drawCircle(const Offset(60, 60), 52, Paint()..color = button)
+      ..drawCircle(
+        const Offset(60, 60),
+        43,
+        Paint()
+          ..color = holes.withValues(alpha: 0.25)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 3,
+      );
+    for (final (x, y, colour) in [(38.0, 38.0, holes), (63.0, 38.0, lit), (38.0, 63.0, holes), (63.0, 63.0, holes)]) {
+      canvas.drawRRect(RRect.fromRectAndRadius(Rect.fromLTWH(x, y, 19, 19), const Radius.circular(6)), Paint()..color = colour);
+    }
+    canvas.restore();
+  }
+
+  @override
+  bool shouldRepaint(_ButtonMark old) => old.button != button || old.holes != holes || old.lit != lit;
 }
 
 class _Header extends StatelessWidget implements PreferredSizeWidget {
@@ -116,7 +142,7 @@ class _Header extends StatelessWidget implements PreferredSizeWidget {
                       const LanguageButton(),
                       const SizedBox(width: 8),
                       FilledButton(
-                        onPressed: () => site.open(Brand.whatsAppLink('Hi Arandas Tech, I found you on your website.'.tr)),
+                        onPressed: () => site.open(Brand.whatsAppLink('Hi Zirr team, I found you on your website.'.tr)),
                         style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14)),
                         child: Text('Talk to us'.tr),
                       ),
@@ -166,7 +192,7 @@ class _Menu extends StatelessWidget {
                 },
               ),
             const SizedBox(height: 16),
-            FilledButton(onPressed: () => site.open(Brand.whatsAppLink('Hi Arandas Tech, I found you on your website.'.tr)), child: Text('Talk to us'.tr)),
+            FilledButton(onPressed: () => site.open(Brand.whatsAppLink('Hi Zirr team, I found you on your website.'.tr)), child: Text('Talk to us'.tr)),
           ],
         ),
       ),

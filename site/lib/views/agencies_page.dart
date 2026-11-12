@@ -22,7 +22,7 @@ class AgenciesPage extends StatelessWidget {
         title: 'A white-label Flutter team, under your name',
         body: 'You win the client and own the relationship. We design, build, test and ship the Flutter app, in Arabic and English, and hand it over as yours.',
         actions: [
-          SiteLink('Send us a brief', Brand.whatsAppLink('Hi Arandas Tech, we are an agency and would like to talk about a Flutter project.'.tr)),
+          SiteLink('Send us a brief', Brand.whatsAppLink('Hi Zirr team, we are an agency and would like to talk about a Flutter project.'.tr)),
           const SiteLink('See our work', Routes.work),
         ],
         aside: const _WhoWeAre(),

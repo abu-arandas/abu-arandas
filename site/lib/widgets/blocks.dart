@@ -303,8 +303,7 @@ class _OfferCard extends StatelessWidget {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
     final link =
-        offer.link ??
-        SiteLink('Ask on WhatsApp', Brand.whatsAppLink('Hi Arandas Tech, I would like to know more about: @name'.trParams({'name': offer.name.tr})));
+        offer.link ?? SiteLink('Ask on WhatsApp', Brand.whatsAppLink('Hi Zirr team, I would like to know more about: @name'.trParams({'name': offer.name.tr})));
     final site = Get.find<SiteController>();
     return Card(
       shape: RoundedRectangleBorder(
@@ -385,7 +384,7 @@ class CallToAction extends StatelessWidget {
                     alignment: context.isDesktop ? WrapAlignment.end : WrapAlignment.start,
                     children: [
                       FilledButton(
-                        onPressed: () => site.open(Brand.whatsAppLink('Hi Arandas Tech, I found you on your website.'.tr)),
+                        onPressed: () => site.open(Brand.whatsAppLink('Hi Zirr team, I found you on your website.'.tr)),
                         style: FilledButton.styleFrom(backgroundColor: scheme.onPrimary, foregroundColor: scheme.primary),
                         child: Text('Message us on WhatsApp'.tr),
                       ),

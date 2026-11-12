@@ -4,6 +4,7 @@ import '../config/brand.dart';
 /// shows English rather than nothing; test/l10n/translations_test.dart fails the build when one is missing.
 const ar = <String, String>{
   Brand.name: Brand.nameAr,
+  Brand.wordmark: Brand.nameAr,
   Brand.city: 'عمّان، الأردن',
   'العربية': 'English',
 
@@ -23,8 +24,8 @@ const ar = <String, String>{
   'GitHub': 'GitHub',
   'A Flutter and Supabase studio in Amman, building in Arabic and English.': 'استوديو Flutter وSupabase في عمّان، نبني بالعربي والإنجليزي.',
   '© @year @name. Built with Flutter.': '© @year @name. صُنع بـ Flutter.',
-  'Hi Arandas Tech, I found you on your website.': 'مرحباً أرندس تك، وصلت إليكم من موقعكم.',
-  'Hi Arandas Tech, I would like to know more about: @name': 'مرحباً أرندس تك، أودّ معرفة المزيد عن: @name',
+  'Hi Zirr team, I found you on your website.': 'مرحباً فريق زِرّ، وصلت إليكم من موقعكم.',
+  'Hi Zirr team, I would like to know more about: @name': 'مرحباً فريق زِرّ، أودّ معرفة المزيد عن: @name',
 
   // Blocks
   'Message us on WhatsApp': 'راسلنا على واتساب',
@@ -64,10 +65,10 @@ const ar = <String, String>{
   'White-label Flutter team': 'فريق Flutter باسمك',
   'We build your clients’ apps under your agency’s name, on your timeline, and stay invisible unless you want us in the room.':
       'نبني تطبيقات عملائك باسم وكالتك وفي مواعيدك، ونبقى خلف الكواليس إلا إذا أردت حضورنا.',
-  'Arandas Tech Retail': 'أرندس تك للتجزئة',
+  'Zirr Retail': 'زِرّ للتجزئة',
   'An online shop, a back office and a point of sale in one Flutter app, sold as source code you can brand and resell.':
       'متجر إلكتروني ولوحة إدارة ونقطة بيع في تطبيق Flutter واحد، يُباع ككود مصدري تضع عليه علامتك.',
-  'Arandas Clinic': 'موعد',
+  'Zirr Clinic': 'زِرّ للعيادات',
   'Appointments, patient files, WhatsApp reminders and JoFotara e-invoices for small clinics in Jordan.':
       'مواعيد وملفات مرضى وتذكيرات واتساب وفواتير جو فوترة للعيادات الصغيرة في الأردن.',
   'Custom apps': 'تطبيقات حسب الطلب',
@@ -98,7 +99,7 @@ const ar = <String, String>{
   'You win the client and own the relationship. We design, build, test and ship the Flutter app, in Arabic and English, and hand it over as yours.':
       'أنت تكسب العميل وتملك العلاقة معه. ونحن نصمّم تطبيق Flutter ونبنيه ونختبره ونطلقه بالعربي والإنجليزي، ونسلّمه لك باسمك.',
   'Send us a brief': 'أرسل لنا الفكرة',
-  'Hi Arandas Tech, we are an agency and would like to talk about a Flutter project.': 'مرحباً أرندس تك، نحن وكالة ونودّ الحديث عن مشروع Flutter.',
+  'Hi Zirr team, we are an agency and would like to talk about a Flutter project.': 'مرحباً فريق زِرّ، نحن وكالة ونودّ الحديث عن مشروع Flutter.',
   'What you get': 'ما تحصل عليه',
   'Based in Amman, UTC+3.': 'مقرّنا عمّان، بتوقيت UTC+3.',
   'Why agencies use us': 'لماذا تعمل الوكالات معنا',
@@ -159,7 +160,7 @@ const ar = <String, String>{
   'What agencies ask us': 'ما تسألنا عنه الوكالات',
   'Who owns the code?': 'من يملك الكود؟',
   'You do, for the work you pay for. Our own products (the starter, the retail app and the clinic system) are licensed to you instead.':
-      'أنت، في العمل الذي تدفع ثمنه. أما منتجاتنا (القالب وأرندس تك للتجزئة ونظام العيادات) فتحصل على ترخيص لاستخدامها.',
+      'أنت، في العمل الذي تدفع ثمنه. أما منتجاتنا (القالب وزِرّ للتجزئة ونظام العيادات) فتحصل على ترخيص لاستخدامها.',
   'Will you talk to our client?': 'هل تتواصلون مع عميلنا؟',
   'Only if you want us to. By default we talk to you, and your client never sees our name.':
       'فقط إن أردت ذلك. نتواصل معك أنت عادةً، ولا يرى عميلك اسمنا أبداً.',
@@ -181,10 +182,10 @@ const ar = <String, String>{
   'Weekly builds you can show your client': 'إصدارات أسبوعية تعرضها على عميلك',
   'Source code and store builds under your name': 'الكود وإصدارات المتاجر باسمك',
 
-  // Arandas Tech Retail
-  'Arandas Tech Retail · for fashion retail': 'أرندس تك للتجزئة · لمحلات الأزياء',
+  // Zirr Retail
+  'Zirr Retail · for fashion retail': 'زِرّ للتجزئة · لمحلات الأزياء',
   'Your online shop, tills and stock in one Flutter app': 'متجرك الإلكتروني والكاشير والمخزون في تطبيق Flutter واحد',
-  'Arandas Tech Retail runs a fashion retailer end to end: the website, a point of sale in every branch, stock across stores, purchasing and the books, on one Supabase database. Buy the source code and ship it under your brand.': 'أرندس تك للتجزئة يدير محل الأزياء من أوله إلى آخره: الموقع ونقطة بيع في كل فرع والمخزون بين الفروع والمشتريات والحسابات، على قاعدة بيانات Supabase واحدة. اشترِ الكود المصدري وأطلقه باسمك.',
+  'Zirr Retail runs a fashion retailer end to end: the website, a point of sale in every branch, stock across stores, purchasing and the books, on one Supabase database. Buy the source code and ship it under your brand.': 'زِرّ للتجزئة يدير محل الأزياء من أوله إلى آخره: الموقع ونقطة بيع في كل فرع والمخزون بين الفروع والمشتريات والحسابات، على قاعدة بيانات Supabase واحدة. اشترِ الكود المصدري وأطلقه باسمك.',
   'Visit the demo shop': 'زُر المتجر التجريبي',
   'Try the back office': 'جرّب لوحة الإدارة',
   'Compare licences': 'قارن التراخيص',
@@ -244,11 +245,11 @@ const ar = <String, String>{
       'نعرض لك المتجر ولوحة الإدارة والكاشير في مكالمة، بالعربي أو الإنجليزي.',
 
   // Clinic
-  'Arandas Clinic · for clinics in Jordan': 'موعد · للعيادات في الأردن',
+  'Zirr Clinic · for clinics in Jordan': 'زِرّ للعيادات · في الأردن',
   'Fewer no-shows, files in one place, and e-invoices sent for you': 'غياب أقل، وملفات في مكان واحد، وفواتير إلكترونية تُرسل عنك',
   'Appointments, patient files and WhatsApp reminders for small clinics, on Android, iPhone and the web. Arabic first, English too, and built around Jordan’s privacy and e-invoicing laws.': 'مواعيد وملفات مرضى وتذكيرات واتساب للعيادات الصغيرة، على أندرويد وآيفون والويب. العربية أولاً والإنجليزية أيضاً، ومبني حول قوانين الخصوصية والفوترة الإلكترونية في الأردن.',
   'Book a demo on WhatsApp': 'احجز عرضاً على واتساب',
-  'Hi Arandas Tech, I would like a demo of Arandas Clinic.': 'مرحباً أرندس تك، أودّ عرضاً تجريبياً لنظام موعد.',
+  'Hi Zirr team, I would like a demo of Zirr Clinic.': 'مرحباً فريق زِرّ، أودّ عرضاً تجريبياً لنظام زِرّ للعيادات.',
   'Today': 'اليوم',
   'Confirmed': 'مؤكَّد',
   'Reminder sent': 'أُرسل التذكير',
@@ -309,8 +310,8 @@ const ar = <String, String>{
   'JoFotara e-invoices for every sale': 'فاتورة جو فوترة لكل عملية بيع',
   'One database for the shop, the stores and the books': 'قاعدة بيانات واحدة للمتجر والفروع والحسابات',
   '68% test coverage, with an integration test that walks a sale end to end': 'تغطية 68% بالاختبارات، مع اختبار تكامل يمرّ بعملية بيع كاملة',
-  'Now sold as source code, as Arandas Tech Retail': 'يُباع الآن ككود مصدري باسم أرندس تك للتجزئة',
-  'See Arandas Tech Retail': 'تعرّف على أرندس تك للتجزئة',
+  'Now sold as source code, as Zirr Retail': 'يُباع الآن ككود مصدري باسم زِرّ للتجزئة',
+  'See Zirr Retail': 'تعرّف على زِرّ للتجزئة',
   'Bookings, files and WhatsApp reminders for clinics in Jordan': 'حجوزات وملفات وتذكيرات واتساب للعيادات في الأردن',
   'Healthcare': 'الرعاية الصحية',
   'A Flutter app for small clinics, on Android, iPhone and the web, built Arabic first around Jordan’s privacy and e-invoicing laws.':
@@ -325,7 +326,7 @@ const ar = <String, String>{
       'تغطية 75% بالاختبارات، مع اختبارات SQL لقواعد الحجز والتداخل والموافقة والوصول',
   'Clinical notes hidden from receptionists by the database itself': 'الملاحظات السريرية محجوبة عن الاستقبال من قاعدة البيانات نفسها',
   'One codebase for three platforms': 'كود واحد لثلاث منصّات',
-  'See Arandas Clinic': 'تعرّف على موعد',
+  'See Zirr Clinic': 'تعرّف على زِرّ للعيادات',
   'A premium fashion store with its own back office': 'متجر أزياء راقٍ بلوحة إدارة خاصة',
   'E-commerce': 'التجارة الإلكترونية',
   'An editorial Flutter Web storefront with colour and size variants, promotion rules and Stripe checkout, and an admin panel for the team.':
@@ -341,7 +342,7 @@ const ar = <String, String>{
   'Services kept free of the UI framework, so the logic is tested on its own': 'خدمات منفصلة عن إطار الواجهة، فتُختبر المنطقيات وحدها',
   '64% test coverage': 'تغطية 64% بالاختبارات',
   'Open the store demo': 'افتح المتجر التجريبي',
-  'The starter every Arandas Tech app begins from': 'القالب الذي يبدأ منه كل تطبيق من أرندس تك',
+  'The starter every Zirr app begins from': 'القالب الذي يبدأ منه كل تطبيق من زِرّ',
   'Internal tooling': 'أدوات داخلية',
   'A Flutter and Supabase template with one folder structure, house lint rules, CI, row-level security tests and a one-file rebrand.':
       'قالب Flutter وSupabase ببنية مجلّدات واحدة وقواعد جودة خاصة بنا وCI واختبارات أمان على مستوى الصفوف وتغيير العلامة من ملف واحد.',
@@ -356,7 +357,7 @@ const ar = <String, String>{
   'This website is built from it': 'هذا الموقع مبني منه',
   'Agencies get the same structure in every app we hand over': 'تحصل الوكالات على البنية نفسها في كل تطبيق نسلّمه',
   'Work with us': 'اعمل معنا',
-  'EA POS': 'EA POS',
+  'Zirr POS': 'زِرّ كاشير',
   'A point of sale for shops, cafés and restaurants that saves every sale on the device first, so the till keeps selling when the internet drops.':
       'نقطة بيع للمحلات والمقاهي والمطاعم تحفظ كل عملية بيع على الجهاز أولاً، فيستمر الكاشير بالبيع حين ينقطع الإنترنت.',
   'Try the demo': 'جرّب العرض التجريبي',
@@ -371,7 +372,7 @@ const ar = <String, String>{
   'Your message': 'رسالتك',
   'Send on WhatsApp': 'أرسل على واتساب',
   'Required': 'مطلوب',
-  'Hi Arandas Tech, I am @name.': 'مرحباً أرندس تك، أنا @name.',
+  'Hi Zirr team, I am @name.': 'مرحباً فريق زِرّ، أنا @name.',
   'Company: @company': 'الشركة: @company',
   'About: @type': 'الموضوع: @type',
   'White-label work for an agency': 'عمل باسم وكالة',
