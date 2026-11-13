@@ -2,7 +2,7 @@
 
 The studio's own site, in Arabic and English: a white-label Flutter team for agencies, the Zirr Retail
 product page, case studies from the project repositories, and a contact page. A Flutter web app built from
-[arandas-starter](https://github.com/abu-arandas/arandas-starter)'s structure and rules. It needs no backend and no keys.
+[zirr-starter](https://github.com/abu-arandas/zirr-starter)'s structure and rules. It needs no backend and no keys.
 
 | Home | For agencies (Arabic) |
 | --- | --- |

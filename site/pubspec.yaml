@@ -16,7 +16,7 @@ dependencies:
   # Material widgets, as a package since Flutter 3.50 deprecated package:flutter/material.dart.
   material_ui: ^1.11.0
 
-  # Pinned exactly, as in arandas-starter: one maintainer, and 5.0 has been a release candidate since 2023.
+  # Pinned exactly, as in zirr-starter: one maintainer, and 5.0 has been a release candidate since 2023.
   get: 4.7.3
   url_launcher: ^6.3.2
 
