@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:get/get.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -7,6 +9,8 @@ import '../config/content.dart';
 import '../config/routes.dart';
 import '../controllers/site_controller.dart';
 import '../widgets/blocks.dart';
+import '../widgets/confetti.dart';
+import '../widgets/motion.dart';
 import '../widgets/site_scaffold.dart';
 
 /// A short form that writes the visitor's WhatsApp message for them, and the other ways to reach the studio. The
@@ -43,6 +47,7 @@ class ContactForm extends StatefulWidget {
 
 class _ContactFormState extends State<ContactForm> {
   final _form = GlobalKey<FormState>();
+  final _sendKey = GlobalKey();
   final _name = TextEditingController();
   final _company = TextEditingController();
   final _message = TextEditingController();
@@ -70,7 +75,9 @@ class _ContactFormState extends State<ContactForm> {
 
   void _send() {
     if (!(_form.currentState?.validate() ?? false)) return;
-    Get.find<SiteController>().open(Brand.whatsAppLink(message));
+    // A small burst from the button as the message heads off (never on a missing field: those stay plain).
+    celebrate(context, from: centreOf(_sendKey));
+    unawaited(Get.find<SiteController>().open(Brand.whatsAppLink(message)));
   }
 
   String? _required(String? value) => (value ?? '').trim().isEmpty ? 'Required'.tr : null;
@@ -111,7 +118,10 @@ class _ContactFormState extends State<ContactForm> {
         const SizedBox(height: 24),
         Align(
           alignment: AlignmentDirectional.centerStart,
-          child: FilledButton.icon(onPressed: _send, icon: const Icon(Icons.send), label: Text('Send on WhatsApp'.tr)),
+          child: Squish(
+            key: _sendKey,
+            child: FilledButton.icon(onPressed: _send, icon: const Icon(Icons.send), label: Text('Send on WhatsApp'.tr)),
+          ),
         ),
       ],
     ),
@@ -134,7 +144,7 @@ class _Elsewhere extends StatelessWidget {
             for (final link in Content.contactLinks)
               ListTile(
                 contentPadding: EdgeInsets.zero,
-                leading: Icon(_icons[link.label] ?? Icons.link, color: theme.colorScheme.primary),
+                leading: Wiggle(child: Icon(_icons[link.label] ?? Icons.link, color: theme.colorScheme.primary)),
                 title: Text(link.label.tr),
                 trailing: const Icon(Icons.open_in_new, size: 18),
                 onTap: () => site.open(link.url),

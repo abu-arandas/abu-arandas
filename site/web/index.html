@@ -27,6 +27,20 @@
   <style>
     body { margin: 0; background: #F7F5F0; }
     @media (prefers-color-scheme: dark) { body { background: #0D121C; } }
+    /* While the site boots: the Zirr button presses itself in under an invisible thumb, and a line under it changes
+       now and then, in the visitor's language. It fades out on Flutter's first frame. */
+    #boot {
+      position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 18px; font-family: Rubik, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      transition: opacity .4s ease;
+    }
+    #boot .press { width: 56px; height: 56px; animation: press 1100ms cubic-bezier(0.34, 1.56, 0.64, 1) infinite; }
+    @keyframes press { 0% { transform: scale(1); } 22% { transform: scale(.84); } 60%, 100% { transform: scale(1); } }
+    #boot .line { font-size: 15px; color: #5A6272; min-height: 22px; transition: opacity .25s ease; }
+    #boot .line.swap { opacity: 0; }
+    @media (prefers-color-scheme: dark) { #boot .line { color: #A9B1C0; } }
+    @media (prefers-reduced-motion: reduce) { #boot .press { animation: none; } #boot .line { transition: none; } }
+    body.flutter-ready #boot { opacity: 0; pointer-events: none; }
   </style>
 </head>
 <body>
@@ -36,6 +50,35 @@
     <p>A Flutter and Supabase studio in Amman, Jordan. A white-label Flutter team for agencies, and Zirr Retail: an online shop, back office and point of sale. Arabic and English.</p>
     <p><a href="https://wa.me/962791568798">WhatsApp</a></p>
   </noscript>
+  <div id="boot" role="status" aria-label="Loading Zirr">
+    <svg class="press" viewBox="0 0 120 120" aria-hidden="true">
+      <circle cx="60" cy="60" r="52" fill="#2B4C8C"/>
+      <circle cx="60" cy="60" r="43" fill="none" stroke="#F7F5F0" stroke-opacity=".25" stroke-width="3"/>
+      <g fill="#F7F5F0"><rect x="38" y="38" width="19" height="19" rx="6"/><rect x="38" y="63" width="19" height="19" rx="6"/><rect x="63" y="63" width="19" height="19" rx="6"/></g>
+      <rect x="63" y="38" width="19" height="19" rx="6" fill="#EE7B30"/>
+    </svg>
+    <div class="line" aria-hidden="true"></div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      document.body.classList.add('flutter-ready');
+      clearInterval(window.bootLines);
+    });
+    (function () {
+      var arabic = /^ar/i.test(navigator.language || '');
+      var lines = arabic
+        ? ['لحظة، نخيط الأزرار…', 'نرتّب الصفحات…', 'نسخّن القهوة…']
+        : ['Sewing on the buttons…', 'Lining up the pages…', 'Warming up the coffee…'];
+      var el = document.querySelector('#boot .line');
+      if (arabic) el.dir = 'rtl';
+      var i = 0;
+      el.textContent = lines[0];
+      window.bootLines = setInterval(function () {
+        el.classList.add('swap');
+        setTimeout(function () { i = (i + 1) % lines.length; el.textContent = lines[i]; el.classList.remove('swap'); }, 250);
+      }, 2200);
+    })();
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

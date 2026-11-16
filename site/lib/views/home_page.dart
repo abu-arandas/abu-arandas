@@ -6,6 +6,7 @@ import '../config/content.dart';
 import '../config/routes.dart';
 import '../models/content.dart';
 import '../widgets/blocks.dart';
+import '../widgets/motion.dart';
 import '../widgets/site_scaffold.dart';
 import '../widgets/testimonials.dart';
 
@@ -82,7 +83,9 @@ class _Stats extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    // The figures roll to their real values as the band comes into view (the year stays put, the
+                    // analyzer count counts down to its zero).
+                    RollingFigure(
                       figure,
                       style: theme.textTheme.headlineMedium?.copyWith(
                         color: theme.colorScheme.primary,

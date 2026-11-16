@@ -5,6 +5,7 @@ import '../config/breakpoints.dart';
 import '../config/content.dart';
 import '../config/routes.dart';
 import '../widgets/blocks.dart';
+import '../widgets/motion.dart';
 import '../widgets/site_scaffold.dart';
 
 /// Zirr Retail: the online shop, back office and point of sale, sold as source code. Its public demo is the ERP House shop.
@@ -79,19 +80,25 @@ class _Figures extends StatelessWidget {
     return GridRow(
       gutter: 20,
       children: [
+        // Each figure rolls to its real value as it comes into view, and its card lifts under the pointer.
         for (final (figure, label) in figures)
           GridCol(
             xs: 6,
-            child: Card(
-              child: Padding(
-                padding: const EdgeInsets.all(24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(figure, style: theme.textTheme.displaySmall?.copyWith(color: theme.colorScheme.primary)),
-                    const SizedBox(height: 8),
-                    Text(label, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
-                  ],
+            child: HoverLift(
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      RollingFigure(
+                        figure,
+                        style: theme.textTheme.displaySmall?.copyWith(color: theme.colorScheme.primary, fontFeatures: const [FontFeature.tabularFigures()]),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(label, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+                    ],
+                  ),
                 ),
               ),
             ),

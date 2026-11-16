@@ -8,9 +8,18 @@ import '../config/theme.dart';
 import '../controllers/site_controller.dart';
 import '../models/content.dart';
 import 'glyph_icon.dart';
+import 'motion.dart';
 import 'stitch_line.dart';
 
 /// The building blocks every page is made of. Text handed to them is English and is translated here.
+///
+/// They also carry the site's motion (lib/widgets/motion.dart), so every page moves the same way: the hero comes in
+/// within about a second, each band's heading rises word by word and its stitch sews in as it scrolls into view,
+/// cards rise a step apart, lift and lean toward the pointer, and the main buttons are drawn to it. All of it plays
+/// once, and with reduce motion on everything is simply there.
+
+/// A block that brings its own entrance, so [PageSection] does not move it a second time.
+mixin SelfRevealing on Widget {}
 
 /// A band across the page with an optional heading, holding [child] in the grid's container.
 class PageSection extends StatelessWidget {
@@ -38,23 +47,42 @@ class PageSection extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              if (eyebrow != null) ...[Eyebrow(eyebrow!), const SizedBox(height: 8)],
-              if (title != null) Text(title!.tr, style: theme.textTheme.headlineMedium),
+              if (eyebrow != null) ...[Reveal(rise: 10, child: Eyebrow(eyebrow!)), const SizedBox(height: 8)],
+              if (title != null) _RisingTitle(title!.tr, style: theme.textTheme.headlineMedium),
               if (subtitle != null) ...[
                 const SizedBox(height: 12),
-                ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 720),
-                  child: Text(subtitle!.tr, style: theme.textTheme.bodyLarge?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+                Reveal(
+                  delay: AppTheme.stagger * 3,
+                  rise: 12,
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 720),
+                    child: Text(subtitle!.tr, style: theme.textTheme.bodyLarge?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+                  ),
                 ),
               ],
               if (title != null || subtitle != null) const SizedBox(height: 32),
-              child,
+              if (child is SelfRevealing) child else Reveal(delay: AppTheme.stagger * 2, child: child),
             ],
           ),
         ),
       ),
     );
   }
+}
+
+/// A band's title: its words rise one after another the first time it comes into view (not before, so a heading
+/// further down the page is not over by the time it is seen).
+class _RisingTitle extends StatelessWidget {
+  const _RisingTitle(this.text, {required this.style});
+
+  final String text;
+  final TextStyle? style;
+
+  @override
+  Widget build(BuildContext context) => InView(
+    duration: AppTheme.fast,
+    builder: (context, t, _) => t == 0 ? Opacity(opacity: 0, child: Text(text, style: style)) : WordsRise(text, style: style),
+  );
 }
 
 /// A short coloured label above a heading: spaced capitals in English, plain in Arabic, whose letters must join.
@@ -112,17 +140,31 @@ class PageHero extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (eyebrow != null) ...[Eyebrow(eyebrow!), const SizedBox(height: 12)],
-                    Text(title.tr, style: context.responsive(theme.textTheme.headlineMedium, lg: theme.textTheme.displaySmall)),
+                    // The entrance: the eyebrow, the title word by word, the stitch sewing itself in, then the rest, all
+                    // within about a second, so the first button can be clicked straight away.
+                    if (eyebrow != null) ...[Appear(child: Eyebrow(eyebrow!)), const SizedBox(height: 12)],
+                    WordsRise(
+                      title.tr,
+                      delay: const Duration(milliseconds: 120),
+                      style: context.responsive(theme.textTheme.headlineMedium, lg: theme.textTheme.displaySmall),
+                    ),
                     const SizedBox(height: 14),
-                    const StitchLine(),
+                    const SewIn(delay: Duration(milliseconds: 480), child: StitchLine()),
                     const SizedBox(height: 18),
-                    Text(body.tr, style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant, height: 1.6)),
-                    if (actions.isNotEmpty) ...[const SizedBox(height: 32), LinkButtons(actions)],
+                    Appear(
+                      delay: const Duration(milliseconds: 360),
+                      child: Text(body.tr, style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant, height: 1.6)),
+                    ),
+                    if (actions.isNotEmpty) ...[const SizedBox(height: 32), Appear(delay: const Duration(milliseconds: 440), child: LinkButtons(actions))],
                   ],
                 ),
               ),
-              if (side != null) GridCol(lg: 6, child: side),
+              // The picture is unveiled from the start edge as it settles to its size.
+              if (side != null)
+                GridCol(
+                  lg: 6,
+                  child: image != null ? PhotoReveal(delay: const Duration(milliseconds: 200), child: side) : Appear(delay: AppTheme.stagger * 4, child: side),
+                ),
             ],
           ),
         ),
@@ -133,22 +175,31 @@ class PageHero extends StatelessWidget {
 
 /// [links] as buttons: the first filled, the rest outlined.
 class LinkButtons extends StatelessWidget {
-  const LinkButtons(this.links, {super.key});
+  const LinkButtons(this.links, {this.alignment = WrapAlignment.start, super.key});
 
   final List<SiteLink> links;
+  final WrapAlignment alignment;
 
   @override
   Widget build(BuildContext context) {
     final site = Get.find<SiteController>();
     return Wrap(
+      alignment: alignment,
       spacing: 12,
       runSpacing: 12,
       children: [
+        // The first, filled button leans toward the pointer; every button gives a little when pressed.
         for (final (i, link) in links.indexed)
           if (i == 0)
-            FilledButton(onPressed: () => site.open(link.url), child: Text(link.label.tr))
+            Magnetic(
+              child: Squish(
+                child: FilledButton(onPressed: () => site.open(link.url), child: Text(link.label.tr)),
+              ),
+            )
           else
-            OutlinedButton(onPressed: () => site.open(link.url), child: Text(link.label.tr)),
+            Squish(
+              child: OutlinedButton(onPressed: () => site.open(link.url), child: Text(link.label.tr)),
+            ),
       ],
     );
   }
@@ -184,7 +235,7 @@ class Screenshot extends StatelessWidget {
 }
 
 /// [features] as cards in a grid: one column on phones, two on tablets, [columns] on laptops.
-class FeatureGrid extends StatelessWidget {
+class FeatureGrid extends StatelessWidget with SelfRevealing {
   const FeatureGrid(this.features, {this.columns = 3, this.numbered = false, super.key});
 
   final List<Feature> features;
@@ -201,7 +252,11 @@ class FeatureGrid extends StatelessWidget {
         GridCol(
           md: 6,
           lg: 12 ~/ columns,
-          child: FeatureCard(f, number: numbered ? i + 1 : null),
+          // Cards rise a step apart along each row.
+          child: Reveal(
+            delay: staggerOf(context) * (i % columns) * 1.5,
+            child: FeatureCard(f, number: numbered ? i + 1 : null),
+          ),
         ),
     ],
   );
@@ -216,26 +271,35 @@ class FeatureCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                GlyphIcon(feature.glyph),
-                if (number != null) ...[
-                  const Spacer(),
-                  Text('$number', style: theme.textTheme.headlineMedium?.copyWith(color: theme.colorScheme.outlineVariant)),
+    // The card rises onto a soft shadow under the pointer, and its icon gives a little shake.
+    return HoverLift(
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Wiggle(child: GlyphIcon(feature.glyph)),
+                  if (number != null) ...[
+                    const Spacer(),
+                    Text(
+                      '$number',
+                      style: theme.textTheme.headlineMedium?.copyWith(
+                        color: theme.colorScheme.outlineVariant,
+                        fontFeatures: const [FontFeature.tabularFigures()],
+                      ),
+                    ),
+                  ],
                 ],
-              ],
-            ),
-            const SizedBox(height: 16),
-            Text(feature.title.tr, style: theme.textTheme.titleMedium),
-            const SizedBox(height: 8),
-            Text(feature.body.tr, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
-          ],
+              ),
+              const SizedBox(height: 16),
+              Text(feature.title.tr, style: theme.textTheme.titleMedium),
+              const SizedBox(height: 8),
+              Text(feature.body.tr, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+            ],
+          ),
         ),
       ),
     );
@@ -254,19 +318,23 @@ class CheckList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        for (final item in items)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 12),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 3),
-                  child: Icon(Icons.check_circle, size: 20, color: theme.colorScheme.primary),
-                ),
-                const SizedBox(width: 12),
-                Expanded(child: Text(item.tr, style: theme.textTheme.bodyLarge)),
-              ],
+        for (final (i, item) in items.indexed)
+          Reveal(
+            delay: staggerOf(context) * i,
+            rise: 8,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 3),
+                    child: Icon(Icons.check_circle, size: 20, color: theme.colorScheme.primary),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(child: Text(item.tr, style: theme.textTheme.bodyLarge)),
+                ],
+              ),
             ),
           ),
       ],
@@ -275,7 +343,7 @@ class CheckList extends StatelessWidget {
 }
 
 /// [offers] side by side, as price cards.
-class OfferGrid extends StatelessWidget {
+class OfferGrid extends StatelessWidget with SelfRevealing {
   const OfferGrid(this.offers, {this.highlight, super.key});
 
   final List<Offer> offers;
@@ -291,7 +359,11 @@ class OfferGrid extends StatelessWidget {
         GridCol(
           md: offers.length == 2 ? 6 : 12,
           lg: 12 ~/ offers.length,
-          child: _OfferCard(o, highlighted: i == highlight),
+          // The price cards rise a step apart and lean toward the pointer (a few degrees, with a soft gleam).
+          child: Reveal(
+            delay: staggerOf(context) * i * 1.5,
+            child: Tilt(maxAngle: 0.06, child: _OfferCard(o, highlighted: i == highlight)),
+          ),
         ),
     ],
   );
@@ -337,9 +409,12 @@ class _OfferCard extends StatelessWidget {
             const SizedBox(height: 8),
             SizedBox(
               width: double.infinity,
-              child: highlighted
-                  ? FilledButton(onPressed: () => site.open(link.url), child: Text(link.label.tr))
-                  : OutlinedButton(onPressed: () => site.open(link.url), child: Text(link.label.tr)),
+              child: Squish(
+                scale: 0.97,
+                child: highlighted
+                    ? FilledButton(onPressed: () => site.open(link.url), child: Text(link.label.tr))
+                    : OutlinedButton(onPressed: () => site.open(link.url), child: Text(link.label.tr)),
+              ),
             ),
           ],
         ),
@@ -367,48 +442,56 @@ class CallToAction extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 48),
       child: GridContainer(
-        child: DecoratedBox(
-          decoration: ShapeDecoration(color: scheme.primary, shape: AppTheme.shape(24)),
-          child: Padding(
-            padding: EdgeInsets.all(context.responsive<double>(28, lg: 56)),
-            child: GridRow(
-              gutter: 24,
-              children: [
-                GridCol(
-                  lg: 8,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(title.tr, style: theme.textTheme.headlineMedium?.copyWith(color: scheme.onPrimary)),
-                      const SizedBox(height: 12),
-                      Text(body.tr, style: theme.textTheme.bodyLarge?.copyWith(color: scheme.onPrimary.withValues(alpha: 0.85))),
-                    ],
+        child: Reveal(
+          child: DecoratedBox(
+            decoration: ShapeDecoration(color: scheme.primary, shape: AppTheme.shape(24)),
+            child: Padding(
+              padding: EdgeInsets.all(context.responsive<double>(28, lg: 56)),
+              child: GridRow(
+                gutter: 24,
+                children: [
+                  GridCol(
+                    lg: 8,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(title.tr, style: theme.textTheme.headlineMedium?.copyWith(color: scheme.onPrimary)),
+                        const SizedBox(height: 12),
+                        Text(body.tr, style: theme.textTheme.bodyLarge?.copyWith(color: scheme.onPrimary.withValues(alpha: 0.85))),
+                      ],
+                    ),
                   ),
-                ),
-                GridCol(
-                  lg: 4,
-                  child: Wrap(
-                    spacing: 12,
-                    runSpacing: 12,
-                    alignment: context.isDesktop ? WrapAlignment.end : WrapAlignment.start,
-                    children: [
-                      FilledButton(
-                        onPressed: () => site.open(Brand.whatsAppLink('Hi Zirr team, I found you on your website.'.tr)),
-                        style: FilledButton.styleFrom(backgroundColor: scheme.onPrimary, foregroundColor: scheme.primary),
-                        child: Text('Message us on WhatsApp'.tr),
-                      ),
-                      OutlinedButton(
-                        onPressed: () => site.open(Routes.contact),
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: scheme.onPrimary,
-                          side: BorderSide(color: scheme.onPrimary.withValues(alpha: 0.6)),
+                  GridCol(
+                    lg: 4,
+                    child: Wrap(
+                      spacing: 12,
+                      runSpacing: 12,
+                      alignment: context.isDesktop ? WrapAlignment.end : WrapAlignment.start,
+                      children: [
+                        Magnetic(
+                          child: Squish(
+                            child: FilledButton(
+                              onPressed: () => site.open(Brand.whatsAppLink('Hi Zirr team, I found you on your website.'.tr)),
+                              style: FilledButton.styleFrom(backgroundColor: scheme.onPrimary, foregroundColor: scheme.primary),
+                              child: Text('Message us on WhatsApp'.tr),
+                            ),
+                          ),
                         ),
-                        child: Text('Other ways to reach us'.tr),
-                      ),
-                    ],
+                        Squish(
+                          child: OutlinedButton(
+                            onPressed: () => site.open(Routes.contact),
+                            style: OutlinedButton.styleFrom(
+                              foregroundColor: scheme.onPrimary,
+                              side: BorderSide(color: scheme.onPrimary.withValues(alpha: 0.6)),
+                            ),
+                            child: Text('Other ways to reach us'.tr),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
@@ -429,45 +512,54 @@ class CaseStudyCard extends StatelessWidget {
     final theme = Theme.of(context);
     final site = Get.find<SiteController>();
     final open = hasPage ? Routes.caseStudy(study.slug) : study.links.firstOrNull?.url;
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: open == null ? null : () => site.open(open),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            AspectRatio(
-              aspectRatio: 16 / 9,
-              child: study.image != null
-                  ? Image.asset(study.image!, fit: BoxFit.cover, alignment: Alignment.topCenter)
-                  : ColoredBox(
-                      color: theme.colorScheme.primaryContainer,
-                      child: Center(child: Icon(_sectorIcons[study.slug] ?? Icons.apps, size: 56, color: theme.colorScheme.onPrimaryContainer)),
-                    ),
+    // Lifts onto a soft shadow under the pointer, leans toward it, and its picture leans in inside the frame.
+    return HoverLift(
+      zoom: true,
+      child: Tilt(
+        maxAngle: 0.05,
+        child: Card(
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            onTap: open == null ? null : () => site.open(open),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: study.image != null
+                      ? HoverZoom(
+                          child: Image.asset(study.image!, fit: BoxFit.cover, alignment: Alignment.topCenter),
+                        )
+                      : ColoredBox(
+                          color: theme.colorScheme.primaryContainer,
+                          child: Center(child: Icon(_sectorIcons[study.slug] ?? Icons.apps, size: 56, color: theme.colorScheme.onPrimaryContainer)),
+                        ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Eyebrow(study.sector),
+                      const SizedBox(height: 8),
+                      Text(study.title.tr, style: theme.textTheme.titleMedium),
+                      const SizedBox(height: 8),
+                      Text(study.summary.tr, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+                      const SizedBox(height: 16),
+                      StackChips(study.stack),
+                      if (open != null) ...[
+                        const SizedBox(height: 16),
+                        Text(
+                          hasPage ? 'Read the case study'.tr : study.links.first.label.tr,
+                          style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary),
+                        ),
+                      ],
+                    ],
+                  ),
+                ),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.all(24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Eyebrow(study.sector),
-                  const SizedBox(height: 8),
-                  Text(study.title.tr, style: theme.textTheme.titleMedium),
-                  const SizedBox(height: 8),
-                  Text(study.summary.tr, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
-                  const SizedBox(height: 16),
-                  StackChips(study.stack),
-                  if (open != null) ...[
-                    const SizedBox(height: 16),
-                    Text(
-                      hasPage ? 'Read the case study'.tr : study.links.first.label.tr,
-                      style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary),
-                    ),
-                  ],
-                ],
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
