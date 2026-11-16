@@ -20,6 +20,47 @@ class AppTheme {
   static const curve = Cubic(0.2, 0, 0, 1);
   static const fast = Duration(milliseconds: 160);
 
+  // The motion tokens, the same as the Zirr shops' (lib/widgets/motion.dart reads them; no widget keeps its own
+  // numbers). This is a marketing site, so it moves the most of any Zirr product: the hero comes in, blocks rise as
+  // they scroll into view, cards lean toward the pointer, figures roll. With reduce motion on, everything simply shows.
+
+  /// A quick change in place.
+  static const medium = Duration(milliseconds: 280);
+
+  /// A hover or a press.
+  static const hover = Duration(milliseconds: 200);
+
+  /// An entrance.
+  static const slow = Duration(milliseconds: 520);
+
+  /// A block rising into view.
+  static const reveal = Duration(milliseconds: 600);
+
+  /// The hero's whole entrance, and the figures rolling.
+  static const hero = Duration(milliseconds: 1100);
+
+  /// The step between items that come in one after another: shorter on phones.
+  static const stagger = Duration(milliseconds: 60);
+  static const staggerPhone = Duration(milliseconds: 40);
+
+  /// How far a block rises as it comes into view, in points.
+  static const rise = 24.0;
+
+  /// For something arriving: fast at first, then a long settle.
+  static const enter = Cubic(0.05, 0.7, 0.1, 1);
+
+  /// For a pop: a little past its size and back.
+  static const pop = Cubic(0.34, 1.56, 0.64, 1);
+
+  /// The cards' corner radius.
+  static const radius = 16.0;
+
+  /// The shadow a card rises onto under the pointer: soft, layered and tinted with ink.
+  static const lifted = [
+    BoxShadow(color: Color(0x0F18202E), blurRadius: 4, offset: Offset(0, 1)),
+    BoxShadow(color: Color(0x2418202E), blurRadius: 28, offset: Offset(0, 12)),
+  ];
+
   static ThemeData _build(Brightness brightness) {
     final dark = brightness == Brightness.dark;
     final scheme = ColorScheme.fromSeed(seedColor: Brand.seedColor, brightness: brightness, dynamicSchemeVariant: DynamicSchemeVariant.fidelity).copyWith(

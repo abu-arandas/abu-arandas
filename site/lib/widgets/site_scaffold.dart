@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:get/get.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -6,7 +8,10 @@ import '../config/breakpoints.dart';
 import '../config/routes.dart';
 import '../config/theme.dart';
 import '../controllers/site_controller.dart';
+import 'confetti.dart';
+import 'fun.dart';
 import 'language_button.dart';
+import 'motion.dart';
 
 /// The site's main pages, as the header and the menu list them.
 const navItems = [(Routes.agencies, 'For agencies'), (Routes.retail, 'Retail'), (Routes.work, 'Work'), (Routes.contact, 'Contact')];
@@ -42,24 +47,53 @@ class SiteScaffold extends StatelessWidget {
   );
 }
 
-class _Logo extends StatelessWidget {
+/// The logo, which takes the visitor home and keeps a secret: press it five times in a row and shirt buttons rain
+/// down, with a short line to say thanks. The mark gives a little shake under the pointer and on every press.
+class _Logo extends StatefulWidget {
   const _Logo();
+
+  @override
+  State<_Logo> createState() => _LogoState();
+}
+
+class _LogoState extends State<_Logo> {
+  // Counted across pages, since the first press on another page goes home.
+  static int _taps = 0;
+  static DateTime _last = DateTime(0);
+
+  void _tap() {
+    final now = DateTime.now();
+    _taps = now.difference(_last) < const Duration(milliseconds: 1500) ? _taps + 1 : 1;
+    _last = now;
+    setState(() {});
+    if (_taps >= 5) {
+      _taps = 0;
+      celebrate(context, kind: Celebration.buttons);
+      ScaffoldMessenger.maybeOf(context)
+        ?..hideCurrentSnackBar()
+        ..showSnackBar(SnackBar(content: Text(funLine(['Five presses! Our button says thank you.'.tr, 'You found the secret. Buttons for everyone.'.tr]))));
+    }
+    unawaited(Get.find<SiteController>().open(Routes.home));
+  }
 
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     return InkWell(
       borderRadius: BorderRadius.circular(8),
-      onTap: () => Get.find<SiteController>().open(Routes.home),
+      onTap: _tap,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             ExcludeSemantics(
-              child: CustomPaint(
-                size: const Size.square(34),
-                painter: _ButtonMark(button: scheme.primary, holes: scheme.surface, lit: scheme.secondary),
+              child: Wiggle(
+                trigger: _taps,
+                child: CustomPaint(
+                  size: const Size.square(34),
+                  painter: _ButtonMark(button: scheme.primary, holes: scheme.surface, lit: scheme.secondary),
+                ),
               ),
             ),
             const SizedBox(width: 10),
@@ -128,33 +162,39 @@ class _Header extends StatelessWidget implements PreferredSizeWidget {
             child: GridContainer(
               child: SizedBox(
                 height: 72,
-                child: Row(
-                  children: [
-                    const _Logo(),
-                    const Spacer(),
-                    if (context.isDesktop) ...[
-                      for (final (route, label) in navItems)
-                        TextButton(
-                          onPressed: () => site.open(route),
-                          style: TextButton.styleFrom(foregroundColor: _isCurrent(route) ? scheme.primary : scheme.onSurface),
-                          child: Text(label.tr, style: TextStyle(fontWeight: _isCurrent(route) ? FontWeight.w600 : FontWeight.w400)),
+                child: _FirstEntrance(
+                  child: Row(
+                    children: [
+                      const _Logo(),
+                      const Spacer(),
+                      if (context.isDesktop) ...[
+                        for (final (route, label) in navItems)
+                          TextButton(
+                            onPressed: () => site.open(route),
+                            style: TextButton.styleFrom(foregroundColor: _isCurrent(route) ? scheme.primary : scheme.onSurface),
+                            child: Text(label.tr, style: TextStyle(fontWeight: _isCurrent(route) ? FontWeight.w600 : FontWeight.w400)),
+                          ),
+                        const SizedBox(width: 8),
+                        const LanguageButton(),
+                        const SizedBox(width: 8),
+                        Magnetic(
+                          child: Squish(
+                            child: FilledButton(
+                              onPressed: () => site.open(Brand.whatsAppLink('Hi Zirr team, I found you on your website.'.tr)),
+                              style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14)),
+                              child: Text('Talk to us'.tr),
+                            ),
+                          ),
                         ),
-                      const SizedBox(width: 8),
-                      const LanguageButton(),
-                      const SizedBox(width: 8),
-                      FilledButton(
-                        onPressed: () => site.open(Brand.whatsAppLink('Hi Zirr team, I found you on your website.'.tr)),
-                        style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14)),
-                        child: Text('Talk to us'.tr),
-                      ),
-                    ] else ...[
-                      const LanguageButton(),
-                      Builder(
-                        builder: (context) =>
-                            IconButton(tooltip: 'Menu'.tr, icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer()),
-                      ),
+                      ] else ...[
+                        const LanguageButton(),
+                        Builder(
+                          builder: (context) =>
+                              IconButton(tooltip: 'Menu'.tr, icon: const Icon(Icons.menu), onPressed: () => Scaffold.of(context).openEndDrawer()),
+                        ),
+                      ],
                     ],
-                  ],
+                  ),
                 ),
               ),
             ),
@@ -165,6 +205,22 @@ class _Header extends StatelessWidget implements PreferredSizeWidget {
   }
 
   bool _isCurrent(String route) => current == route || current.startsWith('$route/');
+}
+
+/// Slides the header's contents down into place on the first page of a visit, not on every page after it.
+class _FirstEntrance extends StatelessWidget {
+  const _FirstEntrance({required this.child});
+
+  static bool _played = false;
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    if (_played) return child;
+    WidgetsBinding.instance.addPostFrameCallback((_) => _played = true);
+    return Appear(offset: const Offset(0, -10), child: child);
+  }
 }
 
 class _Menu extends StatelessWidget {
@@ -219,42 +275,60 @@ class _Footer extends StatelessWidget {
             children: [
               GridCol(
                 md: 6,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const _Logo(),
-                    const SizedBox(height: 12),
-                    Text('A Flutter and Supabase studio in Amman, building in Arabic and English.'.tr, style: muted),
-                    const SizedBox(height: 4),
-                    Text(Brand.city.tr, style: muted),
-                  ],
+                child: Reveal(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const _Logo(),
+                      const SizedBox(height: 12),
+                      Text('A Flutter and Supabase studio in Amman, building in Arabic and English.'.tr, style: muted),
+                      const SizedBox(height: 4),
+                      Text(Brand.city.tr, style: muted),
+                    ],
+                  ),
                 ),
               ),
               GridCol(
                 xs: 6,
                 md: 3,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Pages'.tr, style: theme.textTheme.titleSmall),
-                    for (final (route, label) in navItems) _FooterLink(label: label.tr, onTap: () => site.open(route)),
-                  ],
+                child: Reveal(
+                  delay: staggerOf(context) * 1.5,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Pages'.tr, style: theme.textTheme.titleSmall),
+                      for (final (route, label) in navItems) _FooterLink(label: label.tr, onTap: () => site.open(route)),
+                    ],
+                  ),
                 ),
               ),
               GridCol(
                 xs: 6,
                 md: 3,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: Reveal(
+                  delay: staggerOf(context) * 3,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Elsewhere'.tr, style: theme.textTheme.titleSmall),
+                      _FooterLink(label: 'WhatsApp'.tr, onTap: () => site.open(Brand.whatsAppLink())),
+                      _FooterLink(label: 'Facebook'.tr, onTap: () => site.open(Brand.facebook)),
+                      _FooterLink(label: 'GitHub'.tr, onTap: () => site.open(Brand.github)),
+                    ],
+                  ),
+                ),
+              ),
+              GridCol(
+                child: Wrap(
+                  spacing: 16,
+                  runSpacing: 4,
+                  alignment: WrapAlignment.spaceBetween,
                   children: [
-                    Text('Elsewhere'.tr, style: theme.textTheme.titleSmall),
-                    _FooterLink(label: 'WhatsApp'.tr, onTap: () => site.open(Brand.whatsAppLink())),
-                    _FooterLink(label: 'Facebook'.tr, onTap: () => site.open(Brand.facebook)),
-                    _FooterLink(label: 'GitHub'.tr, onTap: () => site.open(Brand.github)),
+                    Text('© @year @name. Built with Flutter.'.trParams({'year': '${DateTime.now().year}', 'name': Brand.name.tr}), style: muted),
+                    Text('Made in Amman, one button at a time.'.tr, style: muted),
                   ],
                 ),
               ),
-              GridCol(child: Text('© @year @name. Built with Flutter.'.trParams({'year': '${DateTime.now().year}', 'name': Brand.name.tr}), style: muted)),
             ],
           ),
         ),
@@ -270,8 +344,11 @@ class _FooterLink extends StatelessWidget {
   final VoidCallback onTap;
 
   @override
-  Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.only(top: 8),
-    child: InkWell(onTap: onTap, child: Text(label)),
+  Widget build(BuildContext context) => UnderlineLink(
+    label: label,
+    onTap: onTap,
+    style: Theme.of(context).textTheme.bodyMedium,
+    line: Theme.of(context).colorScheme.secondary,
+    padding: const EdgeInsets.only(top: 8, bottom: 4),
   );
 }

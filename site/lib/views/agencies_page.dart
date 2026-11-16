@@ -7,6 +7,7 @@ import '../config/content.dart';
 import '../config/routes.dart';
 import '../models/content.dart';
 import '../widgets/blocks.dart';
+import '../widgets/motion.dart';
 import '../widgets/site_scaffold.dart';
 
 /// The white-label Flutter team, for agencies that sell apps and need people to build them.
@@ -80,17 +81,22 @@ class _Faqs extends StatelessWidget {
     constraints: BoxConstraints(maxWidth: context.isDesktop ? 860 : double.infinity),
     child: Column(
       children: [
-        for (final faq in faqs)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 12),
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              child: ExpansionTile(
-                shape: const Border(),
-                title: Text(faq.question.tr, style: const TextStyle(fontWeight: FontWeight.w600)),
-                childrenPadding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 16),
-                expandedAlignment: AlignmentDirectional.centerStart,
-                children: [Text(faq.answer.tr)],
+        // The questions come in one after another as the list scrolls into view.
+        for (final (i, faq) in faqs.indexed)
+          Reveal(
+            delay: staggerOf(context) * i,
+            rise: 12,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: Card(
+                clipBehavior: Clip.antiAlias,
+                child: ExpansionTile(
+                  shape: const Border(),
+                  title: Text(faq.question.tr, style: const TextStyle(fontWeight: FontWeight.w600)),
+                  childrenPadding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 16),
+                  expandedAlignment: AlignmentDirectional.centerStart,
+                  children: [Text(faq.answer.tr)],
+                ),
               ),
             ),
           ),

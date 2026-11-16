@@ -36,6 +36,28 @@ switches. Any other address shows the not-found page.
 - **Pictures:** `assets/images`.
 - **Page title and link previews:** `web/index.html`.
 
+## Motion and voice
+
+The site is a marketing page, so it moves the most of all the Zirr apps, and everything is built from
+[`lib/widgets/motion.dart`](lib/widgets/motion.dart) with the durations and curves in `AppTheme`
+([`lib/config/theme.dart`](lib/config/theme.dart)); a widget never sets its own.
+
+- **On load:** while Flutter boots, the Zirr button presses itself in with a rotating line in the visitor's language
+  (`web/index.html`). Then the header slides down (first page only), the hero's title rises word by word, its orange
+  stitch sews itself in and the picture is unveiled, all within about a second.
+- **On scroll:** each band's heading rises word by word and its contents follow; cards come in a step apart; the
+  figures on the home and Retail pages roll to their real values (the analyzer count counts down to zero). Each
+  plays once.
+- **Under the pointer:** cards lift onto a soft shadow, price and case study cards lean toward the pointer, pictures
+  lean in, icons give a little shake, footer links draw an orange underline, the main buttons are drawn to the
+  pointer and every button gives a little when pressed.
+- **Fun:** press the logo five times in a row for a shower of buttons and a thank-you line; the not-found page has a
+  lost button that rolls in, with one of a few lines ([`lib/widgets/fun.dart`](lib/widgets/fun.dart)); sending the
+  contact form bursts confetti from the button; the footer signs off "Made in Amman, one button at a time."
+- **Never:** jokes on prices, licences, the contact form's errors or anything legal. Arabic lines are written
+  separately in [`lib/l10n/ar.dart`](lib/l10n/ar.dart), not translated word for word.
+- **Reduce motion:** with the system's reduce-motion setting on, every page is simply there, still.
+
 ## Run and check
 
 Flutter 3.50.0, the version CI and `tool/vercel_build.sh` use.

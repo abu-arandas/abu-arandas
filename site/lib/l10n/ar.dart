@@ -320,7 +320,15 @@ const ar = <String, String>{
 
   // Not found
   'Page not found': 'الصفحة غير موجودة',
-  'This page does not exist': 'هذه الصفحة غير موجودة',
+  'This page lost a button.': 'ضاع زِرّ من هذه الصفحة.',
+  'This page went out for a coffee.': 'هذه الصفحة خرجت تشرب قهوة.',
+  'We looked under every cushion. Nothing.': 'بحثنا تحت كل وسادة. لا شيء.',
+  'The lost button': 'الزِّرّ الضائع',
   'The link may be old, or the address mistyped.': 'ربما الرابط قديم، أو في العنوان خطأ.',
   'Go to the home page': 'اذهب إلى الرئيسية',
+
+  // The logo's secret (five presses in a row) and the footer's smile.
+  'Five presses! Our button says thank you.': 'خمس ضغطات! زِرّنا يشكرك.',
+  'You found the secret. Buttons for everyone.': 'وجدت السرّ. أزرار للجميع.',
+  'Made in Amman, one button at a time.': 'صُنع في عمّان، زِرّاً بعد زِرّ.',
 };
