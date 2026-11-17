@@ -104,10 +104,15 @@ class GridRow extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final column = (constraints.maxWidth + gutter) / 12;
-        return Wrap(
-          spacing: gutter,
-          runSpacing: gutter,
-          children: [for (final cell in children) SizedBox(width: math.max(0, column * cell.spanAt(screen).clamp(1, 12) - gutter), child: cell)],
+        // Wrap is only as wide as its cells, so a row that spans less than 12 would shrink and be centred by its
+        // parent. Giving it the full width keeps a short row at the start, as in Bootstrap.
+        return SizedBox(
+          width: constraints.maxWidth,
+          child: Wrap(
+            spacing: gutter,
+            runSpacing: gutter,
+            children: [for (final cell in children) SizedBox(width: math.max(0, column * cell.spanAt(screen).clamp(1, 12) - gutter), child: cell)],
+          ),
         );
       },
     );

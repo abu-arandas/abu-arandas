@@ -183,7 +183,7 @@ const ar = <String, String>{
   'Your online shop, tills and stock in one Flutter app': 'متجرك الإلكتروني والكاشير والمخزون في تطبيق Flutter واحد',
   'Zirr Retail runs a fashion retailer end to end: the website, a point of sale in every branch, stock across stores, purchasing and the books, on one Supabase database. Buy the source code and ship it under your brand.': 'زِرّ للتجزئة يدير محل الأزياء من أوله إلى آخره: الموقع ونقطة بيع في كل فرع والمخزون بين الفروع والمشتريات والحسابات، على قاعدة بيانات Supabase واحدة. اشترِ الكود المصدري وأطلقه باسمك.',
   'Visit the live shop': 'زُر المتجر المباشر',
-  'Try the back office': 'جرّب لوحة الإدارة',
+  'Book a back-office walkthrough': 'احجز جولة في لوحة الإدارة',
   'Compare licences': 'قارن التراخيص',
   'Features': 'المزايا',
   'One system instead of five': 'نظام واحد بدل خمسة',

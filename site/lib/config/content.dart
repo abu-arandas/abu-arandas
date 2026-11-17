@@ -146,7 +146,11 @@ class Content {
 
   static const retailLinks = [
     SiteLink('Visit the live shop', 'https://erp-house.vercel.app'),
-    SiteLink('Try the back office', 'https://erp-house.vercel.app/sandbox/sign-in'),
+    // There is no public back office (its pages need a staff sign-in), so visitors book a walkthrough instead.
+    SiteLink(
+      'Book a back-office walkthrough',
+      'https://wa.me/962791568798?text=Hi%2C%20I%20would%20like%20a%20walkthrough%20of%20the%20Zirr%20Retail%20back%20office.',
+    ),
     SiteLink('Compare licences', 'https://erp-house.vercel.app/software#pricing'),
   ];
 

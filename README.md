@@ -10,6 +10,7 @@
 Point of sale · Retail ERP · Online stores · Flutter apps · Arabic and English
 
 [![Book a free demo on WhatsApp](https://img.shields.io/badge/WhatsApp-Book_a_free_demo-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/962791568798?text=Hi%20Zirr%20team%2C%20I%20found%20you%20on%20GitHub%20and%20would%20like%20a%20demo.)
+[![Visit the Zirr website](https://img.shields.io/badge/Website-zirr--site.vercel.app-2B4C8C?style=for-the-badge&logo=googlechrome&logoColor=white)](https://zirr-site.vercel.app)
 [![Follow Zirr on Facebook](https://img.shields.io/badge/Facebook-Zirr-0866FF?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/1294898037048567)
 
 </div>
@@ -86,7 +87,7 @@ Everything ships in Arabic and English, with right-to-left layouts.
 
 نظام الكاشير **زِرّ كاشير** للمطاعم والكافيهات والمحلات: [جرّب الديمو](https://pos-sage-one.vercel.app)، ونركّبه عندك في عمّان مع تجربة مجانية 14 يوماً، ثم 299 ديناراً مرة واحدة بدون اشتراك شهري.
 
-تابعنا على [فيسبوك](https://www.facebook.com/1294898037048567).
+زُر [موقعنا](https://zirr-site.vercel.app)، وتابعنا على [فيسبوك](https://www.facebook.com/1294898037048567).
 
 لحجز عرض تجريبي مجاني، راسلنا على [واتساب](https://wa.me/962791568798?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%88%D8%B5%D9%84%D8%AA%20%D8%A5%D9%84%D9%8A%D9%83%D9%85%20%D9%85%D9%86%20GitHub%20%D9%88%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A.).
 
