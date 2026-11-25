@@ -18,10 +18,10 @@ class HomePage extends StatelessWidget {
     current: Routes.home,
     sections: [
       const PageHero(
-        eyebrow: 'Flutter and Supabase studio in Amman',
-        title: 'Flutter apps for agencies, and the products to start them from',
-        body: 'We build Arabic and English apps under your agency’s name, and we make our own products for shops that you can license and ship.',
-        actions: [SiteLink('Hire us for your agency', Routes.agencies), SiteLink('See our work', Routes.work)],
+        eyebrow: 'Arandas Tech · software company in Amman',
+        title: 'Software for businesses that work in Arabic and English',
+        body: 'We build Flutter apps for companies and agencies, and we make Zirr, our own line of software that shops run on: the till, the stock, the online store.',
+        actions: [SiteLink('See our Flutter services', Routes.services), SiteLink('Meet Zirr', Routes.zirr)],
         image: 'assets/images/zirr-retail.jpg',
       ),
       const _Stats(),
@@ -29,13 +29,14 @@ class HomePage extends StatelessWidget {
       PageSection(
         tinted: true,
         eyebrow: 'Our products',
-        title: 'Built, checked and ready to brand',
-        subtitle: 'Each product is a working app with its source code, database checks and docs, so your next project starts at version one.',
-        child: GridRow(
-          gutter: 20,
+        title: 'Zirr, our software for shops',
+        subtitle: 'Four products from one team, built and checked to the same bar as our client work, in Arabic and English.',
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            GridCol(lg: 6, child: CaseStudyCard(Content.caseStudy('retail')!)),
-            GridCol(lg: 6, child: CaseStudyCard(Content.caseStudy('starter')!)),
+            GridRow(gutter: 20, children: [for (final product in Content.zirrProducts) GridCol(md: 6, lg: 3, child: CaseStudyCard(product, hasPage: false))]),
+            const SizedBox(height: 24),
+            const LinkButtons([SiteLink('Meet Zirr', Routes.zirr)]),
           ],
         ),
       ),

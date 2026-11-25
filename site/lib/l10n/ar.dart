@@ -9,7 +9,6 @@ const ar = <String, String>{
   'العربية': 'English',
 
   // Header, menu and footer
-  'For agencies': 'للوكالات',
   'Work': 'أعمالنا',
   'Contact': 'تواصل معنا',
   'Home': 'الرئيسية',
@@ -21,10 +20,7 @@ const ar = <String, String>{
   'Email': 'البريد الإلكتروني',
   'Facebook': 'فيسبوك',
   'GitHub': 'GitHub',
-  'A Flutter and Supabase studio in Amman, building in Arabic and English.': 'استوديو Flutter وSupabase في عمّان، نبني بالعربي والإنجليزي.',
   '© @year @name. Built with Flutter.': '© @year @name. صُنع بـ Flutter.',
-  'Hi Zirr team, I found you on your website.': 'مرحباً فريق زِرّ، وصلت إليكم من موقعكم.',
-  'Hi Zirr team, I would like to know more about: @name': 'مرحباً فريق زِرّ، أودّ معرفة المزيد عن: @name',
 
   // Blocks
   'Message us on WhatsApp': 'راسلنا على واتساب',
@@ -37,22 +33,13 @@ const ar = <String, String>{
   'What clients say': 'ماذا يقول عملاؤنا',
 
   // Home
-  'Flutter and Supabase studio in Amman': 'استوديو Flutter وSupabase في عمّان',
-  'Flutter apps for agencies, and the products to start them from': 'تطبيقات Flutter للوكالات، ومنتجات جاهزة تبدأ منها',
-  'We build Arabic and English apps under your agency’s name, and we make our own products for shops that you can license and ship.':
-      'نبني تطبيقات بالعربي والإنجليزي باسم وكالتك، ونصنع منتجاتنا الخاصة لمحلات التجزئة لتشتري ترخيصها وتطلقها.',
-  'Hire us for your agency': 'اعمل معنا لوكالتك',
   'See our work': 'شاهد أعمالنا',
   'building Flutter apps for clients': 'نبني تطبيقات Flutter للعملاء منذ',
   'languages in every build, Arabic and English': 'لغتان في كل إصدار، العربية والإنجليزية',
   'analyzer issues, the only number CI accepts': 'مشكلة في التحليل، الرقم الوحيد الذي يقبله CI',
-  'of tables behind row-level security': 'من الجداول محمية بأمان على مستوى الصفوف',
   'What we do': 'ماذا نفعل',
   'Three ways to work with us': 'ثلاث طرق للعمل معنا',
   'Our products': 'منتجاتنا',
-  'Built, checked and ready to brand': 'مبنية ومفحوصة وجاهزة لعلامتك',
-  'Each product is a working app with its source code, database checks and docs, so your next project starts at version one.':
-      'كل منتج تطبيق يعمل، مع كوده المصدري وفحوص قاعدة بياناته ووثائقه، فيبدأ مشروعك القادم من الإصدار الأول.',
   'Our quality bar': 'معايير الجودة لدينا',
   'What every project ships with': 'ما يأتي مع كل مشروع',
   'The same rules hold for our own products and for the apps we build for you.': 'القواعد نفسها تسري على منتجاتنا وعلى التطبيقات التي نبنيها لك.',
@@ -65,9 +52,6 @@ const ar = <String, String>{
   'We build your clients’ apps under your agency’s name, on your timeline, and stay invisible unless you want us in the room.':
       'نبني تطبيقات عملائك باسم وكالتك وفي مواعيدك، ونبقى خلف الكواليس إلا إذا أردت حضورنا.',
   'Zirr Retail': 'زِرّ للتجزئة',
-  'An online shop, a back office and a point of sale in one Flutter app, sold as source code you can brand and resell.':
-      'متجر إلكتروني ولوحة إدارة ونقطة بيع في تطبيق Flutter واحد، يُباع ككود مصدري تضع عليه علامتك.',
-  'Custom apps': 'تطبيقات حسب الطلب',
   'Android, iPhone and web apps on Flutter and Supabase, from the first screen to the store listing.':
       'تطبيقات أندرويد وآيفون وويب على Flutter وSupabase، من أول شاشة حتى النشر في المتجر.',
 
@@ -92,14 +76,9 @@ const ar = <String, String>{
   // Agencies
   'For agencies and software houses': 'للوكالات وشركات البرمجيات',
   'A white-label Flutter team, under your name': 'فريق Flutter يعمل باسمك',
-  'You win the client and own the relationship. We design, build, test and ship the Flutter app, in Arabic and English, and hand it over as yours.':
-      'أنت تكسب العميل وتملك العلاقة معه. ونحن نصمّم تطبيق Flutter ونبنيه ونختبره ونطلقه بالعربي والإنجليزي، ونسلّمه لك باسمك.',
   'Send us a brief': 'أرسل لنا الفكرة',
-  'Hi Zirr team, we are an agency and would like to talk about a Flutter project.': 'مرحباً فريق زِرّ، نحن وكالة ونودّ الحديث عن مشروع Flutter.',
   'What you get': 'ما تحصل عليه',
   'Based in Amman, UTC+3.': 'مقرّنا عمّان، بتوقيت UTC+3.',
-  'Why agencies use us': 'لماذا تعمل الوكالات معنا',
-  'Everything you need to resell our work': 'كل ما تحتاجه لتقدّم عملنا باسمك',
   'Your name on everything': 'اسمك على كل شيء',
   'Builds, store listings, repositories and invoices to your client carry your brand, not ours.':
       'الإصدارات وصفحات المتاجر والمستودعات والفواتير لعميلك تحمل علامتك أنت، لا علامتنا.',
@@ -153,10 +132,9 @@ const ar = <String, String>{
   'Source code, store builds, docs and a walkthrough, all under your name.': 'الكود وإصدارات المتاجر والوثائق وجولة شرح، كلها باسمك.',
   'The standard your client gets': 'المستوى الذي يحصل عليه عميلك',
   'Questions': 'أسئلة',
-  'What agencies ask us': 'ما تسألنا عنه الوكالات',
   'Who owns the code?': 'من يملك الكود؟',
-  'You do, for the work you pay for. Our own products (the starter, the retail app and the till) are licensed to you instead.':
-      'أنت، في العمل الذي تدفع ثمنه. أما منتجاتنا (القالب وزِرّ للتجزئة والكاشير) فتحصل على ترخيص لاستخدامها.',
+  'You do, for the work you pay for. Our own products, the Zirr line, are licensed to you instead.':
+      'أنت، في العمل الذي تدفع ثمنه. أما منتجاتنا، مجموعة زِرّ، فتحصل على ترخيص لاستخدامها.',
   'Will you talk to our client?': 'هل تتواصلون مع عميلنا؟',
   'Only if you want us to. By default we talk to you, and your client never sees our name.':
       'فقط إن أردت ذلك. نتواصل معك أنت عادةً، ولا يرى عميلك اسمنا أبداً.',
@@ -169,7 +147,6 @@ const ar = <String, String>{
   'Do you only do Flutter?': 'هل تعملون بـ Flutter فقط؟',
   'Flutter and Supabase are what we do best. We also build web apps in React and TypeScript.':
       'أفضل ما نتقنه Flutter وSupabase، ونبني أيضاً تطبيقات ويب بـ React وTypeScript.',
-  'Have a client waiting?': 'عندك عميل ينتظر؟',
   'Send the brief on WhatsApp. We sign an NDA first if you need one, and quote within two working days.':
       'أرسل الفكرة على واتساب. نوقّع اتفاقية سرية أولاً إن احتجت، ونرسل السعر خلال يومَي عمل.',
   'Flutter apps for Android, iPhone and the web': 'تطبيقات Flutter لأندرويد وآيفون والويب',
@@ -243,7 +220,6 @@ const ar = <String, String>{
   'What we have built': 'ما بنيناه',
   'Products we built and run, with the problem each one solves and what it achieved.': 'منتجات بنيناها ونشغّلها، مع المشكلة التي يحلّها كلٌّ منها وما حقّقه.',
   'Also from us': 'من منتجاتنا أيضاً',
-  'Other products': 'منتجات أخرى',
   'The challenge': 'التحدّي',
   'Stack': 'التقنيات',
   'What we built': 'ما بنيناه',
@@ -280,7 +256,6 @@ const ar = <String, String>{
   'Services kept free of the UI framework, so the logic stands on its own': 'خدمات منفصلة عن إطار الواجهة، فيبقى المنطق مستقلاً بذاته',
   'Database rules proven by 163 SQL checks': 'قواعد قاعدة البيانات تثبتها 163 فحصاً بلغة SQL',
   'Open the store': 'افتح المتجر',
-  'The starter every Zirr app begins from': 'القالب الذي يبدأ منه كل تطبيق من زِرّ',
   'Internal tooling': 'أدوات داخلية',
   'A Flutter and Supabase template with one folder structure, house lint rules, CI, row-level security tests and a one-file rebrand.':
       'قالب Flutter وSupabase ببنية مجلّدات واحدة وقواعد جودة خاصة بنا وCI واختبارات أمان على مستوى الصفوف وتغيير العلامة من ملف واحد.',
@@ -310,12 +285,9 @@ const ar = <String, String>{
   'Your message': 'رسالتك',
   'Send on WhatsApp': 'أرسل على واتساب',
   'Required': 'مطلوب',
-  'Hi Zirr team, I am @name.': 'مرحباً فريق زِرّ، أنا @name.',
   'Company: @company': 'الشركة: @company',
   'About: @type': 'الموضوع: @type',
   'White-label work for an agency': 'عمل باسم وكالة',
-  'Retail licence': 'ترخيص نظام التجزئة',
-  'A new app': 'تطبيق جديد',
   'Something else': 'موضوع آخر',
 
   // Not found
@@ -328,7 +300,104 @@ const ar = <String, String>{
   'Go to the home page': 'اذهب إلى الرئيسية',
 
   // The logo's secret (five presses in a row) and the footer's smile.
-  'Five presses! Our button says thank you.': 'خمس ضغطات! زِرّنا يشكرك.',
   'You found the secret. Buttons for everyone.': 'وجدت السرّ. أزرار للجميع.',
   'Made in Amman, one button at a time.': 'صُنع في عمّان، زِرّاً بعد زِرّ.',
+
+  // Arandas Tech and its Zirr line
+  Brand.productLine: Brand.productLineAr,
+  'Flutter services': 'خدمات Flutter',
+  'A software company in Amman. We build Flutter apps and make Zirr, software for shops.':
+      'شركة برمجيات في عمّان. نبني تطبيقات Flutter ونصنع زِرّ، برامج للمحلات.',
+  'Hi Arandas Tech team, I found you on your website.': 'مرحباً فريق أرندس تك، وصلت إليكم من موقعكم.',
+  'Hi Arandas Tech team, I would like to know more about: @name': 'مرحباً فريق أرندس تك، أودّ معرفة المزيد عن: @name',
+  'Hi Arandas Tech team, I am @name.': 'مرحباً فريق أرندس تك، أنا @name.',
+  'Hi Arandas Tech team, I would like to talk about a Flutter project.': 'مرحباً فريق أرندس تك، أودّ الحديث عن مشروع Flutter.',
+  'Hi Arandas Tech team, I would like a demo of Zirr.': 'مرحباً فريق أرندس تك، أودّ عرضاً تجريبياً لزِرّ.',
+  'Five presses! Zirr’s buttons say thank you.': 'خمس ضغطات! أزرار زِرّ تشكرك.',
+  'Arandas Tech · software company in Amman': 'أرندس تك · شركة برمجيات في عمّان',
+  'Software for businesses that work in Arabic and English': 'برمجيات لأعمال تعمل بالعربي والإنجليزي',
+  'We build Flutter apps for companies and agencies, and we make Zirr, our own line of software that shops run on: the till, the stock, the online store.':
+      'نبني تطبيقات Flutter للشركات والوكالات، ونصنع زِرّ، مجموعتنا من البرامج التي تعمل عليها المحلات: الكاشير والمخزون والمتجر الإلكتروني.',
+  'See our Flutter services': 'تعرّف على خدمات Flutter',
+  'Meet Zirr': 'تعرّف على زِرّ',
+  'products in our Zirr line for shops': 'منتجات في مجموعة زِرّ للمحلات',
+  'Zirr, our software for shops': 'زِرّ، برامجنا للمحلات',
+  'Four products from one team, built and checked to the same bar as our client work, in Arabic and English.':
+      'أربعة منتجات من فريق واحد، مبنية ومفحوصة بمعايير أعمالنا للعملاء نفسها، بالعربي والإنجليزي.',
+  'Flutter apps for your business': 'تطبيقات Flutter لعملك',
+  'An online store, a back office, a till and a starter for new apps, made and supported by us.':
+      'متجر إلكتروني ولوحة إدارة وكاشير وقالب للتطبيقات الجديدة، نصنعها وندعمها بأنفسنا.',
+
+  // Flutter services
+  'Mobile apps': 'تطبيقات الجوال',
+  'Android and iPhone apps in Flutter, from the first sketch to the App Store and Google Play.':
+      'تطبيقات أندرويد وآيفون بـ Flutter، من أول رسمة حتى App Store وGoogle Play.',
+  'Web apps and dashboards': 'تطبيقات ويب ولوحات متابعة',
+  'Back offices, portals and dashboards in Flutter Web, or React and TypeScript when it fits better.':
+      'لوحات إدارة وبوابات ولوحات متابعة بـ Flutter Web، أو React وTypeScript حين يكونان الأنسب.',
+  'Supabase backends': 'خوادم Supabase',
+  'Sign-in, roles, storage and a PostgreSQL database with row-level security and SQL tests.':
+      'تسجيل دخول وصلاحيات وتخزين وقاعدة بيانات PostgreSQL بأمان على مستوى الصفوف واختبارات SQL.',
+  'Online stores': 'متاجر إلكترونية',
+  'A shop with its back office, payments and stock, starting from Zirr so you pay for less.': 'متجر مع لوحة إدارته والدفع والمخزون، يبدأ من زِرّ فتدفع أقل.',
+  'AI features': 'مزايا الذكاء الاصطناعي',
+  'Assistants, product writers and photo tools added to the app you already have.': 'مساعدون وكاتب لوصف المنتجات وأدوات للصور، تُضاف إلى تطبيقك الحالي.',
+  'An audit of a Flutter app that is late, slow or hard to change, and the fixes if you want them.':
+      'تدقيق لتطبيق Flutter متأخر أو بطيء أو صعب التعديل، والإصلاحات إن أردتها.',
+  'Flutter apps for businesses and agencies': 'تطبيقات Flutter للشركات والوكالات',
+  'Bring us your idea, or your client’s. We design, build, test and ship the app in Arabic and English, and hand it over with its code. For agencies, all of it under your name.':
+      'أحضر لنا فكرتك، أو فكرة عميلك. نصمّم التطبيق ونبنيه ونختبره ونطلقه بالعربي والإنجليزي، ونسلّمه مع كوده. وللوكالات، كل ذلك باسمها.',
+  'What we build': 'ماذا نبني',
+  'From one screen to a whole system': 'من شاشة واحدة إلى نظام كامل',
+  'You win the client and own the relationship. We build the app and hand it over as yours.':
+      'أنت تكسب العميل وتملك العلاقة معه. ونحن نبني التطبيق ونسلّمه لك باسمك.',
+  'What clients and agencies ask us': 'ما يسألنا عنه العملاء والوكالات',
+  'Have an app to build?': 'عندك تطبيق تريد بناءه؟',
+  'A Flutter app for my business': 'تطبيق Flutter لعملي',
+  'A Zirr product': 'منتج من زِرّ',
+
+  // The Zirr line
+  'Zirr by Arandas Tech': 'زِرّ من أرندس تك',
+  'Zirr: the software a shop runs on': 'زِرّ: البرامج التي يعمل عليها محلّك',
+  'Zirr is our product line for retail: a till for every branch, the stock behind it, the online store, and the starter we build new apps from. Every product is made, run and supported by Arandas Tech in Amman.': 'زِرّ مجموعتنا من البرامج لقطاع التجزئة: كاشير لكل فرع والمخزون خلفه والمتجر الإلكتروني والقالب الذي نبني منه التطبيقات الجديدة. كل منتج تصنعه أرندس تك في عمّان وتشغّله وتدعمه.',
+  'Book a free demo': 'احجز عرضاً مجانياً',
+  'The Zirr line': 'مجموعة زِرّ',
+  'Four products, one team behind them': 'أربعة منتجات، وفريق واحد خلفها',
+  'Why shops pick Zirr': 'لماذا تختار المحلات زِرّ',
+  'Made for how shops here work': 'مصمّم على طريقة عمل محلاتنا',
+  'Want to see Zirr in your shop?': 'تريد أن ترى زِرّ في محلّك؟',
+  'We show you the till, the stock and the online store on a call, in Arabic or English, and set it up for you in Amman.':
+      'نعرض لك الكاشير والمخزون والمتجر الإلكتروني في مكالمة، بالعربي أو الإنجليزي، ونجهّزه لك في عمّان.',
+  'Press the Zirr button': 'اضغط الزِّرّ',
+  'Zirr means “button”: the one on a shirt, and the one on a screen.': 'زِرّ يعني الزِّرّ: زِرّ القميص، وزِرّ الشاشة.',
+  'Pressed. It likes that.': 'انضغط. وعجبه الموضوع.',
+  'Click. Every sale starts like this.': 'كليك. كل بيعة بتبدأ هيك.',
+  'Zirr Boutique': 'زِرّ بوتيك',
+  'Zirr Starter': 'قالب زِرّ',
+  'Retail ERP': 'نظام إدارة التجزئة',
+  'Online store': 'متجر إلكتروني',
+  'App template': 'قالب تطبيقات',
+  'One app for a clothing store: the online shop, a till in every branch, stock, buying and the books, sold as source code.':
+      'تطبيق واحد لمحل الملابس: المتجر الإلكتروني وكاشير في كل فرع والمخزون والمشتريات والحسابات، يُباع ككود مصدري.',
+  'A fashion storefront with its own admin panel for a brand that sells online: colour and size variants, promotion codes and card checkout.':
+      'واجهة متجر أزياء بلوحة إدارة خاصة لعلامة تبيع أونلاين: خيارات ألوان ومقاسات ورموز عروض ودفع بالبطاقة.',
+  'The Flutter and Supabase template every Arandas Tech app starts from: sign-in, roles, Arabic and English, CI and docs on day one.':
+      'قالب Flutter وSupabase الذي يبدأ منه كل تطبيق من أرندس تك: تسجيل الدخول والصلاحيات والعربية والإنجليزية وCI والوثائق من اليوم الأول.',
+  'Read how we use it': 'اقرأ كيف نستخدمه',
+  'Arabic first, English too': 'العربية أولاً، والإنجليزية أيضاً',
+  'Every screen, receipt and email in both languages, right to left where it should be.': 'كل شاشة وإيصال وبريد باللغتين، ومن اليمين إلى اليسار حيث يجب.',
+  'Ready for Jordan': 'جاهز للأردن',
+  'JoFotara e-invoices, Jordanian dinars and the personal data protection law, built in.':
+      'فواتير جو فوترة والدينار الأردني وقانون حماية البيانات الشخصية، مبنية فيه.',
+  'Keeps selling offline': 'يبيع حتى دون إنترنت',
+  'The till saves each sale on the device first and sends it when the internet is back.':
+      'يحفظ الكاشير كل عملية بيع على الجهاز أولاً ويرسلها حين يعود الإنترنت.',
+  'Code you can own': 'كود يمكنك امتلاكه',
+  'Buy the source code with a licence, or let us set it up and run it for you.': 'اشترِ الكود المصدري بترخيص، أو دعنا نجهّزه ونشغّله لك.',
+  'People you can call': 'فريق تستطيع الاتصال به',
+  'Made in Amman by Arandas Tech. Ask on WhatsApp and a developer answers.': 'صُنع في عمّان على يد أرندس تك. اسأل على واتساب ويجيبك مطوّر.',
+  'Your data stays yours': 'بياناتك تبقى لك',
+  'Row-level security on every table, with SQL tests that fail when a rule leaks.':
+      'أمان على مستوى الصفوف في كل جدول، مع اختبارات SQL تفشل إذا سرّبت قاعدة أي بيانات.',
+  'The starter every Arandas Tech app begins from': 'القالب الذي يبدأ منه كل تطبيق من أرندس تك',
 };

@@ -10,37 +10,49 @@ import '../widgets/blocks.dart';
 import '../widgets/motion.dart';
 import '../widgets/site_scaffold.dart';
 
-/// The white-label Flutter team, for agencies that sell apps and need people to build them.
-class AgenciesPage extends StatelessWidget {
-  const AgenciesPage({super.key});
+/// Arandas Tech's Flutter services: apps for businesses, and a white-label team for agencies that sell apps and need
+/// people to build them.
+class ServicesPage extends StatelessWidget {
+  const ServicesPage({super.key});
 
   @override
   Widget build(BuildContext context) => SiteScaffold(
-    current: Routes.agencies,
+    current: Routes.services,
     sections: [
       PageHero(
-        eyebrow: 'For agencies and software houses',
-        title: 'A white-label Flutter team, under your name',
-        body: 'You win the client and own the relationship. We design, build, test and ship the Flutter app, in Arabic and English, and hand it over as yours.',
+        eyebrow: 'Flutter services',
+        title: 'Flutter apps for businesses and agencies',
+        body: 'Bring us your idea, or your client’s. We design, build, test and ship the app in Arabic and English, and hand it over with its code. For agencies, all of it under your name.',
         actions: [
-          SiteLink('Send us a brief', Brand.whatsAppLink('Hi Zirr team, we are an agency and would like to talk about a Flutter project.'.tr)),
+          SiteLink('Send us a brief', Brand.whatsAppLink('Hi Arandas Tech team, I would like to talk about a Flutter project.'.tr)),
           const SiteLink('See our work', Routes.work),
         ],
         aside: const _WhoWeAre(),
       ),
-      const PageSection(eyebrow: 'Why agencies use us', title: 'Everything you need to resell our work', child: FeatureGrid(Content.agencyBenefits)),
+      const PageSection(eyebrow: 'What we build', title: 'From one screen to a whole system', child: FeatureGrid(Content.flutterServices)),
       const PageSection(
         tinted: true,
+        eyebrow: 'For agencies and software houses',
+        title: 'A white-label Flutter team, under your name',
+        subtitle: 'You win the client and own the relationship. We build the app and hand it over as yours.',
+        child: FeatureGrid(Content.agencyBenefits),
+      ),
+      const PageSection(
         eyebrow: 'Ways to work',
         title: 'Pick how we work with you',
         subtitle: 'Prices depend on the scope. Send a brief and you get a written quote within two working days.',
         child: OfferGrid(Content.agencyOffers, highlight: 1),
       ),
-      const PageSection(eyebrow: 'How it works', title: 'From brief to handover', child: FeatureGrid(Content.agencySteps, columns: 4, numbered: true)),
-      const PageSection(tinted: true, eyebrow: 'Our quality bar', title: 'The standard your client gets', child: FeatureGrid(Content.qualityBar)),
-      const PageSection(eyebrow: 'Questions', title: 'What agencies ask us', child: _Faqs(Content.agencyFaqs)),
+      const PageSection(
+        tinted: true,
+        eyebrow: 'How it works',
+        title: 'From brief to handover',
+        child: FeatureGrid(Content.agencySteps, columns: 4, numbered: true),
+      ),
+      const PageSection(eyebrow: 'Our quality bar', title: 'The standard your client gets', child: FeatureGrid(Content.qualityBar)),
+      const PageSection(tinted: true, eyebrow: 'Questions', title: 'What clients and agencies ask us', child: _Faqs(Content.agencyFaqs)),
       const CallToAction(
-        title: 'Have a client waiting?',
+        title: 'Have an app to build?',
         body: 'Send the brief on WhatsApp. We sign an NDA first if you need one, and quote within two working days.',
       ),
     ],

@@ -6,7 +6,7 @@ import '../config/routes.dart';
 import '../widgets/blocks.dart';
 import '../widgets/site_scaffold.dart';
 
-/// Every case study, then the products that have no case study of their own.
+/// Every case study, then the Zirr line.
 class WorkPage extends StatelessWidget {
   const WorkPage({super.key});
 
@@ -23,8 +23,11 @@ class WorkPage extends StatelessWidget {
       PageSection(
         tinted: true,
         eyebrow: 'Also from us',
-        title: 'Other products',
-        child: GridRow(gutter: 20, children: [for (final product in Content.otherProducts) GridCol(md: 6, child: CaseStudyCard(product, hasPage: false))]),
+        title: 'The Zirr line',
+        child: GridRow(
+          gutter: 20,
+          children: [for (final product in Content.zirrProducts) GridCol(md: 6, lg: 3, child: CaseStudyCard(product, hasPage: false))],
+        ),
       ),
       const CallToAction(),
     ],

@@ -380,7 +380,8 @@ class _OfferCard extends StatelessWidget {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
     final link =
-        offer.link ?? SiteLink('Ask on WhatsApp', Brand.whatsAppLink('Hi Zirr team, I would like to know more about: @name'.trParams({'name': offer.name.tr})));
+        offer.link ??
+        SiteLink('Ask on WhatsApp', Brand.whatsAppLink('Hi Arandas Tech team, I would like to know more about: @name'.trParams({'name': offer.name.tr})));
     final site = Get.find<SiteController>();
     return Card(
       shape: AppTheme.shape(
@@ -471,7 +472,7 @@ class CallToAction extends StatelessWidget {
                         Magnetic(
                           child: Squish(
                             child: FilledButton(
-                              onPressed: () => site.open(Brand.whatsAppLink('Hi Zirr team, I found you on your website.'.tr)),
+                              onPressed: () => site.open(Brand.whatsAppLink('Hi Arandas Tech team, I found you on your website.'.tr)),
                               style: FilledButton.styleFrom(backgroundColor: scheme.onPrimary, foregroundColor: scheme.primary),
                               child: Text('Message us on WhatsApp'.tr),
                             ),
@@ -565,7 +566,7 @@ class CaseStudyCard extends StatelessWidget {
     );
   }
 
-  static const _sectorIcons = {'starter': Icons.rocket_launch_outlined};
+  static const _sectorIcons = {'starter': Icons.rocket_launch_outlined, 'zirr-starter': Icons.rocket_launch_outlined};
 }
 
 /// Names of tools as small chips. Names are not translated.
