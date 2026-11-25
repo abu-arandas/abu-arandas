@@ -23,6 +23,7 @@ no keys. Live at https://arandas.tech.
 | `/zirr/retail` | Zirr Retail: features, what is in the box, licences with PayPal links (`/products/retail` still opens it) |
 | `/work`, `/work/<slug>` | Case studies: `retail`, `vanguard` (Zirr Boutique), `starter`; then the Zirr line |
 | `/contact` | A form that opens WhatsApp with the visitor's message written, and the other links |
+| `/terms`, `/privacy`, `/refunds` | Terms of service, privacy policy, refund and cancellation policy (linked from every footer; card payment providers read them) |
 
 The site opens in Arabic when the visitor's browser asks for Arabic, otherwise in English; the button in the header
 switches. Any other address shows the not-found page.
@@ -46,6 +47,8 @@ The pictures on the company's Facebook page and Google Business profile are in `
   no Arabic, or when an Arabic entry is left over.
 - **Name, product line, colour, font, WhatsApp, email, social links:** [`lib/config/brand.dart`](lib/config/brand.dart).
   Set `Brand.email` once the company has its own address; the contact page shows it then.
+- **Policies:** `Content.legal` in `lib/config/content.dart`; change `Content.legalUpdated` with them. Once the company
+  is in the trade register, set `Brand.registrationNumber` and the footer and the policy pages show it.
 - **Testimonials:** add them to `Content.testimonials` once clients agree to be quoted; the section appears by itself.
 - **Pictures:** `assets/images`.
 - **Page title, link previews and company details for Google:** `web/index.html`. The preview picture `web/og.jpg` is
