@@ -49,6 +49,10 @@ class Brand {
   /// Where the company works from, for the footer and the contact page.
   static const city = 'Amman, Jordan';
 
+  /// The company's number in the Jordanian trade register, or null until it is registered. Once set, the footer and the
+  /// policy pages show it (card payment providers ask for it).
+  static const String? registrationNumber = null;
+
   /// A chat with [whatsApp], opened with [text] already typed.
   static String whatsAppLink([String text = '']) => 'https://wa.me/$whatsApp${text.isEmpty ? '' : '?text=${Uri.encodeComponent(text)}'}';
 }

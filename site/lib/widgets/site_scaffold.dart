@@ -5,6 +5,7 @@ import 'package:material_ui/material_ui.dart';
 
 import '../config/brand.dart';
 import '../config/breakpoints.dart';
+import '../config/content.dart';
 import '../config/routes.dart';
 import '../config/theme.dart';
 import '../controllers/site_controller.dart';
@@ -321,6 +322,11 @@ class _Footer extends StatelessWidget {
                   alignment: WrapAlignment.spaceBetween,
                   children: [
                     Text('© @year @name. Built with Flutter.'.trParams({'year': '${DateTime.now().year}', 'name': Brand.name.tr}), style: muted),
+                    if (Brand.registrationNumber != null) Text('Trade register number: @number'.trParams({'number': Brand.registrationNumber!}), style: muted),
+                    Wrap(
+                      spacing: 16,
+                      children: [for (final doc in Content.legal) _FooterLink(label: doc.title.tr, onTap: () => site.open(doc.route))],
+                    ),
                     Text('Made in Amman, one button at a time.'.tr, style: muted),
                   ],
                 ),

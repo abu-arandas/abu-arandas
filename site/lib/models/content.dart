@@ -87,3 +87,21 @@ class CaseStudy {
   final String? image;
   final List<SiteLink> links;
 }
+
+/// A policy page (terms, privacy, refunds): its address, title, one line on what it covers, and its parts in order.
+class LegalDoc {
+  const LegalDoc({required this.route, required this.title, required this.summary, required this.parts});
+
+  final String route;
+  final String title;
+  final String summary;
+  final List<LegalPart> parts;
+}
+
+/// One part of a [LegalDoc]: a heading and its paragraphs.
+class LegalPart {
+  const LegalPart(this.heading, this.paragraphs);
+
+  final String heading;
+  final List<String> paragraphs;
+}

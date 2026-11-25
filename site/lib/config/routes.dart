@@ -4,12 +4,14 @@ import 'package:get/get.dart';
 import '../views/case_study_page.dart';
 import '../views/contact_page.dart';
 import '../views/home_page.dart';
+import '../views/legal_page.dart';
 import '../views/not_found_page.dart';
 import '../views/retail_page.dart';
 import '../views/services_page.dart';
 import '../views/work_page.dart';
 import '../views/zirr_page.dart';
 import '../widgets/site_scaffold.dart';
+import 'content.dart';
 
 /// Every page the site can open, by address.
 class Routes {
@@ -19,6 +21,9 @@ class Routes {
   static const retail = '/zirr/retail';
   static const work = '/work';
   static const contact = '/contact';
+  static const terms = '/terms';
+  static const privacy = '/privacy';
+  static const refunds = '/refunds';
 
   static const notFound = '/not-found';
 
@@ -30,7 +35,7 @@ class Routes {
   /// One case study, by its slug.
   static String caseStudy(String slug) => '$work/$slug';
 
-  static const _fixed = {home, services, zirr, retail, work, contact, notFound, oldAgencies, oldRetail};
+  static const _fixed = {home, services, zirr, retail, work, contact, terms, privacy, refunds, notFound, oldAgencies, oldRetail};
 
   /// Whether [name] is one of the site's addresses, ignoring a query and a trailing slash.
   static bool isKnown(String name) {
@@ -61,5 +66,6 @@ final appPages = [
   _page(Routes.work, () => const WorkPage()),
   _page('${Routes.work}/:slug', () => CaseStudyPage(slug: Get.parameters['slug'] ?? '')),
   _page(Routes.contact, () => const ContactPage()),
+  for (final doc in Content.legal) _page(doc.route, () => LegalPage(doc)),
   notFoundPage,
 ];

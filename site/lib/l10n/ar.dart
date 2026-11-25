@@ -399,4 +399,75 @@ const ar = <String, String>{
   'Row-level security on every table, with SQL tests that fail when a rule leaks.':
       'أمان على مستوى الصفوف في كل جدول، مع اختبارات SQL تفشل إذا سرّبت قاعدة أي بيانات.',
   'The starter every Arandas Tech app begins from': 'القالب الذي يبدأ منه كل تطبيق من العرندس للتكنولوجيا',
+
+  // Policies
+  'Policies': 'السياسات',
+  'Last updated 25 November 2026': 'آخر تحديث: 25 تشرين الثاني 2026',
+  'Trade register number: @number': 'رقم السجل التجاري: @number',
+  'Terms of service': 'شروط الخدمة',
+  'The rules for using this site, buying a Zirr licence and working with us on a project.':
+      'قواعد استخدام هذا الموقع، وشراء ترخيص زِرّ، والعمل معنا على مشروع.',
+  'Who we are': 'من نحن',
+  'Arandas Tech (العرندس للتكنولوجيا) is a software business in Amman, Jordan, owned and run by Ehab Arandas. You can reach us on WhatsApp or through the other links at the foot of every page.': 'العرندس للتكنولوجيا (Arandas Tech) عمل برمجيات في عمّان، الأردن، يملكه ويديره إيهاب العرندس. يمكنك التواصل معنا على واتساب أو عبر الروابط الأخرى أسفل كل صفحة.',
+  'What these terms cover': 'ما تشمله هذه الشروط',
+  'These terms apply to this website, to the Zirr licences we sell and to the work we do for clients. When we sign a written quote or contract with you, it comes first wherever it differs from these terms.': 'تسري هذه الشروط على هذا الموقع، وعلى تراخيص زِرّ التي نبيعها، وعلى العمل الذي ننجزه للعملاء. وإذا وقّعنا معك عرض سعر أو عقداً مكتوباً، يُقدَّم على هذه الشروط حيثما اختلف عنها.',
+  'Zirr licences': 'تراخيص زِرّ',
+  'A licence lets you use the source code of the product you bought, under the licence file that comes with it (LICENSE.md). Buying a licence means you accept that file.':
+      'يتيح لك الترخيص استخدام الكود المصدري للمنتج الذي اشتريته، وفق ملف الترخيص المرفق معه (LICENSE.md). وشراؤك للترخيص يعني قبولك لهذا الملف.',
+  'Our products stay ours: a licence gives you the right to use the code, not its ownership.':
+      'تبقى منتجاتنا ملكاً لنا: يمنحك الترخيص حق استخدام الكود، لا ملكيته.',
+  'Projects for clients': 'مشاريع العملاء',
+  'Before we start, we agree in writing on what we will build, the price, how it is paid and the timeline.':
+      'قبل أن نبدأ، نتفق كتابةً على ما سنبنيه، والسعر، وطريقة الدفع، والجدول الزمني.',
+  'Once you have paid for a project in full, you own the code we wrote for it. A Zirr product inside it stays under its own licence.':
+      'عندما تدفع ثمن المشروع كاملاً، يصبح الكود الذي كتبناه له ملكاً لك. ويبقى أي منتج من زِرّ داخله خاضعاً لترخيصه الخاص.',
+  'Prices and payment': 'الأسعار والدفع',
+  'Prices are shown on this site or in your quote, in US dollars or Jordanian dinars. You pay through PayPal or as your quote says, so we never see your card details.': 'تظهر الأسعار على هذا الموقع أو في عرض السعر الخاص بك، بالدولار الأمريكي أو الدينار الأردني. تدفع عبر PayPal أو كما يذكر عرض السعر، فلا نطّلع أبداً على بيانات بطاقتك.',
+  'Our responsibility': 'مسؤوليتنا',
+  'We fix faults in our own work during the help period of your licence or quote. Beyond that, software is provided as it is, and as far as the law allows, our total liability is limited to what you paid us for it.': 'نصلح الأعطال في عملنا خلال فترة الدعم المذكورة في ترخيصك أو عرض السعر. وبعدها تُقدَّم البرمجيات كما هي، وفي الحدود التي يسمح بها القانون تقتصر مسؤوليتنا الكاملة على ما دفعته لنا مقابلها.',
+  'Law': 'القانون',
+  'These terms are governed by the laws of the Hashemite Kingdom of Jordan, and the courts of Amman decide any dispute.':
+      'تخضع هذه الشروط لقوانين المملكة الأردنية الهاشمية، وتختص محاكم عمّان بالنظر في أي نزاع.',
+  'Changes': 'التعديلات',
+  'We may update these terms. The date at the top shows the latest version, and the version in force when you paid applies to that purchase.':
+      'قد نحدّث هذه الشروط. يبيّن التاريخ في الأعلى أحدث نسخة، وتسري على كل عملية شراء النسخةُ النافذة وقت الدفع.',
+  'Privacy policy': 'سياسة الخصوصية',
+  'What we learn about you, why, and what you can ask us to do with it.': 'ما نعرفه عنك، ولماذا، وما يمكنك أن تطلبه منّا بشأنه.',
+  'What this site collects': 'ما يجمعه هذا الموقع',
+  'Nothing that names you. The site has no accounts, no tracking cookies and no analytics. The contact form only writes a WhatsApp message on your own device; nothing reaches us until you send it from WhatsApp.': 'لا شيء يدلّ على هويتك. لا حسابات في الموقع، ولا ملفات تعريف ارتباط للتتبّع، ولا أدوات تحليلات. نموذج التواصل يكتب رسالة واتساب على جهازك فقط، ولا يصلنا شيء حتى ترسلها أنت من واتساب.',
+  'Like every website, the services that deliver the page (our host Vercel, and Google, which serves part of the page’s engine) see technical details such as your IP address while it loads.':
+      'وكأي موقع، ترى الخدمات التي توصل الصفحة إليك (مستضيفنا Vercel، وGoogle التي تقدّم جزءاً من محرّك الصفحة) تفاصيل تقنية مثل عنوان IP أثناء تحميلها.',
+  'What you send us': 'ما ترسله إلينا',
+  'When you message us on WhatsApp, by email or on Facebook, we receive what you write and what those services show us, such as your name and number.':
+      'عندما تراسلنا على واتساب أو بالبريد الإلكتروني أو على فيسبوك، يصلنا ما تكتبه وما تُظهره لنا تلك الخدمات، مثل اسمك ورقمك.',
+  'When you buy through PayPal, we receive your name, your email address and what you bought. PayPal handles the payment, so we never see your card details.':
+      'وعندما تشتري عبر PayPal، يصلنا اسمك وبريدك الإلكتروني وما اشتريته. يتولّى PayPal عملية الدفع، فلا نطّلع أبداً على بيانات بطاقتك.',
+  'Why we use it': 'لماذا نستخدمها',
+  'To answer you, deliver what you bought, send your invoice, give the help your licence or project includes, and keep the records the law asks for.':
+      'للرد عليك، وتسليم ما اشتريته، وإرسال فاتورتك، وتقديم الدعم الذي يشمله ترخيصك أو مشروعك، والاحتفاظ بالسجلات التي يطلبها القانون.',
+  'Who we share it with': 'مع من نشاركها',
+  'We never sell your information. We share only what is needed: with the payment provider you chose, and with the Income and Sales Tax Department, which receives invoices through the national e-invoicing system as Jordanian law requires.': 'لا نبيع معلوماتك أبداً. نشارك فقط ما يلزم: مع مزوّد الدفع الذي اخترته، ومع دائرة ضريبة الدخل والمبيعات التي تستلم الفواتير عبر نظام الفوترة الوطني كما يشترط القانون الأردني.',
+  'How long we keep it': 'مدة الاحتفاظ بها',
+  'Invoices and payment records for as long as the law requires. Messages and other details until you ask us to delete them, or once we no longer need them.':
+      'الفواتير وسجلات الدفع للمدة التي يشترطها القانون. أما الرسائل والتفاصيل الأخرى فحتى تطلب منّا حذفها، أو حين لا نعود بحاجة إليها.',
+  'Your rights': 'حقوقك',
+  'You can ask to see the information we hold about you, to correct it or to delete it, as Jordan’s Personal Data Protection Law (No. 24 of 2023) allows. Message us on WhatsApp and we will answer within a few working days.': 'يحق لك أن تطلب الاطلاع على المعلومات التي نحتفظ بها عنك، أو تصحيحها، أو حذفها، وفق قانون حماية البيانات الشخصية الأردني رقم 24 لسنة 2023. راسلنا على واتساب وسنرد خلال أيام عمل قليلة.',
+  'Apps we build or run for clients': 'التطبيقات التي نبنيها أو نشغّلها للعملاء',
+  'When we build or run an app for a client, that client decides how its users’ data is used, and we handle that data only on the client’s instructions.':
+      'عندما نبني تطبيقاً لعميل أو نشغّله له، يقرّر العميل كيف تُستخدم بيانات مستخدميه، ولا نتعامل مع تلك البيانات إلا بتعليماته.',
+  'We may update this policy. The date at the top shows the latest version.': 'قد نحدّث هذه السياسة. يبيّن التاريخ في الأعلى أحدث نسخة.',
+  'Refund and cancellation policy': 'سياسة الاسترداد والإلغاء',
+  'When you can get your money back, and how to ask.': 'متى يمكنك استرداد أموالك، وكيف تطلب ذلك.',
+  'A licence gives you the source code straight away, so it cannot be returned. If the code does not install or work as described and we cannot fix it within 14 days of your purchase, we refund you in full.': 'يمنحك الترخيص الكود المصدري فوراً، لذا لا يمكن إرجاعه. وإذا لم يُثبَّت الكود أو لم يعمل كما هو موصوف، ولم نتمكن من إصلاحه خلال 14 يوماً من شرائك، نعيد لك المبلغ كاملاً.',
+  'If you paid twice for the same licence by mistake, we refund the extra payment.': 'وإذا دفعت ثمن الترخيص نفسه مرتين بالخطأ، نعيد لك الدفعة الزائدة.',
+  'Zirr set up for you': 'زِرّ جاهز لك',
+  'The setup fee is refunded in full if you cancel before we start setting up your shop. Once your shop is live, it is not refunded.':
+      'تُعاد رسوم التجهيز كاملة إذا ألغيت قبل أن نبدأ تجهيز متجرك. أما بعد إطلاق متجرك فلا تُعاد.',
+  'You can stop the monthly fee at any time. Your shop stays open until the end of the month you paid for, and that month is not refunded.':
+      'يمكنك إيقاف الاشتراك الشهري في أي وقت. يبقى متجرك يعمل حتى نهاية الشهر الذي دفعته، ولا يُعاد مبلغ ذلك الشهر.',
+  'Payments follow the stages in your quote. If either side ends a project early, you pay for the work done up to then, and we refund the rest of what you paid in advance.':
+      'تتبع الدفعات مراحل عرض السعر. وإذا أنهى أيّ من الطرفين المشروع مبكراً، تدفع مقابل العمل المنجز حتى ذلك الحين، ونعيد لك باقي ما دفعته مقدماً.',
+  'How to ask': 'كيف تطلب ذلك',
+  'Message us on WhatsApp with your name and your order or invoice number. We answer within two working days, and an approved refund goes back the way you paid, usually within 14 days.':
+      'راسلنا على واتساب باسمك ورقم طلبك أو فاتورتك. نرد خلال يومَي عمل، ويُعاد المبلغ الموافَق عليه بالطريقة التي دفعت بها، عادةً خلال 14 يوماً.',
 };

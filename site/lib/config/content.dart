@@ -318,6 +318,99 @@ class Content {
     const SiteLink('GitHub', Brand.github),
   ];
 
+  // ---------------------------------------------------------------- Policies
+
+  /// When the policies below last changed. Change it with them.
+  static const legalUpdated = 'Last updated 25 November 2026';
+
+  /// The terms, privacy and refund pages, linked from every page's footer. Payment providers read them before they
+  /// accept a shop, so they stay plain and match what the offers above promise.
+  static const legal = [
+    LegalDoc(
+      route: Routes.terms,
+      title: 'Terms of service',
+      summary: 'The rules for using this site, buying a Zirr licence and working with us on a project.',
+      parts: [
+        LegalPart('Who we are', [
+          'Arandas Tech (العرندس للتكنولوجيا) is a software business in Amman, Jordan, owned and run by Ehab Arandas. You can reach us on WhatsApp or through the other links at the foot of every page.',
+        ]),
+        LegalPart('What these terms cover', [
+          'These terms apply to this website, to the Zirr licences we sell and to the work we do for clients. When we sign a written quote or contract with you, it comes first wherever it differs from these terms.',
+        ]),
+        LegalPart('Zirr licences', [
+          'A licence lets you use the source code of the product you bought, under the licence file that comes with it (LICENSE.md). Buying a licence means you accept that file.',
+          'Our products stay ours: a licence gives you the right to use the code, not its ownership.',
+        ]),
+        LegalPart('Projects for clients', [
+          'Before we start, we agree in writing on what we will build, the price, how it is paid and the timeline.',
+          'Once you have paid for a project in full, you own the code we wrote for it. A Zirr product inside it stays under its own licence.',
+        ]),
+        LegalPart('Prices and payment', [
+          'Prices are shown on this site or in your quote, in US dollars or Jordanian dinars. You pay through PayPal or as your quote says, so we never see your card details.',
+        ]),
+        LegalPart('Our responsibility', [
+          'We fix faults in our own work during the help period of your licence or quote. Beyond that, software is provided as it is, and as far as the law allows, our total liability is limited to what you paid us for it.',
+        ]),
+        LegalPart('Law', ['These terms are governed by the laws of the Hashemite Kingdom of Jordan, and the courts of Amman decide any dispute.']),
+        LegalPart('Changes', [
+          'We may update these terms. The date at the top shows the latest version, and the version in force when you paid applies to that purchase.',
+        ]),
+      ],
+    ),
+    LegalDoc(
+      route: Routes.privacy,
+      title: 'Privacy policy',
+      summary: 'What we learn about you, why, and what you can ask us to do with it.',
+      parts: [
+        LegalPart('What this site collects', [
+          'Nothing that names you. The site has no accounts, no tracking cookies and no analytics. The contact form only writes a WhatsApp message on your own device; nothing reaches us until you send it from WhatsApp.',
+          'Like every website, the services that deliver the page (our host Vercel, and Google, which serves part of the page’s engine) see technical details such as your IP address while it loads.',
+        ]),
+        LegalPart('What you send us', [
+          'When you message us on WhatsApp, by email or on Facebook, we receive what you write and what those services show us, such as your name and number.',
+          'When you buy through PayPal, we receive your name, your email address and what you bought. PayPal handles the payment, so we never see your card details.',
+        ]),
+        LegalPart('Why we use it', [
+          'To answer you, deliver what you bought, send your invoice, give the help your licence or project includes, and keep the records the law asks for.',
+        ]),
+        LegalPart('Who we share it with', [
+          'We never sell your information. We share only what is needed: with the payment provider you chose, and with the Income and Sales Tax Department, which receives invoices through the national e-invoicing system as Jordanian law requires.',
+        ]),
+        LegalPart('How long we keep it', [
+          'Invoices and payment records for as long as the law requires. Messages and other details until you ask us to delete them, or once we no longer need them.',
+        ]),
+        LegalPart('Your rights', [
+          'You can ask to see the information we hold about you, to correct it or to delete it, as Jordan’s Personal Data Protection Law (No. 24 of 2023) allows. Message us on WhatsApp and we will answer within a few working days.',
+        ]),
+        LegalPart('Apps we build or run for clients', [
+          'When we build or run an app for a client, that client decides how its users’ data is used, and we handle that data only on the client’s instructions.',
+        ]),
+        LegalPart('Changes', ['We may update this policy. The date at the top shows the latest version.']),
+      ],
+    ),
+    LegalDoc(
+      route: Routes.refunds,
+      title: 'Refund and cancellation policy',
+      summary: 'When you can get your money back, and how to ask.',
+      parts: [
+        LegalPart('Zirr licences', [
+          'A licence gives you the source code straight away, so it cannot be returned. If the code does not install or work as described and we cannot fix it within 14 days of your purchase, we refund you in full.',
+          'If you paid twice for the same licence by mistake, we refund the extra payment.',
+        ]),
+        LegalPart('Zirr set up for you', [
+          'The setup fee is refunded in full if you cancel before we start setting up your shop. Once your shop is live, it is not refunded.',
+          'You can stop the monthly fee at any time. Your shop stays open until the end of the month you paid for, and that month is not refunded.',
+        ]),
+        LegalPart('Projects for clients', [
+          'Payments follow the stages in your quote. If either side ends a project early, you pay for the work done up to then, and we refund the rest of what you paid in advance.',
+        ]),
+        LegalPart('How to ask', [
+          'Message us on WhatsApp with your name and your order or invoice number. We answer within two working days, and an approved refund goes back the way you paid, usually within 14 days.',
+        ]),
+      ],
+    ),
+  ];
+
   /// Every text above that is shown translated, for the Arabic check.
   static Iterable<String> get translatedText sync* {
     for (final (_, label) in homeStats) yield label;
@@ -339,5 +432,10 @@ class Content {
     }
     for (final t in testimonials) yield* [t.quote, t.role];
     yield* projectTypes;
+    yield legalUpdated;
+    for (final doc in legal) {
+      yield* [doc.title, doc.summary];
+      for (final part in doc.parts) yield* [part.heading, ...part.paragraphs];
+    }
   }
 }
