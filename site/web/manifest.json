@@ -1,11 +1,11 @@
 {
-  "name": "Zirr",
-  "short_name": "Zirr",
+  "name": "Arandas Tech",
+  "short_name": "Arandas Tech",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#F7F5F0",
   "theme_color": "#2B4C8C",
-  "description": "Flutter apps for agencies, and products for shops, in Arabic and English.",
+  "description": "Flutter apps for businesses and agencies, and Zirr, our software for shops, in Arabic and English.",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "icons": [

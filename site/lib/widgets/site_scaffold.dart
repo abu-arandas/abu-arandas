@@ -14,7 +14,7 @@ import 'language_button.dart';
 import 'motion.dart';
 
 /// The site's main pages, as the header and the menu list them.
-const navItems = [(Routes.agencies, 'For agencies'), (Routes.retail, 'Retail'), (Routes.work, 'Work'), (Routes.contact, 'Contact')];
+const navItems = [(Routes.services, 'Flutter services'), (Routes.zirr, Brand.productLine), (Routes.work, 'Work'), (Routes.contact, 'Contact')];
 
 /// Builds [page] again from the top when the language changes, so every `.tr` text is read in the new language: the
 /// ones the page reads while building (a WhatsApp message it puts in a link) as well as its sections'. Every route
@@ -47,8 +47,8 @@ class SiteScaffold extends StatelessWidget {
   );
 }
 
-/// The logo, which takes the visitor home and keeps a secret: press it five times in a row and shirt buttons rain
-/// down, with a short line to say thanks. The mark gives a little shake under the pointer and on every press.
+/// The logo, which takes the visitor home and keeps a secret: press it five times in a row and Zirr's shirt buttons
+/// rain down, with a short line to say thanks. The mark gives a little shake under the pointer and on every press.
 class _Logo extends StatefulWidget {
   const _Logo();
 
@@ -71,7 +71,7 @@ class _LogoState extends State<_Logo> {
       celebrate(context, kind: Celebration.buttons);
       ScaffoldMessenger.maybeOf(context)
         ?..hideCurrentSnackBar()
-        ..showSnackBar(SnackBar(content: Text(funLine(['Five presses! Our button says thank you.'.tr, 'You found the secret. Buttons for everyone.'.tr]))));
+        ..showSnackBar(SnackBar(content: Text(funLine(['Five presses! Zirr’s buttons say thank you.'.tr, 'You found the secret. Buttons for everyone.'.tr]))));
     }
     unawaited(Get.find<SiteController>().open(Routes.home));
   }
@@ -92,7 +92,7 @@ class _LogoState extends State<_Logo> {
                 trigger: _taps,
                 child: CustomPaint(
                   size: const Size.square(34),
-                  painter: _ButtonMark(button: scheme.primary, holes: scheme.surface, lit: scheme.secondary),
+                  painter: _CompanyMark(tile: scheme.primary, letter: scheme.surface, lit: scheme.secondary),
                 ),
               ),
             ),
@@ -105,36 +105,41 @@ class _LogoState extends State<_Logo> {
   }
 }
 
-/// The Zirr mark: a shirt button whose four holes are app tiles, the top-right one lit. Drawn on a 120-unit grid.
-class _ButtonMark extends CustomPainter {
-  const _ButtonMark({required this.button, required this.holes, required this.lit});
+/// The Arandas Tech mark on a 120-unit grid: a denim tile with continuous corners and a white A whose crossbar is an
+/// orange button, the company's nod to its Zirr line. web/favicon.svg and the boot screen in web/index.html draw the
+/// same shape.
+class _CompanyMark extends CustomPainter {
+  const _CompanyMark({required this.tile, required this.letter, required this.lit});
 
-  final Color button;
-  final Color holes;
+  final Color tile;
+  final Color letter;
   final Color lit;
 
   @override
   void paint(Canvas canvas, Size size) {
+    final stroke = Paint()
+      ..color = letter
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 13
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round;
     canvas
       ..save()
       ..scale(size.shortestSide / 120)
-      ..drawCircle(const Offset(60, 60), 52, Paint()..color = button)
-      ..drawCircle(
-        const Offset(60, 60),
-        43,
-        Paint()
-          ..color = holes.withValues(alpha: 0.25)
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 3,
-      );
-    for (final (x, y, colour) in [(38.0, 38.0, holes), (63.0, 38.0, lit), (38.0, 63.0, holes), (63.0, 63.0, holes)]) {
-      canvas.drawRRect(RRect.fromRectAndRadius(Rect.fromLTWH(x, y, 19, 19), const Radius.circular(6)), Paint()..color = colour);
-    }
-    canvas.restore();
+      ..drawRSuperellipse(RSuperellipse.fromRectAndRadius(const Rect.fromLTWH(4, 4, 112, 112), const Radius.circular(34)), Paint()..color = tile)
+      ..drawPath(
+        Path()
+          ..moveTo(32, 90)
+          ..lineTo(60, 30)
+          ..lineTo(88, 90),
+        stroke,
+      )
+      ..drawCircle(const Offset(60, 72), 10, Paint()..color = lit)
+      ..restore();
   }
 
   @override
-  bool shouldRepaint(_ButtonMark old) => old.button != button || old.holes != holes || old.lit != lit;
+  bool shouldRepaint(_CompanyMark old) => old.tile != tile || old.letter != letter || old.lit != lit;
 }
 
 class _Header extends StatelessWidget implements PreferredSizeWidget {
@@ -180,7 +185,7 @@ class _Header extends StatelessWidget implements PreferredSizeWidget {
                         Magnetic(
                           child: Squish(
                             child: FilledButton(
-                              onPressed: () => site.open(Brand.whatsAppLink('Hi Zirr team, I found you on your website.'.tr)),
+                              onPressed: () => site.open(Brand.whatsAppLink('Hi Arandas Tech team, I found you on your website.'.tr)),
                               style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14)),
                               child: Text('Talk to us'.tr),
                             ),
@@ -249,7 +254,7 @@ class _Menu extends StatelessWidget {
                 },
               ),
             const SizedBox(height: 16),
-            FilledButton(onPressed: () => site.open(Brand.whatsAppLink('Hi Zirr team, I found you on your website.'.tr)), child: Text('Talk to us'.tr)),
+            FilledButton(onPressed: () => site.open(Brand.whatsAppLink('Hi Arandas Tech team, I found you on your website.'.tr)), child: Text('Talk to us'.tr)),
           ],
         ),
       ),
@@ -281,7 +286,7 @@ class _Footer extends StatelessWidget {
                     children: [
                       const _Logo(),
                       const SizedBox(height: 12),
-                      Text('A Flutter and Supabase studio in Amman, building in Arabic and English.'.tr, style: muted),
+                      Text('A software company in Amman. We build Flutter apps and make Zirr, software for shops.'.tr, style: muted),
                       const SizedBox(height: 4),
                       Text(Brand.city.tr, style: muted),
                     ],

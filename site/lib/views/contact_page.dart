@@ -13,7 +13,7 @@ import '../widgets/confetti.dart';
 import '../widgets/motion.dart';
 import '../widgets/site_scaffold.dart';
 
-/// A short form that writes the visitor's WhatsApp message for them, and the other ways to reach the studio. The
+/// A short form that writes the visitor's WhatsApp message for them, and the other ways to reach the company. The
 /// site has no server, so nothing is stored: the message goes from the visitor's own WhatsApp.
 class ContactPage extends StatelessWidget {
   const ContactPage({super.key});
@@ -64,7 +64,7 @@ class _ContactFormState extends State<ContactForm> {
   /// The WhatsApp message the form describes, in the site's current language.
   String get message {
     final lines = [
-      'Hi Zirr team, I am @name.'.trParams({'name': _name.text.trim()}),
+      'Hi Arandas Tech team, I am @name.'.trParams({'name': _name.text.trim()}),
       if (_company.text.trim().isNotEmpty) 'Company: @company'.trParams({'company': _company.text.trim()}),
       'About: @type'.trParams({'type': _type.tr}),
       '',

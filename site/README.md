@@ -1,48 +1,58 @@
-# Zirr website
+# Arandas Tech website
 
-The studio's own site, in Arabic and English: a white-label Flutter team for agencies, the Zirr Retail
-product page, case studies from the project repositories, and a contact page. A Flutter web app built from
-[zirr-starter](https://github.com/abu-arandas/zirr-starter)'s structure and rules. It needs no backend and no keys.
+The company's own site, in Arabic and English: Arandas Tech's Flutter services for businesses and agencies, the Zirr
+product line (Zirr Retail, Zirr POS, Zirr Boutique, Zirr Starter), case studies and a contact page. A Flutter web app
+built from Zirr Starter's structure and rules. It needs no backend and
+no keys. Live at https://zirr-site.vercel.app.
 
-| Home | For agencies (Arabic) |
+| Home | Home (Arabic) |
 | --- | --- |
-| ![Home](docs/screenshots/en-home.jpg) | ![For agencies, in Arabic](docs/screenshots/ar-agencies.jpg) |
+| ![Home](docs/screenshots/en-home.jpg) | ![Home, in Arabic](docs/screenshots/ar-home.jpg) |
 
-| Zirr Retail | Phone |
+| Zirr | Flutter services |
 | --- | --- |
-| ![Zirr Retail](docs/screenshots/en-retail.jpg) | ![Phone](docs/screenshots/mobile-en-home.jpg) |
+| ![The Zirr line](docs/screenshots/en-zirr.jpg) | ![Flutter services](docs/screenshots/en-services.jpg) |
 
 ## Pages
 
 | Address | Page |
 | --- | --- |
-| `/` | Home: services, products, quality bar, recent case studies |
-| `/agencies` | The white-label Flutter team: benefits, ways to work, process, FAQ |
-| `/products/retail` | Zirr Retail (the ERP repository): features, what is in the box, licences with PayPal links |
-| `/work`, `/work/<slug>` | Case studies: `retail`, `vanguard` (Zirr Boutique), `starter`; Zirr POS as another product |
+| `/` | Home: what we do, the Zirr line, quality bar, recent case studies |
+| `/services` | Flutter services: what we build, the white-label team for agencies, ways to work, process, FAQ (`/agencies` still opens it) |
+| `/zirr` | The Zirr line: what the name means, the four products, why shops pick it |
+| `/zirr/retail` | Zirr Retail: features, what is in the box, licences with PayPal links (`/products/retail` still opens it) |
+| `/work`, `/work/<slug>` | Case studies: `retail`, `vanguard` (Zirr Boutique), `starter`; then the Zirr line |
 | `/contact` | A form that opens WhatsApp with the visitor's message written, and the other links |
 
 The site opens in Arabic when the visitor's browser asks for Arabic, otherwise in English; the button in the header
 switches. Any other address shows the not-found page.
+
+## Brand
+
+Arandas Tech (أرندس تك) is the company; Zirr (زِرّ, "button") is its product line for shops. Both share the house
+palette (denim #2B4C8C, thread orange #EE7B30, cotton #F7F5F0) and the Rubik font. The company mark is a denim tile with
+a white A whose crossbar is an orange button: drawn in `lib/widgets/site_scaffold.dart` (`_CompanyMark`), in
+`web/favicon.svg` and on the boot screen in `web/index.html`. The Zirr button (`ZirrButton` in `lib/widgets/fun.dart`)
+stays the mark of the Zirr line.
 
 ## Changing what it says
 
 - **Text, offers, case studies, FAQ:** [`lib/config/content.dart`](lib/config/content.dart), in English.
 - **Arabic:** [`lib/l10n/ar.dart`](lib/l10n/ar.dart), keyed by the English. `node tool/check_arabic.mjs` fails when a text has
   no Arabic, or when an Arabic entry is left over.
-- **Name, colour, font, WhatsApp, email, social links:** [`lib/config/brand.dart`](lib/config/brand.dart). Set
-  `Brand.email` once the studio has its own address; the contact page shows it then.
+- **Name, product line, colour, font, WhatsApp, email, social links:** [`lib/config/brand.dart`](lib/config/brand.dart).
+  Set `Brand.email` once the company has its own address; the contact page shows it then.
 - **Testimonials:** add them to `Content.testimonials` once clients agree to be quoted; the section appears by itself.
 - **Pictures:** `assets/images`.
 - **Page title and link previews:** `web/index.html`.
 
 ## Motion and voice
 
-The site is a marketing page, so it moves the most of all the Zirr apps, and everything is built from
+The site is a marketing page, so it moves the most of all our apps, and everything is built from
 [`lib/widgets/motion.dart`](lib/widgets/motion.dart) with the durations and curves in `AppTheme`
 ([`lib/config/theme.dart`](lib/config/theme.dart)); a widget never sets its own.
 
-- **On load:** while Flutter boots, the Zirr button presses itself in with a rotating line in the visitor's language
+- **On load:** while Flutter boots, the Arandas Tech mark presses itself in with a rotating line in the visitor's language
   (`web/index.html`). Then the header slides down (first page only), the hero's title rises word by word, its orange
   stitch sews itself in and the picture is unveiled, all within about a second.
 - **On scroll:** each band's heading rises word by word and its contents follow; cards come in a step apart; the
@@ -51,7 +61,8 @@ The site is a marketing page, so it moves the most of all the Zirr apps, and eve
 - **Under the pointer:** cards lift onto a soft shadow, price and case study cards lean toward the pointer, pictures
   lean in, icons give a little shake, footer links draw an orange underline, the main buttons are drawn to the
   pointer and every button gives a little when pressed.
-- **Fun:** press the logo five times in a row for a shower of buttons and a thank-you line; the not-found page has a
+- **Fun:** press the logo five times in a row for a shower of Zirr buttons and a thank-you line; the Zirr button on
+  the Zirr page wiggles when pressed and says something back; the not-found page has a
   lost button that rolls in, with one of a few lines ([`lib/widgets/fun.dart`](lib/widgets/fun.dart)); sending the
   contact form bursts confetti from the button; the footer signs off "Made in Amman, one button at a time."
 - **Never:** jokes on prices, licences, the contact form's errors or anything legal. Arabic lines are written
