@@ -10,12 +10,12 @@
 Flutter apps for businesses and agencies · Zirr, our software for shops · Arabic and English
 
 [![Book a free call on WhatsApp](https://img.shields.io/badge/WhatsApp-Book_a_free_call-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20found%20you%20on%20GitHub.)
-[![Visit the Arandas Tech website](https://img.shields.io/badge/Website-zirr--site.vercel.app-2B4C8C?style=for-the-badge&logo=googlechrome&logoColor=white)](https://zirr-site.vercel.app)
+[![Visit the Arandas Tech website](https://img.shields.io/badge/Website-zirr--site.vercel.app-0E5E6F?style=for-the-badge&logo=googlechrome&logoColor=white)](https://zirr-site.vercel.app)
 [![Follow Zirr on Facebook](https://img.shields.io/badge/Facebook-Zirr-0866FF?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/1294898037048567)
 
 </div>
 
-I'm **Ehab Arandas**, a Flutter developer in Amman and the founder of **Arandas Tech** (أرندس تك), a software company. I have built apps for clients since 2021. Today Arandas Tech does two things:
+I'm **Ehab Arandas**, a Flutter developer in Amman and the founder of **Arandas Tech** (العرندس للتكنولوجيا), a software company. I have built apps for clients since 2021. Today Arandas Tech does two things:
 
 - **Flutter services:** mobile and web apps for businesses, and a white-label Flutter team for agencies. [See the services](https://zirr-site.vercel.app/services)
 - **Zirr** (زِرّ, "button": the one on a shirt and the one on a screen): our own line of software for shops. The till, the stock behind it, the online store, and the starter we build new apps from. [Meet Zirr](https://zirr-site.vercel.app/zirr)
@@ -96,7 +96,7 @@ Everything ships in Arabic and English, with right-to-left layouts. [Send us a b
 
 <div dir="rtl">
 
-**أرندس تك (Arandas Tech)** شركة برمجيات في عمّان. نبني تطبيقات Flutter للشركات والوكالات، ونصنع **زِرّ**، مجموعتنا من البرامج للمحلات، بالعربي والإنجليزي.
+**العرندس للتكنولوجيا (Arandas Tech)** شركة برمجيات في عمّان. نبني تطبيقات Flutter للشركات والوكالات، ونصنع **زِرّ**، مجموعتنا من البرامج للمحلات، بالعربي والإنجليزي.
 
 كود **زِرّ للتجزئة** لمحلات الملابس متاح للشراء: متجر إلكتروني وكاشير ومخزون ومشتريات وحسابات في تطبيق واحد. [جرّبه وشاهد الأسعار](https://erp-house.vercel.app/software/ar).
 

@@ -25,8 +25,8 @@ void celebrate(BuildContext context, {Celebration kind = Celebration.burst, Offs
   if (reduceMotion(context)) return;
   final overlay = Overlay.maybeOf(context, rootOverlay: true);
   if (overlay == null) return;
-  // The house's thread orange and denim, the ink of the bands, and a softer orange.
-  const colours = [Brand.thread, Brand.seedColor, Color(0xFF18202E), Brand.threadDark, Brand.seedColor, Brand.thread];
+  // The company's saffron and teal, its ink, and a lighter saffron.
+  const colours = [Brand.accent, Brand.seedColor, Brand.ink, Brand.accentDark, Brand.seedColor, Brand.accent];
   final space = overlay.context.findRenderObject();
   Offset? origin;
   if (space is RenderBox && from != null) origin = space.globalToLocal(from);

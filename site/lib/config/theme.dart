@@ -2,7 +2,7 @@ import 'package:material_ui/material_ui.dart';
 
 import 'brand.dart';
 
-/// Light and dark themes, both made from [Brand.seedColor], with the brand's own denim, thread orange and page colours.
+/// Light and dark themes, both made from [Brand.seedColor], with the brand's own teal, saffron, ink and sand.
 ///
 /// The Zirr house style sits on top of the colours, as in every Zirr product: headings semibold and a touch tight,
 /// corners that flow into the sides ([AppTheme.shape]), fields that show their edge under the pointer and turn white
@@ -57,8 +57,8 @@ class AppTheme {
 
   /// The shadow a card rises onto under the pointer: soft, layered and tinted with ink.
   static const lifted = [
-    BoxShadow(color: Color(0x0F18202E), blurRadius: 4, offset: Offset(0, 1)),
-    BoxShadow(color: Color(0x2418202E), blurRadius: 28, offset: Offset(0, 12)),
+    BoxShadow(color: Color(0x0F121417), blurRadius: 4, offset: Offset(0, 1)),
+    BoxShadow(color: Color(0x24121417), blurRadius: 28, offset: Offset(0, 12)),
   ];
 
   static ThemeData _build(Brightness brightness) {
@@ -66,8 +66,8 @@ class AppTheme {
     final scheme = ColorScheme.fromSeed(seedColor: Brand.seedColor, brightness: brightness, dynamicSchemeVariant: DynamicSchemeVariant.fidelity).copyWith(
       primary: dark ? Brand.seedColorDark : Brand.seedColor,
       onPrimary: dark ? Brand.pageDark : Colors.white,
-      secondary: dark ? Brand.threadDark : Brand.thread,
-      onSecondary: const Color(0xFF18202E),
+      secondary: dark ? Brand.accentDark : Brand.accent,
+      onSecondary: Brand.ink,
       surface: dark ? Brand.pageDark : Brand.page,
     );
     final base = ThemeData(colorScheme: scheme, fontFamily: Brand.fontFamily, scaffoldBackgroundColor: scheme.surface);

@@ -48,7 +48,7 @@ class SiteScaffold extends StatelessWidget {
 }
 
 /// The logo, which takes the visitor home and keeps a secret: press it five times in a row and Zirr's shirt buttons
-/// rain down, with a short line to say thanks. The mark gives a little shake under the pointer and on every press.
+/// rain down, with a short line to say thanks. The wordmark gives a little shake on every press.
 class _Logo extends StatefulWidget {
   const _Logo();
 
@@ -77,69 +77,60 @@ class _LogoState extends State<_Logo> {
   }
 
   @override
+  Widget build(BuildContext context) => InkWell(
+    borderRadius: BorderRadius.circular(8),
+    onTap: _tap,
+    child: Padding(
+      padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
+      child: Wiggle(trigger: _taps, child: const _Wordmark()),
+    ),
+  );
+}
+
+/// The Arandas Tech logo: the name in bold ink with one saffron pixel over the "a" of "das", like the dot of an i.
+/// In Arabic the name stands as العرندس للتكنولوجيا and the pixel sits at its end. web/favicon.svg and the boot screen
+/// in web/index.html draw the small monogram (the A on a teal tile, with the same pixel for its crossbar).
+class _Wordmark extends StatelessWidget {
+  const _Wordmark();
+
+  /// The font size of the name.
+  static const size = 22.0;
+
+  @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
-    return InkWell(
-      borderRadius: BorderRadius.circular(8),
-      onTap: _tap,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
+    final theme = Theme.of(context);
+    final style = theme.textTheme.titleLarge!.copyWith(fontSize: size, fontWeight: FontWeight.w700, letterSpacing: -0.5, height: 1.2);
+    final name = Brand.name.tr;
+    const pixel = size * 0.26;
+    final rtl = Directionality.of(context) == TextDirection.rtl;
+    double measure(String text) => (TextPainter(
+      text: TextSpan(text: text, style: style),
+      textDirection: TextDirection.ltr,
+      maxLines: 1,
+    )..layout()).width;
+    // English: centred over the second "a"; Arabic: at the end of the name, at the height of the letters' tops.
+    final start = rtl ? -pixel * 1.4 : measure('Arand') + (measure('Aranda') - measure('Arand') - pixel) / 2;
+    return Semantics(
+      label: name,
+      child: ExcludeSemantics(
+        child: Stack(
+          clipBehavior: Clip.none,
           children: [
-            ExcludeSemantics(
-              child: Wiggle(
-                trigger: _taps,
-                child: CustomPaint(
-                  size: const Size.square(34),
-                  painter: _CompanyMark(tile: scheme.primary, letter: scheme.surface, lit: scheme.secondary),
-                ),
+            Text(name, style: style),
+            PositionedDirectional(
+              start: rtl ? null : start,
+              end: rtl ? start : null,
+              top: size * (rtl ? 0.3 : 0.14),
+              child: DecoratedBox(
+                decoration: BoxDecoration(color: theme.colorScheme.secondary, borderRadius: BorderRadius.circular(pixel * 0.18)),
+                child: const SizedBox.square(dimension: pixel),
               ),
             ),
-            const SizedBox(width: 10),
-            Text(Brand.wordmark.tr, style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700, letterSpacing: -0.5)),
           ],
         ),
       ),
     );
   }
-}
-
-/// The Arandas Tech mark on a 120-unit grid: a denim tile with continuous corners and a white A whose crossbar is an
-/// orange button, the company's nod to its Zirr line. web/favicon.svg and the boot screen in web/index.html draw the
-/// same shape.
-class _CompanyMark extends CustomPainter {
-  const _CompanyMark({required this.tile, required this.letter, required this.lit});
-
-  final Color tile;
-  final Color letter;
-  final Color lit;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final stroke = Paint()
-      ..color = letter
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 13
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round;
-    canvas
-      ..save()
-      ..scale(size.shortestSide / 120)
-      ..drawRSuperellipse(RSuperellipse.fromRectAndRadius(const Rect.fromLTWH(4, 4, 112, 112), const Radius.circular(34)), Paint()..color = tile)
-      ..drawPath(
-        Path()
-          ..moveTo(32, 90)
-          ..lineTo(60, 30)
-          ..lineTo(88, 90),
-        stroke,
-      )
-      ..drawCircle(const Offset(60, 72), 10, Paint()..color = lit)
-      ..restore();
-  }
-
-  @override
-  bool shouldRepaint(_CompanyMark old) => old.tile != tile || old.letter != letter || old.lit != lit;
 }
 
 class _Header extends StatelessWidget implements PreferredSizeWidget {
