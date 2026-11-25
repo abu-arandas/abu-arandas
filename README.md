@@ -10,15 +10,15 @@
 Flutter apps for businesses and agencies · Zirr, our software for shops · Arabic and English
 
 [![Book a free call on WhatsApp](https://img.shields.io/badge/WhatsApp-Book_a_free_call-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20found%20you%20on%20GitHub.)
-[![Visit the Arandas Tech website](https://img.shields.io/badge/Website-zirr--site.vercel.app-0E5E6F?style=for-the-badge&logo=googlechrome&logoColor=white)](https://zirr-site.vercel.app)
+[![Visit the Arandas Tech website](https://img.shields.io/badge/Website-arandas.tech-0E5E6F?style=for-the-badge&logo=googlechrome&logoColor=white)](https://arandas.tech)
 [![Follow Zirr on Facebook](https://img.shields.io/badge/Facebook-Zirr-0866FF?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/1294898037048567)
 
 </div>
 
 I'm **Ehab Arandas**, a Flutter developer in Amman and the founder of **Arandas Tech** (العرندس للتكنولوجيا), a software company. I have built apps for clients since 2021. Today Arandas Tech does two things:
 
-- **Flutter services:** mobile and web apps for businesses, and a white-label Flutter team for agencies. [See the services](https://zirr-site.vercel.app/services)
-- **Zirr** (زِرّ, "button": the one on a shirt and the one on a screen): our own line of software for shops. The till, the stock behind it, the online store, and the starter we build new apps from. [Meet Zirr](https://zirr-site.vercel.app/zirr)
+- **Flutter services:** mobile and web apps for businesses, and a white-label Flutter team for agencies. [See the services](https://arandas.tech/services)
+- **Zirr** (زِرّ, "button": the one on a shirt and the one on a screen): our own line of software for shops. The till, the stock behind it, the online store, and the starter we build new apps from. [Meet Zirr](https://arandas.tech/zirr)
 
 ## Zirr by Arandas Tech
 
@@ -27,18 +27,18 @@ I'm **Ehab Arandas**, a Flutter developer in Amman and the founder of **Arandas 
   <img src="assets/brand/zirr.png" alt="Zirr" width="180">
 </picture>
 
-### Zirr Retail · [see it and buy the code](https://zirr-site.vercel.app/zirr/retail)
+### Zirr Retail · [see it and buy the code](https://arandas.tech/zirr/retail)
 
 One app that runs a clothing store: the online shop, a till for every branch, stock across stores, buying, customers and the books, on one Supabase database. English and Arabic, light and dark, on the web, Android, iPad and Windows.
 
-[![Zirr Retail: online shop, point of sale and back office](assets/retail/cover.jpg)](https://zirr-site.vercel.app/zirr/retail)
+[![Zirr Retail: online shop, point of sale and back office](assets/retail/cover.jpg)](https://arandas.tech/zirr/retail)
 
 - Online shop with live stock per size, checkout, card payments through PayTabs, order tracking and loyalty points
 - Point of sale with barcodes, split payments, returns, cash-up and bilingual receipts with Jordan's JoFotara e-invoicing
 - Transfers between branches, stock counts, purchase orders, payroll, dashboards and profit and loss
 - 39 staff permissions, two-step sign-in, and an AI assistant that writes product descriptions in both languages
 
-[Visit the live shop](https://erp-house.vercel.app) · [Book a back-office walkthrough](https://wa.me/962791568798?text=Hi%2C%20I%20would%20like%20a%20walkthrough%20of%20the%20Zirr%20Retail%20back%20office.) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://zirr-site.vercel.app/zirr/retail))
+[Visit the live shop](https://erp-house.vercel.app) · [Book a back-office walkthrough](https://wa.me/962791568798?text=Hi%2C%20I%20would%20like%20a%20walkthrough%20of%20the%20Zirr%20Retail%20back%20office.) · Get the code: [Developer licence $59](https://www.paypal.com/ncp/payment/PLB-MEBQ9L5YNMRU) · [Agency licence $199](https://www.paypal.com/ncp/payment/873ZSGENBAFQA) ([compare licences](https://arandas.tech/zirr/retail))
 
 `Flutter` `Dart` `Supabase` `PostgreSQL`
 
@@ -102,7 +102,7 @@ Everything ships in Arabic and English, with right-to-left layouts. [Send us a b
 
 نظام الكاشير **زِرّ كاشير** للمطاعم والكافيهات والمحلات: [جرّب الديمو](https://pos-sage-one.vercel.app)، ونركّبه عندك في عمّان مع تجربة مجانية 14 يوماً، ثم 299 ديناراً مرة واحدة بدون اشتراك شهري.
 
-زُر [موقعنا](https://zirr-site.vercel.app)، وتابعنا على [فيسبوك](https://www.facebook.com/1294898037048567).
+زُر [موقعنا](https://arandas.tech)، وتابعنا على [فيسبوك](https://www.facebook.com/1294898037048567).
 
 لحجز مكالمة مجانية، راسلنا على [واتساب](https://wa.me/962791568798?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D8%B1%D9%8A%D9%82%20%D8%A3%D8%B1%D9%86%D8%AF%D8%B3%20%D8%AA%D9%83%D8%8C%20%D9%88%D8%B5%D9%84%D8%AA%20%D8%A5%D9%84%D9%8A%D9%83%D9%85%20%D9%85%D9%86%20GitHub.).
 
