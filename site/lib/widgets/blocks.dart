@@ -217,7 +217,7 @@ class Screenshot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    const ink = Color(0xFF18202E);
+    const ink = Brand.ink;
     return DecoratedBox(
       decoration: ShapeDecoration(
         shape: AppTheme.shape(16, side: BorderSide(color: scheme.outlineVariant)),

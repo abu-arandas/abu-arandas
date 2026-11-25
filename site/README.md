@@ -29,11 +29,13 @@ switches. Any other address shows the not-found page.
 
 ## Brand
 
-Arandas Tech (أرندس تك) is the company; Zirr (زِرّ, "button") is its product line for shops. Both share the house
-palette (denim #2B4C8C, thread orange #EE7B30, cotton #F7F5F0) and the Rubik font. The company mark is a denim tile with
-a white A whose crossbar is an orange button: drawn in `lib/widgets/site_scaffold.dart` (`_CompanyMark`), in
-`web/favicon.svg` and on the boot screen in `web/index.html`. The Zirr button (`ZirrButton` in `lib/widgets/fun.dart`)
-stays the mark of the Zirr line.
+Arandas Tech (العرندس للتكنولوجيا) is the company; Zirr (زِرّ, "button") is its product line for shops. The company's
+palette is deep teal #0E5E6F, saffron #E8A33D (always with dark text), ink #121417 and warm sand #F5F1EA, set in
+`lib/config/brand.dart`, with the Rubik font. The logo is a wordmark: the name in bold ink with one saffron pixel over
+the "a" of "das", drawn in `lib/widgets/site_scaffold.dart` (`_Wordmark`); the lockups are in `../assets/brand/`
+(`arandas-tech.png`, `arandas-tech-on-dark.png`). The small monogram, a sand A on a teal tile with the pixel for its
+crossbar, is the favicon (`web/favicon.svg`, the icons in `web/icons/`) and the boot screen in `web/index.html`. The
+Zirr button (`ZirrButton` in `lib/widgets/fun.dart`) stays the mark of the Zirr line.
 
 ## Changing what it says
 

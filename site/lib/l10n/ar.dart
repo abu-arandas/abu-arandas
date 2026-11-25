@@ -4,7 +4,6 @@ import '../config/brand.dart';
 /// shows English rather than nothing; `node tool/check_arabic.mjs` fails the build when one is missing.
 const ar = <String, String>{
   Brand.name: Brand.nameAr,
-  Brand.wordmark: Brand.nameAr,
   Brand.city: 'عمّان، الأردن',
   'العربية': 'English',
 
@@ -308,13 +307,13 @@ const ar = <String, String>{
   'Flutter services': 'خدمات Flutter',
   'A software company in Amman. We build Flutter apps and make Zirr, software for shops.':
       'شركة برمجيات في عمّان. نبني تطبيقات Flutter ونصنع زِرّ، برامج للمحلات.',
-  'Hi Arandas Tech team, I found you on your website.': 'مرحباً فريق أرندس تك، وصلت إليكم من موقعكم.',
-  'Hi Arandas Tech team, I would like to know more about: @name': 'مرحباً فريق أرندس تك، أودّ معرفة المزيد عن: @name',
-  'Hi Arandas Tech team, I am @name.': 'مرحباً فريق أرندس تك، أنا @name.',
-  'Hi Arandas Tech team, I would like to talk about a Flutter project.': 'مرحباً فريق أرندس تك، أودّ الحديث عن مشروع Flutter.',
-  'Hi Arandas Tech team, I would like a demo of Zirr.': 'مرحباً فريق أرندس تك، أودّ عرضاً تجريبياً لزِرّ.',
+  'Hi Arandas Tech team, I found you on your website.': 'مرحباً فريق العرندس للتكنولوجيا، وصلت إليكم من موقعكم.',
+  'Hi Arandas Tech team, I would like to know more about: @name': 'مرحباً فريق العرندس للتكنولوجيا، أودّ معرفة المزيد عن: @name',
+  'Hi Arandas Tech team, I am @name.': 'مرحباً فريق العرندس للتكنولوجيا، أنا @name.',
+  'Hi Arandas Tech team, I would like to talk about a Flutter project.': 'مرحباً فريق العرندس للتكنولوجيا، أودّ الحديث عن مشروع Flutter.',
+  'Hi Arandas Tech team, I would like a demo of Zirr.': 'مرحباً فريق العرندس للتكنولوجيا، أودّ عرضاً تجريبياً لزِرّ.',
   'Five presses! Zirr’s buttons say thank you.': 'خمس ضغطات! أزرار زِرّ تشكرك.',
-  'Arandas Tech · software company in Amman': 'أرندس تك · شركة برمجيات في عمّان',
+  'Arandas Tech · software company in Amman': 'العرندس للتكنولوجيا · شركة برمجيات في عمّان',
   'Software for businesses that work in Arabic and English': 'برمجيات لأعمال تعمل بالعربي والإنجليزي',
   'We build Flutter apps for companies and agencies, and we make Zirr, our own line of software that shops run on: the till, the stock, the online store.':
       'نبني تطبيقات Flutter للشركات والوكالات، ونصنع زِرّ، مجموعتنا من البرامج التي تعمل عليها المحلات: الكاشير والمخزون والمتجر الإلكتروني.',
@@ -357,9 +356,9 @@ const ar = <String, String>{
   'A Zirr product': 'منتج من زِرّ',
 
   // The Zirr line
-  'Zirr by Arandas Tech': 'زِرّ من أرندس تك',
+  'Zirr by Arandas Tech': 'زِرّ من العرندس للتكنولوجيا',
   'Zirr: the software a shop runs on': 'زِرّ: البرامج التي يعمل عليها محلّك',
-  'Zirr is our product line for retail: a till for every branch, the stock behind it, the online store, and the starter we build new apps from. Every product is made, run and supported by Arandas Tech in Amman.': 'زِرّ مجموعتنا من البرامج لقطاع التجزئة: كاشير لكل فرع والمخزون خلفه والمتجر الإلكتروني والقالب الذي نبني منه التطبيقات الجديدة. كل منتج تصنعه أرندس تك في عمّان وتشغّله وتدعمه.',
+  'Zirr is our product line for retail: a till for every branch, the stock behind it, the online store, and the starter we build new apps from. Every product is made, run and supported by Arandas Tech in Amman.': 'زِرّ مجموعتنا من البرامج لقطاع التجزئة: كاشير لكل فرع والمخزون خلفه والمتجر الإلكتروني والقالب الذي نبني منه التطبيقات الجديدة. كل منتج تصنعه العرندس للتكنولوجيا في عمّان وتشغّله وتدعمه.',
   'Book a free demo': 'احجز عرضاً مجانياً',
   'The Zirr line': 'مجموعة زِرّ',
   'Four products, one team behind them': 'أربعة منتجات، وفريق واحد خلفها',
@@ -382,7 +381,7 @@ const ar = <String, String>{
   'A fashion storefront with its own admin panel for a brand that sells online: colour and size variants, promotion codes and card checkout.':
       'واجهة متجر أزياء بلوحة إدارة خاصة لعلامة تبيع أونلاين: خيارات ألوان ومقاسات ورموز عروض ودفع بالبطاقة.',
   'The Flutter and Supabase template every Arandas Tech app starts from: sign-in, roles, Arabic and English, CI and docs on day one.':
-      'قالب Flutter وSupabase الذي يبدأ منه كل تطبيق من أرندس تك: تسجيل الدخول والصلاحيات والعربية والإنجليزية وCI والوثائق من اليوم الأول.',
+      'قالب Flutter وSupabase الذي يبدأ منه كل تطبيق من العرندس للتكنولوجيا: تسجيل الدخول والصلاحيات والعربية والإنجليزية وCI والوثائق من اليوم الأول.',
   'Read how we use it': 'اقرأ كيف نستخدمه',
   'Arabic first, English too': 'العربية أولاً، والإنجليزية أيضاً',
   'Every screen, receipt and email in both languages, right to left where it should be.': 'كل شاشة وإيصال وبريد باللغتين، ومن اليمين إلى اليسار حيث يجب.',
@@ -395,9 +394,9 @@ const ar = <String, String>{
   'Code you can own': 'كود يمكنك امتلاكه',
   'Buy the source code with a licence, or let us set it up and run it for you.': 'اشترِ الكود المصدري بترخيص، أو دعنا نجهّزه ونشغّله لك.',
   'People you can call': 'فريق تستطيع الاتصال به',
-  'Made in Amman by Arandas Tech. Ask on WhatsApp and a developer answers.': 'صُنع في عمّان على يد أرندس تك. اسأل على واتساب ويجيبك مطوّر.',
+  'Made in Amman by Arandas Tech. Ask on WhatsApp and a developer answers.': 'صُنع في عمّان على يد العرندس للتكنولوجيا. اسأل على واتساب ويجيبك مطوّر.',
   'Your data stays yours': 'بياناتك تبقى لك',
   'Row-level security on every table, with SQL tests that fail when a rule leaks.':
       'أمان على مستوى الصفوف في كل جدول، مع اختبارات SQL تفشل إذا سرّبت قاعدة أي بيانات.',
-  'The starter every Arandas Tech app begins from': 'القالب الذي يبدأ منه كل تطبيق من أرندس تك',
+  'The starter every Arandas Tech app begins from': 'القالب الذي يبدأ منه كل تطبيق من العرندس للتكنولوجيا',
 };

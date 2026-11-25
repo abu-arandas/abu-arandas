@@ -6,30 +6,30 @@ class Brand {
   /// The company's name in English, also the translation key for [nameAr].
   static const name = 'Arandas Tech';
 
-  /// The name as the logo spells it, next to the mark: all lower case in English, [nameAr] in Arabic.
-  static const wordmark = 'arandas tech';
-
   /// The company's name in Arabic.
-  static const nameAr = 'أرندس تك';
+  static const nameAr = 'العرندس للتكنولوجيا';
 
   /// The company's product line for shops, also the translation key for [productLineAr]. Zirr (زِرّ) is "button": the
   /// one on a shirt and the one on a screen.
   static const productLine = 'Zirr';
   static const productLineAr = 'زِرّ';
 
-  /// Denim: buttons, links and the mark. Arandas Tech and its Zirr line share one palette. Every screen's palette is made from it.
-  static const seedColor = Color(0xFF2B4C8C);
+  /// Deep teal: buttons, links and the monogram. Every screen's palette is made from it.
+  static const seedColor = Color(0xFF0E5E6F);
 
-  /// Thread orange: the lit hole of the mark and highlights. Dark text on it, never white.
-  static const thread = Color(0xFFEE7B30);
+  /// Saffron gold: the pixel on the wordmark and highlights. Dark text on it, never white.
+  static const accent = Color(0xFFE8A33D);
 
-  /// Denim and thread as they read on the dark theme's night blue.
-  static const seedColorDark = Color(0xFF8EAEF0);
-  static const threadDark = Color(0xFFFF9F5A);
+  /// Teal and saffron as they read on the dark theme's ink.
+  static const seedColorDark = Color(0xFF6CC3D3);
+  static const accentDark = Color(0xFFF2B95C);
 
-  /// The page: cotton white, or night blue in the dark.
-  static const page = Color(0xFFF7F5F0);
-  static const pageDark = Color(0xFF0D121C);
+  /// Ink: text, and the tint of every shadow.
+  static const ink = Color(0xFF121417);
+
+  /// The page: warm sand, or ink in the dark.
+  static const page = Color(0xFFF5F1EA);
+  static const pageDark = Color(0xFF101416);
 
   /// One font for Arabic and Latin text, bundled in assets/fonts and declared in pubspec.yaml.
   static const fontFamily = 'Rubik';
