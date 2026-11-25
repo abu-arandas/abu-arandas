@@ -40,10 +40,10 @@ class Brand {
   /// WhatsApp for sales and support, in international form without the plus.
   static const whatsApp = '962791568798';
 
-  /// The address the contact page shows, or null to show none. Fill it in once the company has its own domain.
+  /// The address the contact page shows, or null to show none.
   static const String? email = null;
 
-  static const facebook = 'https://www.facebook.com/1294898037048567';
+  static const facebook = 'https://www.facebook.com/arandas.tech';
   static const github = 'https://github.com/abu-arandas';
 
   /// Where the company works from, for the footer and the contact page.
