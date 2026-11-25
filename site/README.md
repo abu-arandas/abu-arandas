@@ -46,7 +46,9 @@ Zirr button (`ZirrButton` in `lib/widgets/fun.dart`) stays the mark of the Zirr 
   Set `Brand.email` once the company has its own address; the contact page shows it then.
 - **Testimonials:** add them to `Content.testimonials` once clients agree to be quoted; the section appears by itself.
 - **Pictures:** `assets/images`.
-- **Page title and link previews:** `web/index.html`.
+- **Page title, link previews and company details for Google:** `web/index.html`. The preview picture `web/og.jpg` is
+  drawn by `python3 tool/og_image.py`; run it again after changing the name or colours.
+- **Pages Google should list:** `web/sitemap.xml` (add a page there when you add a route).
 
 ## Motion and voice
 

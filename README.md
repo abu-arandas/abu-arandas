@@ -11,7 +11,7 @@ Flutter apps for businesses and agencies · Zirr, our software for shops · Arab
 
 [![Book a free call on WhatsApp](https://img.shields.io/badge/WhatsApp-Book_a_free_call-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20found%20you%20on%20GitHub.)
 [![Visit the Arandas Tech website](https://img.shields.io/badge/Website-arandas.tech-0E5E6F?style=for-the-badge&logo=googlechrome&logoColor=white)](https://arandas.tech)
-[![Follow Zirr on Facebook](https://img.shields.io/badge/Facebook-Zirr-0866FF?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/1294898037048567)
+[![Follow Arandas Tech on Facebook](https://img.shields.io/badge/Facebook-Arandas_Tech-0866FF?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/arandas.tech)
 
 </div>
 
@@ -102,7 +102,7 @@ Everything ships in Arabic and English, with right-to-left layouts. [Send us a b
 
 نظام الكاشير **زِرّ كاشير** للمطاعم والكافيهات والمحلات: [جرّب الديمو](https://pos-sage-one.vercel.app)، ونركّبه عندك في عمّان مع تجربة مجانية 14 يوماً، ثم 299 ديناراً مرة واحدة بدون اشتراك شهري.
 
-زُر [موقعنا](https://arandas.tech)، وتابعنا على [فيسبوك](https://www.facebook.com/1294898037048567).
+زُر [موقعنا](https://arandas.tech)، وتابعنا على [فيسبوك](https://www.facebook.com/arandas.tech).
 
 لحجز مكالمة مجانية، راسلنا على [واتساب](https://wa.me/962791568798?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D8%B1%D9%8A%D9%82%20%D8%A3%D8%B1%D9%86%D8%AF%D8%B3%20%D8%AA%D9%83%D8%8C%20%D9%88%D8%B5%D9%84%D8%AA%20%D8%A5%D9%84%D9%8A%D9%83%D9%85%20%D9%85%D9%86%20GitHub.).
 
