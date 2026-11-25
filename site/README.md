@@ -36,6 +36,8 @@ the "a" of "das", drawn in `lib/widgets/site_scaffold.dart` (`_Wordmark`); the l
 (`arandas-tech.png`, `arandas-tech-on-dark.png`). The small monogram, a sand A on a teal tile with the pixel for its
 crossbar, is the favicon (`web/favicon.svg`, the icons in `web/icons/`) and the boot screen in `web/index.html`. The
 Zirr button (`ZirrButton` in `lib/widgets/fun.dart`) stays the mark of the Zirr line.
+The pictures on the company's Facebook page and Google Business profile are in `../assets/brand/social/`
+(`profile-picture.png`, the monogram at 1000 px; `facebook-cover.png`, 851x315); Google's cover is `web/og.jpg`.
 
 ## Changing what it says
 
