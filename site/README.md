@@ -3,7 +3,7 @@
 The company's own site, in Arabic and English: Arandas Tech's Flutter services for businesses and agencies, the Zirr
 product line (Zirr Retail, Zirr POS, Zirr Boutique, Zirr Starter), case studies and a contact page. A Flutter web app
 built from Zirr Starter's structure and rules. It needs no backend and
-no keys. Live at https://zirr-site.vercel.app.
+no keys. Live at https://arandas.tech.
 
 | Home | Home (Arabic) |
 | --- | --- |
