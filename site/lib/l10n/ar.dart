@@ -402,7 +402,7 @@ const ar = <String, String>{
 
   // Policies
   'Policies': 'السياسات',
-  'Last updated 25 November 2026': 'آخر تحديث: 25 تشرين الثاني 2026',
+  'Last updated 26 November 2026': 'آخر تحديث: 26 تشرين الثاني 2026',
   'Trade register number: @number': 'رقم السجل التجاري: @number',
   'Terms of service': 'شروط الخدمة',
   'The rules for using this site, buying a Zirr licence and working with us on a project.':
@@ -447,6 +447,8 @@ const ar = <String, String>{
       'للرد عليك، وتسليم ما اشتريته، وإرسال فاتورتك، وتقديم الدعم الذي يشمله ترخيصك أو مشروعك، والاحتفاظ بالسجلات التي يطلبها القانون.',
   'Who we share it with': 'مع من نشاركها',
   'We never sell your information. We share only what is needed: with the payment provider you chose, and with the Income and Sales Tax Department, which receives invoices through the national e-invoicing system as Jordanian law requires.': 'لا نبيع معلوماتك أبداً. نشارك فقط ما يلزم: مع مزوّد الدفع الذي اخترته، ومع دائرة ضريبة الدخل والمبيعات التي تستلم الفواتير عبر نظام الفوترة الوطني كما يشترط القانون الأردني.',
+  'Error reports from our apps': 'تقارير الأخطاء من تطبيقاتنا',
+  'When one of our apps runs into an error, such as Zirr POS on a shop’s till or a shop we run, it can send us an error report through Sentry, a service that stores these reports for us. A report holds the error, where in the app it happened, the page or screen, and the kind of browser or device. It does not say who was signed in, and Sentry does not keep the IP address it came from. We use these reports only to find and fix faults.': 'حين يواجه أحد تطبيقاتنا خطأً، مثل زِرّ كاشير على صندوق أحد المتاجر أو متجر نديره، قد يرسل إلينا تقريراً عن الخطأ عبر Sentry، وهي خدمة تحفظ هذه التقارير لنا. يحمل التقرير الخطأ، ومكان حدوثه في التطبيق، والصفحة أو الشاشة، ونوع المتصفح أو الجهاز. ولا يذكر من كان مسجَّل الدخول، ولا تحتفظ Sentry بعنوان IP الذي جاء منه. نستخدم هذه التقارير فقط لإيجاد الأعطال وإصلاحها.',
   'How long we keep it': 'مدة الاحتفاظ بها',
   'Invoices and payment records for as long as the law requires. Messages and other details until you ask us to delete them, or once we no longer need them.':
       'الفواتير وسجلات الدفع للمدة التي يشترطها القانون. أما الرسائل والتفاصيل الأخرى فحتى تطلب منّا حذفها، أو حين لا نعود بحاجة إليها.',
