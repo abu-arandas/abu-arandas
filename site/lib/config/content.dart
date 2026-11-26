@@ -321,7 +321,7 @@ class Content {
   // ---------------------------------------------------------------- Policies
 
   /// When the policies below last changed. Change it with them.
-  static const legalUpdated = 'Last updated 25 November 2026';
+  static const legalUpdated = 'Last updated 26 November 2026';
 
   /// The terms, privacy and refund pages, linked from every page's footer. Payment providers read them before they
   /// accept a shop, so they stay plain and match what the offers above promise.
@@ -375,6 +375,9 @@ class Content {
         ]),
         LegalPart('Who we share it with', [
           'We never sell your information. We share only what is needed: with the payment provider you chose, and with the Income and Sales Tax Department, which receives invoices through the national e-invoicing system as Jordanian law requires.',
+        ]),
+        LegalPart('Error reports from our apps', [
+          'When one of our apps runs into an error, such as Zirr POS on a shop’s till or a shop we run, it can send us an error report through Sentry, a service that stores these reports for us. A report holds the error, where in the app it happened, the page or screen, and the kind of browser or device. It does not say who was signed in, and Sentry does not keep the IP address it came from. We use these reports only to find and fix faults.',
         ]),
         LegalPart('How long we keep it', [
           'Invoices and payment records for as long as the law requires. Messages and other details until you ask us to delete them, or once we no longer need them.',
