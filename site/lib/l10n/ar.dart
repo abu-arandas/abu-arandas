@@ -472,4 +472,125 @@ const ar = <String, String>{
   'How to ask': 'كيف تطلب ذلك',
   'Message us on WhatsApp with your name and your order or invoice number. We answer within two working days, and an approved refund goes back the way you paid, usually within 14 days.':
       'راسلنا على واتساب باسمك ورقم طلبك أو فاتورتك. نرد خلال يومَي عمل، ويُعاد المبلغ الموافَق عليه بالطريقة التي دفعت بها، عادةً خلال 14 يوماً.',
+  // Zirr POS
+  'See Zirr POS': 'تعرّف على زِرّ كاشير',
+  'Zirr POS · for shops, cafés and restaurants': 'زِرّ كاشير · للمحلات والمقاهي والمطاعم',
+  'A till that keeps selling when the internet drops': 'كاشير يكمّل البيع حتى لو انقطع الإنترنت',
+  'Zirr POS saves every sale on the device first, so the queue keeps moving offline. Barcodes, split payments, shifts, stock and, for cafés, tables and a kitchen screen. We install it in your shop for one price, with no monthly fee.': 'زِرّ كاشير يحفظ كل عملية بيع على الجهاز أولاً، فيبقى الدور ماشياً بلا إنترنت. باركود ودفع مقسّم وورديات ومخزون، وللمقاهي طاولات وشاشة للمطبخ. نركّبه في محلّك بسعر واحد، بلا اشتراك شهري.',
+  'Everything at the counter, nothing in the way': 'كل ما تحتاجه على الكاونتر، ولا شيء يعطّلك',
+  'A fast register': 'كاشير سريع',
+  'Barcode scanning, variants, modifiers, discounts and split payments across cash, card and mobile.':
+      'مسح الباركود والمقاسات والإضافات والخصومات، ودفع مقسّم بين النقد والبطاقة والمحفظة.',
+  'Each sale is saved on the device first and synced when the internet is back, so the queue keeps moving.':
+      'كل عملية بيع تُحفظ على الجهاز أولاً وتُرسل عند عودة الإنترنت، فلا يتوقف الدور.',
+  'Shifts and cash-up': 'الورديات وإغلاق الصندوق',
+  'An opening float, pay-ins and pay-outs, and a Z-report of expected against counted cash.':
+      'رصيد افتتاحي، ومقبوضات ومصروفات نثرية، وتقرير Z يقارن النقد المتوقع بالنقد المعدود.',
+  'Stock and suppliers': 'المخزون والموردون',
+  'Receive stock against purchase orders, adjust it with an audit log, and see what runs low.':
+      'استلم البضاعة على أوامر الشراء، وعدّل المخزون مع سجلّ تدقيق، واعرف ما الذي قارب على النفاد.',
+  'Tables and kitchen': 'الطاولات والمطبخ',
+  'For cafés: a floor plan, open tabs over several rounds, a kitchen display and a QR menu.':
+      'للمقاهي: مخطط للصالة، وحسابات مفتوحة على أكثر من طلبية، وشاشة للمطبخ، وقائمة طعام برمز QR.',
+  'Reports you can export': 'تقارير تقدر تصدّرها',
+  'Revenue, profit, best-sellers and sales per cashier for any dates, exported to CSV.':
+      'الإيرادات والأرباح والأكثر مبيعاً ومبيعات كل كاشير لأي فترة، مع تصدير إلى CSV.',
+  'Set up for you': 'نجهّزه لك',
+  'What we do in your shop': 'ماذا نعمل في محلّك',
+  'Installed on your Windows PC, or opened in any browser': 'يُركّب على جهاز ويندوز عندك، أو يُفتح في أي متصفح',
+  'Your menu or products set up in Arabic and English': 'قائمتك أو منتجاتك جاهزة بالعربي والإنجليزي',
+  'Your receipt printer connected, with Arabic receipts': 'طابعة الإيصالات موصولة، وإيصالات بالعربي',
+  'Staff accounts with their own PINs and a manager override': 'حساب لكل موظف برمز خاص، وصلاحية موافقة للمدير',
+  'Training for your team at your shop': 'تدريب لفريقك في محلّك',
+  'Zirr POS in Arabic, with the menu and the cart': 'زِرّ كاشير بالعربي، مع قائمة المنتجات والسلة',
+  'Try it free, then pay once': 'جرّبه مجاناً، ثم ادفع مرة واحدة',
+  'Prices are for shops in Amman and include the setup visit. Outside Amman, ask us on WhatsApp.':
+      'الأسعار للمحلات في عمّان وتشمل زيارة التركيب. خارج عمّان، اسألنا على واتساب.',
+  'Free trial': 'تجربة مجانية',
+  'Free for 14 days': 'مجاناً لمدة 14 يوماً',
+  'Try it in your shop before you pay anything.': 'جرّبه في محلّك قبل أن تدفع أي شيء.',
+  'We install it on your PC': 'نركّبه على جهازك',
+  'Your menu in Arabic and English': 'قائمتك بالعربي والإنجليزي',
+  'Pay only if you keep it': 'تدفع فقط إذا قرّرت أن تكمل',
+  'Start a free trial': 'ابدأ التجربة المجانية',
+  'Set up in your shop': 'مركّب في محلّك',
+  '299 JOD once': '299 دينار مرة واحدة',
+  'For shops, cafés and restaurants in Amman.': 'للمحلات والمقاهي والمطاعم في عمّان.',
+  'No monthly fee': 'بلا اشتراك شهري',
+  'Installed, set up and your staff trained': 'تركيب وتجهيز وتدريب لموظفيك',
+  '3 months of support on WhatsApp': '3 أشهر دعم على واتساب',
+  'Licence for developers': 'ترخيص للمطوّرين',
+  'Ask for a price': 'اسأل عن السعر',
+  'For agencies and developers who install it for clients.': 'للوكالات والمطوّرين الذين يركّبونه لعملائهم.',
+  'The full React and TypeScript source code': 'كود React وTypeScript المصدري كاملاً',
+  'Install it for your own clients': 'ركّبه لعملائك أنت',
+  'Terms agreed with you in writing': 'شروط نتفق عليها معك كتابياً',
+  'Want to see it on your counter?': 'تحب تشوفه على الكاونتر عندك؟',
+  'We show you the till on a call, or at your shop in Amman, in Arabic or English.': 'نعرض لك الكاشير في مكالمة، أو في محلّك في عمّان، بالعربي أو الإنجليزي.',
+
+  // Zirr Boutique
+  'See Zirr Boutique': 'تعرّف على زِرّ بوتيك',
+  'Zirr Boutique · for fashion brands online': 'زِرّ بوتيك · لعلامات الأزياء على الإنترنت',
+  'An online store that dresses as well as your brand': 'متجر إلكتروني أنيق بقدر أناقة علامتك',
+  'Zirr Boutique is a fashion storefront with its own back office: colour and size variants with their own stock, promotion codes with rules, and card checkout. Buy the source code and launch it under your name.':
+      'زِرّ بوتيك متجر أزياء مع لوحة إدارته: ألوان ومقاسات لكلٍّ منها مخزونه، وأكواد خصم بقواعد، ودفع بالبطاقة. اشترِ الكود المصدري وأطلقه باسمك.',
+  'Made for clothes, not for everything': 'مصمّم للملابس، لا لكل شيء',
+  'An editorial storefront': 'واجهة متجر بأسلوب المجلات',
+  'Big photographs, collections and a product page that sells the look, on phones and laptops.':
+      'صور كبيرة ومجموعات وصفحة منتج تبيع الإطلالة، على الجوال واللابتوب.',
+  'Colour and size variants': 'الألوان والمقاسات',
+  'Each colour has its own sizes, and each size its own price and stock, chosen in one tap.': 'لكل لون مقاساته، ولكل مقاس سعره ومخزونه، وتختاره بلمسة واحدة.',
+  'Promotion codes with rules': 'أكواد خصم بقواعد',
+  'Percentage, fixed and free-shipping codes with minimum orders, limits, dates and categories.':
+      'أكواد بنسبة أو بمبلغ ثابت أو بشحن مجاني، مع حد أدنى للطلب وعدد مرات وتواريخ وأقسام.',
+  'Checkout that adds up': 'دفع حساباته مضبوطة',
+  'The database checks every price and takes the exact stock in one step, so nothing oversells.':
+      'قاعدة البيانات تتحقق من كل سعر وتخصم المخزون بدقة في خطوة واحدة، فلا يُباع ما نفد.',
+  'Card payments': 'الدفع بالبطاقة',
+  'Stripe checkout when you are ready for it. The browser can never mark an order paid.':
+      'دفع عبر Stripe متى جهزت له. ولا يستطيع المتصفح أبداً أن يعلّم طلباً بأنه مدفوع.',
+  'A back office for your team': 'لوحة إدارة لفريقك',
+  'A dashboard, products, orders and promotions, with roles so each person sees their part.':
+      'لوحة متابعة ومنتجات وطلبات وعروض، مع أدوار فيرى كل شخص ما يخصّه.',
+  'The full Flutter Web source code: the store and its back office': 'كود Flutter Web المصدري كاملاً: المتجر ولوحة إدارته',
+  'Supabase migrations with row-level security and 163 SQL checks': 'ملفات قاعدة بيانات Supabase مع أمان على مستوى الصفوف و163 فحص SQL',
+  'Stripe checkout behind a small adapter you can swap': 'دفع Stripe خلف طبقة صغيرة تستطيع استبدالها',
+  'Terms, privacy and returns pages, and search-friendly pages': 'صفحات للشروط والخصوصية والإرجاع، وصفحات تفهمها محركات البحث',
+  'Bug fixes for 6 months from your purchase': 'إصلاح الأخطاء لمدة 6 أشهر من تاريخ الشراء',
+  'The Zirr Boutique back office dashboard': 'لوحة متابعة زِرّ بوتيك',
+  'Licences': 'التراخيص',
+  'One store, or one for a client': 'متجر لك، أو متجر لعميلك',
+  'Each licence covers one store with its own web address and database. Ask us and we send the price and the licence terms.':
+      'كل ترخيص يغطي متجراً واحداً بعنوانه وقاعدة بياناته. اسألنا ونرسل لك السعر وشروط الترخيص.',
+  'Regular licence': 'الترخيص العادي',
+  'For one store you own and run, selling your own goods.': 'لمتجر واحد تملكه وتديره وتبيع فيه بضاعتك.',
+  'Change it as you like for your store': 'عدّل فيه كما تريد لمتجرك',
+  'Bug fixes for 6 months': 'إصلاح الأخطاء لمدة 6 أشهر',
+  'Extended licence': 'الترخيص الموسّع',
+  'For one store you build for a client, or run as a service.': 'لمتجر واحد تبنيه لعميل، أو تشغّله كخدمة.',
+  'Deliver it to one client, or host it for other shops': 'سلّمه لعميل واحد، أو استضفه لمحلات أخرى',
+  'Want a tour of the store?': 'تحب جولة في المتجر؟',
+  'We walk you through the shop and its back office on a call, in Arabic or English.': 'نأخذك في جولة على المتجر ولوحة إدارته في مكالمة، بالعربي أو الإنجليزي.',
+
+  // The shop finder on the Zirr page
+  'Which Zirr fits you?': 'أي زِرّ يناسبك؟',
+  'Tell us what you run': 'قل لنا شو عندك',
+  'Pick the closest. We point you to the product, and you can try it or book a demo from there.':
+      'اختر الأقرب لك. ندلّك على المنتج، ومن هناك تجرّبه أو تحجز عرضاً.',
+  'A café or restaurant': 'مقهى أو مطعم',
+  'Tables, open tabs, a kitchen screen and a QR menu, on a till that keeps selling offline.':
+      'طاولات وحسابات مفتوحة وشاشة للمطبخ وقائمة برمز QR، على كاشير يبيع حتى بلا إنترنت.',
+  'A shop with one or two tills': 'محل فيه كاشير أو اثنان',
+  'Barcodes, split payments, shifts and stock, installed on your PC in Amman.': 'باركود ودفع مقسّم وورديات ومخزون، مركّب على جهازك في عمّان.',
+  'Clothing stores and a website': 'محلات ملابس وموقع إلكتروني',
+  'The online shop, a till in every branch and one stock ledger behind them.': 'المتجر الإلكتروني وكاشير في كل فرع وسجلّ مخزون واحد خلفها.',
+  'A fashion brand that sells online': 'علامة أزياء تبيع على الإنترنت',
+  'An editorial store with colour and size variants, promotion codes and card checkout.': 'متجر بأسلوب المجلات مع ألوان ومقاسات وأكواد خصم ودفع بالبطاقة.',
+  'An agency building apps': 'وكالة تبني تطبيقات',
+  'Start every client app with sign-in, roles, Arabic and CI already done.': 'ابدأ كل تطبيق لعملائك وتسجيل الدخول والأدوار والعربية وCI جاهزة.',
+
+  // Contact: demos
+  'A demo of Zirr Retail': 'عرض لزِرّ للتجزئة',
+  'A demo of Zirr POS': 'عرض لزِرّ كاشير',
+  'A demo of Zirr Boutique': 'عرض لزِرّ بوتيك',
 };

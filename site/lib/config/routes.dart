@@ -1,11 +1,13 @@
 import 'package:flutter/widgets.dart' show RouteSettings;
 import 'package:get/get.dart';
 
+import '../views/boutique_page.dart';
 import '../views/case_study_page.dart';
 import '../views/contact_page.dart';
 import '../views/home_page.dart';
 import '../views/legal_page.dart';
 import '../views/not_found_page.dart';
+import '../views/pos_page.dart';
 import '../views/retail_page.dart';
 import '../views/services_page.dart';
 import '../views/work_page.dart';
@@ -19,6 +21,8 @@ class Routes {
   static const services = '/services';
   static const zirr = '/zirr';
   static const retail = '/zirr/retail';
+  static const pos = '/zirr/pos';
+  static const boutique = '/zirr/boutique';
   static const work = '/work';
   static const contact = '/contact';
   static const terms = '/terms';
@@ -35,7 +39,7 @@ class Routes {
   /// One case study, by its slug.
   static String caseStudy(String slug) => '$work/$slug';
 
-  static const _fixed = {home, services, zirr, retail, work, contact, terms, privacy, refunds, notFound, oldAgencies, oldRetail};
+  static const _fixed = {home, services, zirr, retail, pos, boutique, work, contact, terms, privacy, refunds, notFound, oldAgencies, oldRetail};
 
   /// Whether [name] is one of the site's addresses, ignoring a query and a trailing slash.
   static bool isKnown(String name) {
@@ -63,6 +67,8 @@ final appPages = [
   _page(Routes.zirr, () => const ZirrPage()),
   _page(Routes.retail, () => const RetailPage()),
   _page(Routes.oldRetail, () => const RetailPage()),
+  _page(Routes.pos, () => const PosPage()),
+  _page(Routes.boutique, () => const BoutiquePage()),
   _page(Routes.work, () => const WorkPage()),
   _page('${Routes.work}/:slug', () => CaseStudyPage(slug: Get.parameters['slug'] ?? '')),
   _page(Routes.contact, () => const ContactPage()),

@@ -51,7 +51,8 @@ class _ContactFormState extends State<ContactForm> {
   final _name = TextEditingController();
   final _company = TextEditingController();
   final _message = TextEditingController();
-  String _type = Content.projectTypes.first;
+  // A product page opens the form as /contact?about=<product>, with that product's demo already picked.
+  String _type = Content.demoFor(Get.parameters['about']) ?? Content.projectTypes.first;
 
   @override
   void dispose() {

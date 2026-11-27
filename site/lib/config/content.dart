@@ -141,7 +141,7 @@ class Content {
       results: [],
       stack: ['React', 'TypeScript', 'Electron', 'Supabase'],
       image: 'assets/images/pos-register.png',
-      links: [SiteLink('Try it in your browser', 'https://pos-sage-one.vercel.app')],
+      links: [SiteLink('See Zirr POS', Routes.pos)],
     ),
     CaseStudy(
       slug: 'zirr-boutique',
@@ -153,7 +153,7 @@ class Content {
       results: [],
       stack: ['Flutter Web', 'Supabase', 'Stripe'],
       image: 'assets/images/zirr-boutique.jpg',
-      links: [SiteLink('Open the store', 'https://vanguard-demo-sigma.vercel.app')],
+      links: [SiteLink('See Zirr Boutique', Routes.boutique)],
     ),
     CaseStudy(
       slug: 'zirr-starter',
@@ -176,6 +176,112 @@ class Content {
     Feature(Glyph.code, 'Code you can own', 'Buy the source code with a licence, or let us set it up and run it for you.'),
     Feature(Glyph.handshake, 'People you can call', 'Made in Amman by Arandas Tech. Ask on WhatsApp and a developer answers.'),
     Feature(Glyph.shield, 'Your data stays yours', 'Row-level security on every table, with SQL tests that fail when a rule leaks.'),
+  ];
+
+  /// The shop finder on the Zirr page: what the visitor runs, and the Zirr product that fits it, by its slug in
+  /// [zirrProducts]. Each answer says why in one line.
+  static const zirrFits = [
+    ZirrFit('A café or restaurant', slug: 'zirr-pos', why: 'Tables, open tabs, a kitchen screen and a QR menu, on a till that keeps selling offline.'),
+    ZirrFit('A shop with one or two tills', slug: 'zirr-pos', why: 'Barcodes, split payments, shifts and stock, installed on your PC in Amman.'),
+    ZirrFit('Clothing stores and a website', slug: 'zirr-retail', why: 'The online shop, a till in every branch and one stock ledger behind them.'),
+    ZirrFit(
+      'A fashion brand that sells online',
+      slug: 'zirr-boutique',
+      why: 'An editorial store with colour and size variants, promotion codes and card checkout.',
+    ),
+    ZirrFit('An agency building apps', slug: 'zirr-starter', why: 'Start every client app with sign-in, roles, Arabic and CI already done.'),
+  ];
+
+  // ---------------------------------------------------------------- Zirr POS
+
+  static const posFeatures = [
+    Feature(Glyph.pos, 'A fast register', 'Barcode scanning, variants, modifiers, discounts and split payments across cash, card and mobile.'),
+    Feature(Glyph.shield, 'Keeps selling offline', 'Each sale is saved on the device first and synced when the internet is back, so the queue keeps moving.'),
+    Feature(Glyph.calendar, 'Shifts and cash-up', 'An opening float, pay-ins and pay-outs, and a Z-report of expected against counted cash.'),
+    Feature(Glyph.stock, 'Stock and suppliers', 'Receive stock against purchase orders, adjust it with an audit log, and see what runs low.'),
+    Feature(Glyph.chat, 'Tables and kitchen', 'For cafés: a floor plan, open tabs over several rounds, a kitchen display and a QR menu.'),
+    Feature(Glyph.chart, 'Reports you can export', 'Revenue, profit, best-sellers and sales per cashier for any dates, exported to CSV.'),
+  ];
+
+  static const posInTheBox = [
+    'Installed on your Windows PC, or opened in any browser',
+    'Your menu or products set up in Arabic and English',
+    'Your receipt printer connected, with Arabic receipts',
+    'Staff accounts with their own PINs and a manager override',
+    'Training for your team at your shop',
+  ];
+
+  static const posOffers = [
+    Offer(
+      name: 'Free trial',
+      price: 'Free for 14 days',
+      summary: 'Try it in your shop before you pay anything.',
+      points: ['We install it on your PC', 'Your menu in Arabic and English', 'Pay only if you keep it'],
+      link: SiteLink('Start a free trial', '/contact?about=zirr-pos'),
+    ),
+    Offer(
+      name: 'Set up in your shop',
+      price: '299 JOD once',
+      summary: 'For shops, cafés and restaurants in Amman.',
+      points: ['No monthly fee', 'Installed, set up and your staff trained', '3 months of support on WhatsApp'],
+      link: SiteLink('Book a free demo', '/contact?about=zirr-pos'),
+    ),
+    Offer(
+      name: 'Licence for developers',
+      price: 'Ask for a price',
+      summary: 'For agencies and developers who install it for clients.',
+      points: ['The full React and TypeScript source code', 'Install it for your own clients', 'Terms agreed with you in writing'],
+      link: SiteLink('Ask on WhatsApp', 'https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20Zirr%20POS%20licence.'),
+    ),
+  ];
+
+  static const posLinks = [SiteLink('Try it in your browser', 'https://pos-sage-one.vercel.app'), SiteLink('Book a free demo', '/contact?about=zirr-pos')];
+
+  // ---------------------------------------------------------------- Zirr Boutique
+
+  static const boutiqueFeatures = [
+    Feature(Glyph.store, 'An editorial storefront', 'Big photographs, collections and a product page that sells the look, on phones and laptops.'),
+    Feature(Glyph.stock, 'Colour and size variants', 'Each colour has its own sizes, and each size its own price and stock, chosen in one tap.'),
+    Feature(Glyph.receipt, 'Promotion codes with rules', 'Percentage, fixed and free-shipping codes with minimum orders, limits, dates and categories.'),
+    Feature(Glyph.lock, 'Checkout that adds up', 'The database checks every price and takes the exact stock in one step, so nothing oversells.'),
+    Feature(Glyph.handshake, 'Card payments', 'Stripe checkout when you are ready for it. The browser can never mark an order paid.'),
+    Feature(Glyph.chart, 'A back office for your team', 'A dashboard, products, orders and promotions, with roles so each person sees their part.'),
+  ];
+
+  static const boutiqueInTheBox = [
+    'The full Flutter Web source code: the store and its back office',
+    'Supabase migrations with row-level security and 163 SQL checks',
+    'Stripe checkout behind a small adapter you can swap',
+    'Terms, privacy and returns pages, and search-friendly pages',
+    'Bug fixes for 6 months from your purchase',
+  ];
+
+  static const boutiqueOffers = [
+    Offer(
+      name: 'Regular licence',
+      price: 'Ask for a price',
+      summary: 'For one store you own and run, selling your own goods.',
+      points: ['Full Flutter and SQL source code', 'Change it as you like for your store', 'Bug fixes for 6 months'],
+      link: SiteLink(
+        'Ask on WhatsApp',
+        'https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20Zirr%20Boutique%20Regular%20licence.',
+      ),
+    ),
+    Offer(
+      name: 'Extended licence',
+      price: 'Ask for a price',
+      summary: 'For one store you build for a client, or run as a service.',
+      points: ['Full Flutter and SQL source code', 'Deliver it to one client, or host it for other shops', 'Bug fixes for 6 months'],
+      link: SiteLink(
+        'Ask on WhatsApp',
+        'https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20Zirr%20Boutique%20Extended%20licence.',
+      ),
+    ),
+  ];
+
+  static const boutiqueLinks = [
+    SiteLink('Open the store', 'https://vanguard-demo-sigma.vercel.app'),
+    SiteLink('Book a free demo', '/contact?about=zirr-boutique'),
   ];
 
   // ---------------------------------------------------------------- Zirr Retail
@@ -309,8 +415,25 @@ class Content {
 
   // ---------------------------------------------------------------- Contact
 
-  static const projectTypes = ['A Flutter app for my business', 'White-label work for an agency', 'A Zirr product', 'Something else'];
+  static const projectTypes = [
+    'A Flutter app for my business',
+    'White-label work for an agency',
+    'A demo of Zirr Retail',
+    'A demo of Zirr POS',
+    'A demo of Zirr Boutique',
+    'A Zirr product',
+    'Something else',
+  ];
 
+  /// What the contact form is about when a page opens it as `/contact?about=<slug>`: a product's demo.
+  static const projectTypeFor = [
+    (slug: 'zirr-retail', type: 'A demo of Zirr Retail'),
+    (slug: 'zirr-pos', type: 'A demo of Zirr POS'),
+    (slug: 'zirr-boutique', type: 'A demo of Zirr Boutique'),
+  ];
+
+  /// The form's subject for `/contact?about=[slug]`, or null when [slug] is not a product with a demo.
+  static String? demoFor(String? slug) => projectTypeFor.where((t) => t.slug == slug).firstOrNull?.type;
   static final contactLinks = [
     SiteLink('WhatsApp', Brand.whatsAppLink()),
     if (Brand.email != null) const SiteLink('Email', 'mailto:${Brand.email}'),
@@ -417,18 +540,31 @@ class Content {
   /// Every text above that is shown translated, for the Arabic check.
   static Iterable<String> get translatedText sync* {
     for (final (_, label) in homeStats) yield label;
-    for (final f in [...services, ...flutterServices, ...zirrReasons, ...qualityBar, ...agencyBenefits, ...agencySteps, ...retailFeatures]) {
+    for (final f in [
+      ...services,
+      ...flutterServices,
+      ...zirrReasons,
+      ...qualityBar,
+      ...agencyBenefits,
+      ...agencySteps,
+      ...retailFeatures,
+      ...posFeatures,
+      ...boutiqueFeatures,
+    ]) {
       yield f.title;
       yield f.body;
     }
-    for (final o in [...agencyOffers, ...retailOffers]) {
+    for (final o in [...agencyOffers, ...retailOffers, ...posOffers, ...boutiqueOffers]) {
       yield* [o.name, o.price, o.summary, ...o.points];
       if (o.link != null) yield o.link!.label;
     }
     for (final q in agencyFaqs) yield* [q.question, q.answer];
     yield* agencyIncludes;
     yield* retailInTheBox;
-    for (final l in [...retailLinks, ...contactLinks]) yield l.label;
+    yield* posInTheBox;
+    yield* boutiqueInTheBox;
+    for (final f in zirrFits) yield* [f.shop, f.why];
+    for (final l in [...retailLinks, ...posLinks, ...boutiqueLinks, ...contactLinks]) yield l.label;
     for (final c in [...caseStudies, ...zirrProducts]) {
       yield* [c.title, c.sector, c.summary, ...c.built, ...c.results, for (final l in c.links) l.label];
       if (c.challenge.isNotEmpty) yield c.challenge;
