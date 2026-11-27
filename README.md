@@ -54,13 +54,15 @@ Point of sale for shops, cafés and restaurants. Every sale is saved on the devi
 - Kitchen display, tables and open tabs, and a QR menu for customers' phones
 - Receipts on thermal printers, shifts with Z-reports, stock and suppliers
 
-[Try the demo](https://pos-sage-one.vercel.app) (PIN 1234) · In Amman we install it for you: 14-day free trial, then 299 JOD one-off, no monthly fee. [Ask on WhatsApp](https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20free%20Zirr%20POS%20trial.)
+[Try the demo](https://pos-sage-one.vercel.app) (PIN 1234) · In Amman we install it for you: 14-day free trial, then 299 JOD one-off, no monthly fee. [Ask on WhatsApp](https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20free%20Zirr%20POS%20trial.) Developers can buy the code: $199 per shop. [See Zirr POS](https://arandas.tech/zirr/pos)
 
 `React` `TypeScript` `Electron` `Supabase`
 
-### Zirr Boutique · [live demo](https://vanguard-demo-sigma.vercel.app)
+### Zirr Boutique · [see it and the licences](https://arandas.tech/zirr/boutique)
 
-A lighter fashion storefront with its own admin panel, for a single brand that only sells online: colour and size variants, promotion codes and Stripe checkout. [Regular licence $39](https://www.paypal.com/ncp/payment/PLB-NCGYHEPAJRL5) · [Extended licence $149](https://www.paypal.com/ncp/payment/FH5VFUK2KVTSW)
+A lighter fashion storefront with its own admin panel, for a single brand that only sells online: colour and size variants, promotion codes and Stripe checkout.
+
+[Open the store](https://vanguard-demo-sigma.vercel.app) · Get the code: Regular licence $49 · Extended licence $149 · [Ask on WhatsApp](https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20Zirr%20Boutique%20licence.) ([compare licences](https://arandas.tech/zirr/boutique))
 
 `Flutter Web` `Supabase`
 
