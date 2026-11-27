@@ -53,7 +53,7 @@ class BoutiquePage extends StatelessWidget {
       const PageSection(
         eyebrow: 'Licences',
         title: 'One store, or one for a client',
-        subtitle: 'Each licence covers one store with its own web address and database. Ask us and we send the price and the licence terms.',
+        subtitle: 'Each licence covers one store with its own web address and database. Message us to buy: we send a PayPal invoice, then the code by email.',
         child: OfferGrid(Content.boutiqueOffers, highlight: 0),
       ),
       const CallToAction(title: 'Want a tour of the store?', body: 'We walk you through the shop and its back office on a call, in Arabic or English.'),

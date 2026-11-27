@@ -386,8 +386,8 @@ const ar = <String, String>{
   'Arabic first, English too': 'العربية أولاً، والإنجليزية أيضاً',
   'Every screen, receipt and email in both languages, right to left where it should be.': 'كل شاشة وإيصال وبريد باللغتين، ومن اليمين إلى اليسار حيث يجب.',
   'Ready for Jordan': 'جاهز للأردن',
-  'JoFotara e-invoices, Jordanian dinars and the personal data protection law, built in.':
-      'فواتير جو فوترة والدينار الأردني وقانون حماية البيانات الشخصية، مبنية فيه.',
+  'Jordanian dinars and the personal data protection law in every product, and JoFotara e-invoices in Zirr Retail.':
+      'الدينار الأردني وقانون حماية البيانات الشخصية في كل منتج، وفواتير جو فوترة في زِرّ للتجزئة.',
   'Keeps selling offline': 'يبيع حتى دون إنترنت',
   'The till saves each sale on the device first and sends it when the internet is back.':
       'يحفظ الكاشير كل عملية بيع على الجهاز أولاً ويرسلها حين يعود الإنترنت.',
@@ -520,11 +520,12 @@ const ar = <String, String>{
   'Installed, set up and your staff trained': 'تركيب وتجهيز وتدريب لموظفيك',
   '3 months of support on WhatsApp': '3 أشهر دعم على واتساب',
   'Licence for developers': 'ترخيص للمطوّرين',
-  'Ask for a price': 'اسأل عن السعر',
+  r'$199 per shop': r'199$ لكل محل',
+  r'$49': r'49$',
+  r'$149': r'149$',
   'For agencies and developers who install it for clients.': 'للوكالات والمطوّرين الذين يركّبونه لعملائهم.',
   'The full React and TypeScript source code': 'كود React وTypeScript المصدري كاملاً',
-  'Install it for your own clients': 'ركّبه لعملائك أنت',
-  'Terms agreed with you in writing': 'شروط نتفق عليها معك كتابياً',
+  'Install it in one client’s shop, under your brand': 'ركّبه في محل عميل واحد، باسمك',
   'Want to see it on your counter?': 'تحب تشوفه على الكاونتر عندك؟',
   'We show you the till on a call, or at your shop in Amman, in Arabic or English.': 'نعرض لك الكاشير في مكالمة، أو في محلّك في عمّان، بالعربي أو الإنجليزي.',
 
@@ -560,8 +561,8 @@ const ar = <String, String>{
   'The Zirr Boutique back office dashboard': 'لوحة متابعة زِرّ بوتيك',
   'Licences': 'التراخيص',
   'One store, or one for a client': 'متجر لك، أو متجر لعميلك',
-  'Each licence covers one store with its own web address and database. Ask us and we send the price and the licence terms.':
-      'كل ترخيص يغطي متجراً واحداً بعنوانه وقاعدة بياناته. اسألنا ونرسل لك السعر وشروط الترخيص.',
+  'Each licence covers one store with its own web address and database. Message us to buy: we send a PayPal invoice, then the code by email.':
+      'كل ترخيص يغطي متجراً واحداً بعنوانه وقاعدة بياناته. راسلنا للشراء: نرسل لك فاتورة PayPal، ثم الكود بالبريد.',
   'Regular licence': 'الترخيص العادي',
   'For one store you own and run, selling your own goods.': 'لمتجر واحد تملكه وتديره وتبيع فيه بضاعتك.',
   'Change it as you like for your store': 'عدّل فيه كما تريد لمتجرك',
@@ -593,4 +594,28 @@ const ar = <String, String>{
   'A demo of Zirr Retail': 'عرض لزِرّ للتجزئة',
   'A demo of Zirr POS': 'عرض لزِرّ كاشير',
   'A demo of Zirr Boutique': 'عرض لزِرّ بوتيك',
+
+  // Zirr questions
+  'What shops ask before they buy': 'ما تسأل عنه المحلات قبل الشراء',
+  'Can I try it before I pay?': 'أقدر أجرّب قبل ما أدفع؟',
+  'Yes. Zirr POS has a free 14-day trial in your shop, and you can open Zirr POS, the Zirr Retail shop and the Zirr Boutique store online right now, with nothing to install.':
+      'نعم. زِرّ كاشير فيه تجربة مجانية 14 يوماً في محلّك، وتقدر تفتح زِرّ كاشير ومتجر زِرّ للتجزئة ومتجر زِرّ بوتيك على الإنترنت الآن، بلا أي تثبيت.',
+  'What happens when the internet drops?': 'شو بصير إذا انقطع الإنترنت؟',
+  'Zirr POS keeps selling. Each sale is saved on the device first and sent once the internet is back. The online shops need the internet, like any website.':
+      'زِرّ كاشير يكمّل البيع. كل عملية بيع تُحفظ على الجهاز أولاً وتُرسل لما يرجع الإنترنت. أما المتاجر الإلكترونية فتحتاج الإنترنت مثل أي موقع.',
+  'Is it in Arabic?': 'هل هو بالعربي؟',
+  'Yes. Every Zirr product works in Arabic and English, right to left where it should be, and Zirr POS prints Arabic receipts.':
+      'نعم. كل منتجات زِرّ تعمل بالعربي والإنجليزي، من اليمين إلى اليسار حيث يلزم، وزِرّ كاشير يطبع إيصالات بالعربي.',
+  'Does it send e-invoices to JoFotara?': 'هل يرسل الفواتير إلى جو فوترة؟',
+  'Zirr Retail sends every sale to Jordan’s national e-invoicing system, with its QR code on the receipt. For Zirr POS or Zirr Boutique, ask us about adding it.':
+      'زِرّ للتجزئة يرسل كل عملية بيع إلى نظام الفوترة الوطني في الأردن، مع رمز QR على الإيصال. لزِرّ كاشير أو زِرّ بوتيك، اسألنا عن إضافتها.',
+  'Do I own the code?': 'هل أملك الكود؟',
+  'A licence gives you the full source code to use and change for the shops it covers. The product itself stays ours, so we can keep improving it for everyone.':
+      'الترخيص يعطيك الكود المصدري كاملاً لتستخدمه وتعدّل فيه للمحلات التي يغطيها. ويبقى المنتج نفسه ملكنا، لنستمر في تطويره للجميع.',
+  'What if it does not work for me?': 'وإذا ما اشتغل معي؟',
+  'If a licence does not install or work as described and we cannot fix it within 14 days of your purchase, we refund you in full.':
+      'إذا لم يُثبَّت الترخيص أو لم يعمل كما هو موصوف ولم نستطع إصلاحه خلال 14 يوماً من الشراء، نعيد لك المبلغ كاملاً.',
+  'Who helps us after we buy?': 'مين بساعدنا بعد الشراء؟',
+  'We do, from Amman. Message us on WhatsApp and a developer answers, in Arabic or English.':
+      'نحن، من عمّان. راسلنا على واتساب ويردّ عليك مطوّر، بالعربي أو الإنجليزي.',
 };

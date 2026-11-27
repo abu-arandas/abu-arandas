@@ -171,7 +171,11 @@ class Content {
   /// Why shops pick Zirr, on the Zirr page.
   static const zirrReasons = [
     Feature(Glyph.language, 'Arabic first, English too', 'Every screen, receipt and email in both languages, right to left where it should be.'),
-    Feature(Glyph.receipt, 'Ready for Jordan', 'JoFotara e-invoices, Jordanian dinars and the personal data protection law, built in.'),
+    Feature(
+      Glyph.receipt,
+      'Ready for Jordan',
+      'Jordanian dinars and the personal data protection law in every product, and JoFotara e-invoices in Zirr Retail.',
+    ),
     Feature(Glyph.pos, 'Keeps selling offline', 'The till saves each sale on the device first and sends it when the internet is back.'),
     Feature(Glyph.code, 'Code you can own', 'Buy the source code with a licence, or let us set it up and run it for you.'),
     Feature(Glyph.handshake, 'People you can call', 'Made in Amman by Arandas Tech. Ask on WhatsApp and a developer answers.'),
@@ -190,6 +194,32 @@ class Content {
       why: 'An editorial store with colour and size variants, promotion codes and card checkout.',
     ),
     ZirrFit('An agency building apps', slug: 'zirr-starter', why: 'Start every client app with sign-in, roles, Arabic and CI already done.'),
+  ];
+
+  /// What shops ask before they buy, on the Zirr page. Every answer is true of the products as they are.
+  static const zirrFaqs = [
+    Faq(
+      'Can I try it before I pay?',
+      'Yes. Zirr POS has a free 14-day trial in your shop, and you can open Zirr POS, the Zirr Retail shop and the Zirr Boutique store online right now, with nothing to install.',
+    ),
+    Faq(
+      'What happens when the internet drops?',
+      'Zirr POS keeps selling. Each sale is saved on the device first and sent once the internet is back. The online shops need the internet, like any website.',
+    ),
+    Faq('Is it in Arabic?', 'Yes. Every Zirr product works in Arabic and English, right to left where it should be, and Zirr POS prints Arabic receipts.'),
+    Faq(
+      'Does it send e-invoices to JoFotara?',
+      'Zirr Retail sends every sale to Jordan’s national e-invoicing system, with its QR code on the receipt. For Zirr POS or Zirr Boutique, ask us about adding it.',
+    ),
+    Faq(
+      'Do I own the code?',
+      'A licence gives you the full source code to use and change for the shops it covers. The product itself stays ours, so we can keep improving it for everyone.',
+    ),
+    Faq(
+      'What if it does not work for me?',
+      'If a licence does not install or work as described and we cannot fix it within 14 days of your purchase, we refund you in full.',
+    ),
+    Faq('Who helps us after we buy?', 'We do, from Amman. Message us on WhatsApp and a developer answers, in Arabic or English.'),
   ];
 
   // ---------------------------------------------------------------- Zirr POS
@@ -228,10 +258,13 @@ class Content {
     ),
     Offer(
       name: 'Licence for developers',
-      price: 'Ask for a price',
+      price: r'$199 per shop',
       summary: 'For agencies and developers who install it for clients.',
-      points: ['The full React and TypeScript source code', 'Install it for your own clients', 'Terms agreed with you in writing'],
-      link: SiteLink('Ask on WhatsApp', 'https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20Zirr%20POS%20licence.'),
+      points: ['The full React and TypeScript source code', 'Install it in one client’s shop, under your brand', '60 days of email help'],
+      link: SiteLink(
+        'Ask on WhatsApp',
+        'https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20Zirr%20POS%20developer%20licence%20(%24199).',
+      ),
     ),
   ];
 
@@ -259,22 +292,22 @@ class Content {
   static const boutiqueOffers = [
     Offer(
       name: 'Regular licence',
-      price: 'Ask for a price',
+      price: r'$49',
       summary: 'For one store you own and run, selling your own goods.',
       points: ['Full Flutter and SQL source code', 'Change it as you like for your store', 'Bug fixes for 6 months'],
       link: SiteLink(
         'Ask on WhatsApp',
-        'https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20Zirr%20Boutique%20Regular%20licence.',
+        'https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20Zirr%20Boutique%20Regular%20licence%20(%2449).',
       ),
     ),
     Offer(
       name: 'Extended licence',
-      price: 'Ask for a price',
+      price: r'$149',
       summary: 'For one store you build for a client, or run as a service.',
       points: ['Full Flutter and SQL source code', 'Deliver it to one client, or host it for other shops', 'Bug fixes for 6 months'],
       link: SiteLink(
         'Ask on WhatsApp',
-        'https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20Zirr%20Boutique%20Extended%20licence.',
+        'https://wa.me/962791568798?text=Hi%20Arandas%20Tech%20team%2C%20I%20would%20like%20a%20Zirr%20Boutique%20Extended%20licence%20(%24149).',
       ),
     ),
   ];
@@ -558,7 +591,7 @@ class Content {
       yield* [o.name, o.price, o.summary, ...o.points];
       if (o.link != null) yield o.link!.label;
     }
-    for (final q in agencyFaqs) yield* [q.question, q.answer];
+    for (final q in [...agencyFaqs, ...zirrFaqs]) yield* [q.question, q.answer];
     yield* agencyIncludes;
     yield* retailInTheBox;
     yield* posInTheBox;
