@@ -19,10 +19,12 @@ no keys. Live at https://arandas.tech.
 | --- | --- |
 | `/` | Home: what we do, the Zirr line, quality bar, recent case studies |
 | `/services` | Flutter services: what we build, the white-label team for agencies, ways to work, process, FAQ (`/agencies` still opens it) |
-| `/zirr` | The Zirr line: what the name means, the four products, why shops pick it |
+| `/zirr` | The Zirr line: what the name means, a "which Zirr fits you?" finder, the four products, why shops pick it |
 | `/zirr/retail` | Zirr Retail: features, what is in the box, licences with PayPal links (`/products/retail` still opens it) |
+| `/zirr/pos` | Zirr POS: features, what we set up in the shop, the free trial, the 299 JOD setup and the developer licence |
+| `/zirr/boutique` | Zirr Boutique: features, what is in the box, the Regular and Extended licences (priced on request) |
 | `/work`, `/work/<slug>` | Case studies: `retail`, `vanguard` (Zirr Boutique), `starter`; then the Zirr line |
-| `/contact` | A form that opens WhatsApp with the visitor's message written, and the other links |
+| `/contact` | A form that opens WhatsApp with the visitor's message written, and the other links. `/contact?about=zirr-pos` (or `zirr-retail`, `zirr-boutique`) opens it on that product's demo |
 | `/terms`, `/privacy`, `/refunds` | Terms of service, privacy policy, refund and cancellation policy (linked from every footer; card payment providers read them) |
 
 The site opens in Arabic when the visitor's browser asks for Arabic, otherwise in English; the button in the header
@@ -42,6 +44,8 @@ The pictures on the company's Facebook page and Google Business profile are in `
 
 ## Changing what it says
 
+- **Product prices:** `retailOffers`, `posOffers` and `boutiqueOffers` in `lib/config/content.dart`. Zirr Boutique's
+  licences and Zirr POS's developer licence say "Ask for a price" until there is a published price.
 - **Text, offers, case studies, FAQ:** [`lib/config/content.dart`](lib/config/content.dart), in English.
 - **Arabic:** [`lib/l10n/ar.dart`](lib/l10n/ar.dart), keyed by the English. `node tool/check_arabic.mjs` fails when a text has
   no Arabic, or when an Arabic entry is left over.

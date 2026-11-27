@@ -105,3 +105,17 @@ class LegalPart {
   final String heading;
   final List<String> paragraphs;
 }
+
+/// One answer to "what do you run?" on the Zirr page, and the Zirr product that fits it.
+class ZirrFit {
+  const ZirrFit(this.shop, {required this.slug, required this.why});
+
+  /// What the visitor runs, as a short choice.
+  final String shop;
+
+  /// The slug of the product that fits, in the Zirr line.
+  final String slug;
+
+  /// Why it fits, in one line.
+  final String why;
+}
