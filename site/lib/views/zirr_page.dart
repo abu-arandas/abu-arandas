@@ -44,6 +44,7 @@ class ZirrPage extends StatelessWidget {
         child: GridRow(gutter: 20, children: [for (final product in Content.zirrProducts) GridCol(md: 6, child: CaseStudyCard(product, hasPage: false))]),
       ),
       const PageSection(eyebrow: 'Why shops pick Zirr', title: 'Made for how shops here work', child: FeatureGrid(Content.zirrReasons)),
+      const PageSection(tinted: true, eyebrow: 'Questions', title: 'What shops ask before they buy', child: FaqList(Content.zirrFaqs)),
       const CallToAction(
         title: 'Want to see Zirr in your shop?',
         body: 'We show you the till, the stock and the online store on a call, in Arabic or English, and set it up for you in Amman.',

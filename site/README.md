@@ -45,7 +45,7 @@ The pictures on the company's Facebook page and Google Business profile are in `
 ## Changing what it says
 
 - **Product prices:** `retailOffers`, `posOffers` and `boutiqueOffers` in `lib/config/content.dart`. Zirr Boutique's
-  licences and Zirr POS's developer licence say "Ask for a price" until there is a published price.
+  licences and Zirr POS's developer licence are bought on WhatsApp (no PayPal link yet). Keep the prices in `web/index.html` (structured data for Google) in step.
 - **Text, offers, case studies, FAQ:** [`lib/config/content.dart`](lib/config/content.dart), in English.
 - **Arabic:** [`lib/l10n/ar.dart`](lib/l10n/ar.dart), keyed by the English. `node tool/check_arabic.mjs` fails when a text has
   no Arabic, or when an Arabic entry is left over.

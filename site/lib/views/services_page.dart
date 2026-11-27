@@ -2,12 +2,10 @@ import 'package:get/get.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../config/brand.dart';
-import '../config/breakpoints.dart';
 import '../config/content.dart';
 import '../config/routes.dart';
 import '../models/content.dart';
 import '../widgets/blocks.dart';
-import '../widgets/motion.dart';
 import '../widgets/site_scaffold.dart';
 
 /// Arandas Tech's Flutter services: apps for businesses, and a white-label team for agencies that sell apps and need
@@ -50,7 +48,7 @@ class ServicesPage extends StatelessWidget {
         child: FeatureGrid(Content.agencySteps, columns: 4, numbered: true),
       ),
       const PageSection(eyebrow: 'Our quality bar', title: 'The standard your client gets', child: FeatureGrid(Content.qualityBar)),
-      const PageSection(tinted: true, eyebrow: 'Questions', title: 'What clients and agencies ask us', child: _Faqs(Content.agencyFaqs)),
+      const PageSection(tinted: true, eyebrow: 'Questions', title: 'What clients and agencies ask us', child: FaqList(Content.agencyFaqs)),
       const CallToAction(
         title: 'Have an app to build?',
         body: 'Send the brief on WhatsApp. We sign an NDA first if you need one, and quote within two working days.',
@@ -81,38 +79,4 @@ class _WhoWeAre extends StatelessWidget {
       ),
     );
   }
-}
-
-class _Faqs extends StatelessWidget {
-  const _Faqs(this.faqs);
-
-  final List<Faq> faqs;
-
-  @override
-  Widget build(BuildContext context) => ConstrainedBox(
-    constraints: BoxConstraints(maxWidth: context.isDesktop ? 860 : double.infinity),
-    child: Column(
-      children: [
-        // The questions come in one after another as the list scrolls into view.
-        for (final (i, faq) in faqs.indexed)
-          Reveal(
-            delay: staggerOf(context) * i,
-            rise: 12,
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: Card(
-                clipBehavior: Clip.antiAlias,
-                child: ExpansionTile(
-                  shape: const Border(),
-                  title: Text(faq.question.tr, style: const TextStyle(fontWeight: FontWeight.w600)),
-                  childrenPadding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 16),
-                  expandedAlignment: AlignmentDirectional.centerStart,
-                  children: [Text(faq.answer.tr)],
-                ),
-              ),
-            ),
-          ),
-      ],
-    ),
-  );
 }

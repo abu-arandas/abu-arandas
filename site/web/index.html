@@ -38,6 +38,42 @@
   }
   </script>
 
+  <!-- The Zirr products and their published prices, for search results. Keep in step with the offers in lib/config/content.dart. -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Zirr Retail", "alternateName": "زِرّ للتجزئة",
+      "url": "https://arandas.tech/zirr/retail", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, iOS, Windows",
+      "description": "One app for a clothing store: the online shop, a till in every branch, stock, buying and the books, sold as source code.",
+      "publisher": { "@type": "Organization", "name": "Arandas Tech", "url": "https://arandas.tech" },
+      "offers": [
+        { "@type": "Offer", "name": "Developer licence", "price": "59", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Agency licence", "price": "199", "priceCurrency": "USD" }
+      ]
+    },
+    {
+      "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Zirr POS", "alternateName": "زِرّ كاشير",
+      "url": "https://arandas.tech/zirr/pos", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows, Web",
+      "description": "A point of sale for shops, cafés and restaurants that saves every sale on the device first, so the till keeps selling when the internet drops.",
+      "publisher": { "@type": "Organization", "name": "Arandas Tech", "url": "https://arandas.tech" },
+      "offers": [
+        { "@type": "Offer", "name": "Set up in your shop", "price": "299", "priceCurrency": "JOD", "areaServed": "Amman" },
+        { "@type": "Offer", "name": "Licence for developers", "price": "199", "priceCurrency": "USD" }
+      ]
+    },
+    {
+      "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Zirr Boutique", "alternateName": "زِرّ بوتيك",
+      "url": "https://arandas.tech/zirr/boutique", "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
+      "description": "A fashion storefront with its own admin panel: colour and size variants, promotion codes and card checkout.",
+      "publisher": { "@type": "Organization", "name": "Arandas Tech", "url": "https://arandas.tech" },
+      "offers": [
+        { "@type": "Offer", "name": "Regular licence", "price": "49", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Extended licence", "price": "149", "priceCurrency": "USD" }
+      ]
+    }
+  ]
+  </script>
+
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Arandas Tech">
@@ -69,6 +105,11 @@
   <noscript>
     <h1>Arandas Tech</h1>
     <p>A software company in Amman, Jordan. Flutter apps for businesses and agencies, and Zirr, our software for shops: Zirr Retail, Zirr POS, Zirr Boutique and Zirr Starter. Arabic and English.</p>
+    <ul>
+      <li><a href="/zirr/retail">Zirr Retail</a>: online shop, tills, stock and books for clothing stores</li>
+      <li><a href="/zirr/pos">Zirr POS</a>: a point of sale that keeps selling offline</li>
+      <li><a href="/zirr/boutique">Zirr Boutique</a>: an online store for fashion brands</li>
+    </ul>
     <p><a href="https://wa.me/962791568798">WhatsApp</a></p>
   </noscript>
   <div id="boot" role="status" aria-label="Loading Arandas Tech">
